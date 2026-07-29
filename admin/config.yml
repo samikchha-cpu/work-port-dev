@@ -1,0 +1,75 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "admin/uploads"
+public_folder: "/admin/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "projects"
+        label: "Projects (Work section)"
+        file: "content/site.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{company}} — {{title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image alt text", name: "alt", widget: "string", required: false }
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Meta (e.g. year or 'Mobile')", name: "meta", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          - label: "Proof items"
+            name: "proof"
+            widget: "list"
+            summary: "{{number}} — {{text}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Tags", name: "tags", widget: "string" }
+          - label: "About section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Lede paragraph", name: "lede", widget: "text" }
+              - { label: "Support paragraph 1", name: "support1", widget: "text" }
+              - { label: "Support paragraph 2", name: "support2", widget: "text" }
+              - { label: "Pull quote", name: "quote", widget: "string" }
+              - { label: "Currently exploring", name: "currentlyExploring", widget: "text" }
+              - { label: "Elsewhere (links)", name: "elsewhere", widget: "string" }
+
+  - name: "posts"
+    label: "Blog Posts"
+    files:
+      - name: "posts"
+        label: "All Posts"
+        file: "content/posts.json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            summary: "{{title}} — {{date}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL slug (no spaces, e.g. my-post-title)", name: "slug", widget: "string" }
+              - { label: "Short excerpt (shown in previews)", name: "excerpt", widget: "text" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Growth without noise", "Product & platform strategy"]
+              - { label: "Date (display text, e.g. July 2026)", name: "date", widget: "string" }
+              - { label: "Read time (e.g. 6 min)", name: "readTime", widget: "string" }
+              - label: "Accent color"
+                name: "accent"
+                widget: "select"
+                options: ["indigo", "peach", "sage", "violet", "bronze"]
+              - { label: "Image URL", name: "image", widget: "string" }
+              - { label: "Pull-quote (optional highlighted line)", name: "pullquote", widget: "string", required: false }
+              - { label: "Body", name: "body", widget: "text" }

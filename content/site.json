@@ -1,0 +1,79 @@
+{
+  "projects": [
+    {
+      "image": "images/work-perccent.jpg",
+      "alt": "Percent investment dashboard on a laptop",
+      "company": "Perccent",
+      "meta": "2025–26",
+      "title": "Wealth platform and investment journeys"
+    },
+    {
+      "image": "images/work-fund-detail.jpg",
+      "alt": "Fund detail screen on a mobile phone",
+      "company": "Perccent",
+      "meta": "Mobile",
+      "title": "A clearer mobile investing experience"
+    },
+    {
+      "image": "images/work-office-1.jpg",
+      "alt": "Person working on a laptop in an office",
+      "company": "Cybrilla",
+      "meta": "2023–26",
+      "title": "Fintech partnerships and platform strategy"
+    },
+    {
+      "image": "images/work-office-hallway.jpg",
+      "alt": "Modern office interior hallway",
+      "company": "Hyperbola",
+      "meta": "2024",
+      "title": "A clearer digital wealth proposition"
+    },
+    {
+      "image": "images/work-documents.jpg",
+      "alt": "Person reviewing documents beside a laptop",
+      "company": "PlusCash",
+      "meta": "2024",
+      "title": "DIY investing across web and mobile"
+    },
+    {
+      "image": "images/work-desk.jpg",
+      "alt": "Desk with laptop, coffee and notebook",
+      "company": "Independent",
+      "meta": "Ongoing",
+      "title": "Essays, frameworks and strategic notes"
+    }
+  ],
+  "proof": [
+    {
+      "number": "01",
+      "text": "Redesigned a wealth platform's core dashboard around the three numbers investors actually check.",
+      "tags": "Product strategy · UX · Wealth-tech"
+    },
+    {
+      "number": "02",
+      "text": "Reduced a fintech partnership's onboarding flow from 14 steps to 5, without dropping a single compliance check.",
+      "tags": "Partnerships · Compliance · UX"
+    },
+    {
+      "number": "03",
+      "text": "Built the positioning and content engine behind a DIY investing product's first 100K users.",
+      "tags": "Positioning · Content strategy · Growth"
+    },
+    {
+      "number": "04",
+      "text": "Helped a leadership team separate the features driving usage from the ones just driving demos.",
+      "tags": "Strategic review · Product portfolio"
+    }
+  ],
+  "about": {
+    "photo": "images/about-photo.jpg",
+    "name": "Piyush Roy",
+    "location": "New Delhi",
+    "lede": "I'm Piyush, based in New Delhi. I spend my time making investment products simpler than the industry usually allows.",
+    "support1": "At Perccent, Cybrilla and a few platforms before them, the work has always circled the same question — what does this person actually need to see to make a good decision, and what can we remove.",
+    "support2": "Outside work, I make time for long walks, old books and conversations that wander somewhere useful.",
+    "quote": "The best interfaces disappear. The best decisions feel obvious in hindsight.",
+    "currentlyExploring": "Behavioural finance, decision design, and why simplicity is harder to ship than features.",
+    "elsewhere": "LinkedIn · X · RSS"
+  }
+}
