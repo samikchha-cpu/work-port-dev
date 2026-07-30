@@ -5,48 +5,109 @@ backend:
 media_folder: "admin/uploads"
 public_folder: "/admin/uploads"
 
+# Shown at the top of the CMS
+site_url: https://playful-meringue-cde42d.netlify.app
+display_url: https://playful-meringue-cde42d.netlify.app
+logo_url: /images/favicon-32.png
+
 collections:
   - name: "site"
     label: "Site Content"
+    description: "Everything on the homepage that isn't a blog post: the work grid, the proof points, and the about section."
     files:
       - name: "projects"
-        label: "Projects (Work section)"
+        label: "Work · Project Cards"
+        description: "The 6 cards in the dark 'Selected work' grid. There are exactly 6 spots on the live layout — adding a 7th or removing one will change the grid's shape, so keep it at 6 unless you're comfortable with that."
         file: "content/site.json"
         fields:
-          - label: "Projects"
+          - label: "Project cards"
             name: "projects"
             widget: "list"
-            summary: "{{company}} — {{title}}"
+            summary: "{{fields.company}} — {{fields.title}}"
+            collapsed: true
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Image alt text", name: "alt", widget: "string", required: false }
-              - { label: "Company", name: "company", widget: "string" }
-              - { label: "Meta (e.g. year or 'Mobile')", name: "meta", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-          - label: "Proof items"
+              - label: "Cover image"
+                name: "image"
+                widget: "image"
+                hint: "Shows in the dark, monochrome-by-default work grid. Landscape photos work best."
+              - label: "Image description (for screen readers)"
+                name: "alt"
+                widget: "string"
+                required: false
+                hint: "Describe what's in the photo in one short sentence, e.g. 'Fund detail screen on a mobile phone'. Leave blank only if the image is purely decorative."
+              - label: "Company / client name"
+                name: "company"
+                widget: "string"
+                hint: "Shown in small caps at the top-left of the card, e.g. 'Perccent'."
+              - label: "Context tag"
+                name: "meta"
+                widget: "string"
+                hint: "Shown top-right of the card — usually a year range (e.g. '2025–26') or a short tag like 'Mobile' or 'Ongoing'."
+              - label: "Project title"
+                name: "title"
+                widget: "string"
+                hint: "The large headline on the card, e.g. 'Wealth platform and investment journeys'."
+
+          - label: "Proof points"
             name: "proof"
             widget: "list"
-            summary: "{{number}} — {{text}}"
+            summary: "{{fields.number}} — {{fields.text}}"
+            collapsed: true
             fields:
-              - { label: "Number", name: "number", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
-              - { label: "Tags", name: "tags", widget: "string" }
+              - label: "Number"
+                name: "number"
+                widget: "string"
+                hint: "Just the index, e.g. '01', '02' — keep these sequential."
+              - label: "Outcome statement"
+                name: "text"
+                widget: "text"
+                hint: "One sentence describing a concrete result, e.g. 'Reduced onboarding from 14 steps to 5.'"
+              - label: "Tags"
+                name: "tags"
+                widget: "string"
+                hint: "Short, middot-separated labels, e.g. 'Partnerships · Compliance · UX'."
+
           - label: "About section"
             name: "about"
             widget: "object"
             fields:
-              - { label: "Photo", name: "photo", widget: "image" }
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Location", name: "location", widget: "string" }
-              - { label: "Lede paragraph", name: "lede", widget: "text" }
-              - { label: "Support paragraph 1", name: "support1", widget: "text" }
-              - { label: "Support paragraph 2", name: "support2", widget: "text" }
-              - { label: "Pull quote", name: "quote", widget: "string" }
-              - { label: "Currently exploring", name: "currentlyExploring", widget: "text" }
-              - { label: "Elsewhere (links)", name: "elsewhere", widget: "string" }
+              - label: "Photo"
+                name: "photo"
+                widget: "image"
+                hint: "Portrait photo shown beside the about text. A 4:5 (portrait) crop works best."
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Location"
+                name: "location"
+                widget: "string"
+                hint: "Shown as a small caption under the photo, e.g. 'New Delhi'."
+              - label: "Opening line"
+                name: "lede"
+                widget: "text"
+                hint: "The first, larger paragraph of the about section."
+              - label: "Paragraph 2"
+                name: "support1"
+                widget: "text"
+              - label: "Paragraph 3"
+                name: "support2"
+                widget: "text"
+              - label: "Pull quote"
+                name: "quote"
+                widget: "string"
+                hint: "A short italic line shown after the bio paragraphs. Don't include quotation marks — those are added automatically."
+              - label: "Currently exploring"
+                name: "currentlyExploring"
+                widget: "text"
+                hint: "One sentence on what Piyush is reading/thinking about right now."
+              - label: "Elsewhere"
+                name: "elsewhere"
+                widget: "string"
+                hint: "Plain text only (not a clickable link) — shown as a small label, e.g. 'LinkedIn'."
 
   - name: "posts"
     label: "Blog Posts"
+    description: "New posts always appear first on the site automatically, sorted by the Publish date field below — you don't need to reorder anything here."
     files:
       - name: "posts"
         label: "All Posts"
@@ -55,21 +116,67 @@ collections:
           - label: "Posts"
             name: "posts"
             widget: "list"
-            summary: "{{title}} — {{date}}"
+            summary: "{{fields.title}} — {{fields.date}}"
+            collapsed: true
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "URL slug (no spaces, e.g. my-post-title)", name: "slug", widget: "string" }
-              - { label: "Short excerpt (shown in previews)", name: "excerpt", widget: "text" }
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                hint: "The headline shown everywhere this post appears — cards, the blog archive, and the post page itself."
+
+              - label: "Excerpt"
+                name: "excerpt"
+                widget: "text"
+                hint: "One sentence shown under the title on cards and in the archive list. Keep it to a single line if possible."
+
               - label: "Category"
                 name: "category"
                 widget: "select"
+                default: "Growth without noise"
                 options: ["Growth without noise", "Product & platform strategy"]
-              - { label: "Date (display text, e.g. July 2026)", name: "date", widget: "string" }
-              - { label: "Read time (e.g. 6 min)", name: "readTime", widget: "string" }
+                hint: "Which of the two writing 'pillars' this post belongs to."
+
+              - label: "Publish date"
+                name: "date"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "MMMM D, YYYY"
+                time_format: false
+                picker_utc: true
+                hint: "Controls sort order (newest first, automatically) and the date shown on the post. It does not need to match the day you're actually publishing — set it to whatever date should show."
+
+              - label: "Read time"
+                name: "readTime"
+                widget: "string"
+                default: "5 min"
+                hint: "A rough estimate, e.g. '5 min'. There's no need to be precise."
+
               - label: "Accent color"
                 name: "accent"
                 widget: "select"
+                default: "indigo"
                 options: ["indigo", "peach", "sage", "violet", "bronze"]
-              - { label: "Image URL", name: "image", widget: "string" }
-              - { label: "Pull-quote (optional highlighted line)", name: "pullquote", widget: "string", required: false }
-              - { label: "Body", name: "body", widget: "text" }
+                hint: "Sets the highlight color for this post's category label, pull-quote bar, and hover tint. Rotate through the options so consecutive posts don't share a color."
+
+              - label: "Featured image"
+                name: "image"
+                widget: "image"
+                choose_url: true
+                hint: "Shown as the card thumbnail and the large hero image on the post page. You can upload a file or paste an image URL."
+
+              - label: "Pull-quote"
+                name: "pullquote"
+                widget: "string"
+                required: false
+                hint: "Optional. A single sentence from the post, highlighted in larger type partway through the article. Leave blank to skip."
+
+              - label: "Body"
+                name: "body"
+                widget: "text"
+                hint: "The full post. Leave a blank line between paragraphs. Basic Markdown (e.g. **bold**, *italic*, [links](https://example.com)) is supported."
+
+              - label: "URL slug"
+                name: "slug"
+                widget: "string"
+                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase letters, numbers, and hyphens only — no spaces (e.g. my-post-title)."]
+                hint: "Forms the post's web address. Set this once, when first creating the post, and avoid changing it afterwards — editing the slug on a published post breaks any links people have already saved or shared."

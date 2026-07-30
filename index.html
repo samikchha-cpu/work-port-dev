@@ -15,6 +15,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Piyush Roy — selected work, writing and perspective." />
 <title>Piyush Roy — Portfolio</title>
+
+<!-- Site URL below is the current Netlify subdomain. Update this, and the
+     equivalent URLs in robots.txt and sitemap.xml, once Piyush's custom
+     domain is connected. -->
+<link rel="canonical" href="https://playful-meringue-cde42d.netlify.app/" />
+<meta name="theme-color" content="#121722" />
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Piyush Roy" />
+<meta property="og:title" content="Piyush Roy — Portfolio" />
+<meta property="og:description" content="Piyush Roy — selected work, writing and perspective." />
+<meta property="og:image" content="https://playful-meringue-cde42d.netlify.app/images/hero-skyscrapers.jpg" />
+<meta property="og:url" content="https://playful-meringue-cde42d.netlify.app/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Piyush Roy — Portfolio" />
+<meta name="twitter:description" content="Piyush Roy — selected work, writing and perspective." />
+<meta name="twitter:image" content="https://playful-meringue-cde42d.netlify.app/images/hero-skyscrapers.jpg" />
 <style>
   :root{
     --paper:#f1eee8;
@@ -207,9 +230,6 @@
   .work-note{margin-top:22px;color:#8e8d88;font-size:12px}
 
   /* writing */
-  .pillars{display:grid;gap:74px}
-  .pillar-head{display:grid;grid-template-columns:240px 1fr;gap:42px;margin-bottom:24px}
-  .pillar-head h3{margin:0;font:400 30px Georgia,serif}.pillar-head p{margin:4px 0 0;max-width:650px;color:var(--muted);line-height:1.7}
   .essay-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
   .essay{position:relative;min-height:285px;padding:30px 28px 24px;display:flex;flex-direction:column;justify-content:space-between;border-bottom:1px solid var(--line);overflow:hidden;transition:transform .35s var(--ease),background .35s ease}
   .essay+.essay{border-left:1px solid var(--line)}
@@ -342,7 +362,7 @@
   .post-row span.meta{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
 
   @media(max-width:960px){
-    .hero,.section-head,.subscribe-panel,.about-grid{grid-template-columns:1fr}.hero{min-height:auto;padding-top:120px}.hero-prism{inset:0}
+    .hero,.section-head,.subscribe-panel,.about-grid{grid-template-columns:1fr}.hero{min-height:auto;padding-top:120px}
     .work-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto}.work-card:nth-child(n){grid-column:auto;grid-row:auto;min-height:460px}.essay-grid{grid-template-columns:1fr}.essay+.essay{border-left:0}.proof-item{grid-template-columns:56px 1fr}.proof-item span{grid-column:2}.subscribe-panel{padding:54px}.about-grid{gap:55px}
     .post-row{grid-template-columns:90px 1fr;gap:16px}.post-row strong,.post-row span.meta{display:none}
     .post-nextprev{grid-template-columns:1fr}.post-nextprev .next{text-align:left}
@@ -355,7 +375,7 @@
     .hero-meta{text-shadow:0 1px 2px rgba(241,238,232,.95),0 2px 8px rgba(241,238,232,.9)}
     .hero-meta svg{filter:drop-shadow(0 1px 2px rgba(241,238,232,.9))}
     .section{padding:92px 0}.chapter{top:34px}.hero{padding-top:96px}.hero h1{font-size:clamp(38px,13vw,54px)}.hero-quote{font-size:clamp(18px,5vw,21px)}.hero-meta{flex-direction:column;align-items:flex-start;row-gap:12px}.hero-meta span{padding:0}.hero-meta span+span{padding-left:0}.hero-meta span+span:before{display:none}
-    .belief-grid{grid-template-columns:1fr;gap:20px}.belief-marker{position:static;flex-direction:row;align-items:center;gap:20px}.belief-rule{width:100%;height:1px;background:linear-gradient(90deg,rgba(18,23,34,.4),rgba(18,23,34,0))}.belief-number{font-size:52px}.pullquote{padding:26px 24px 26px 28px}.work-guide{grid-template-columns:1fr;gap:8px}.work-grid{grid-template-columns:1fr}.work-card:nth-child(n){min-height:440px}.work-bottom{align-items:center}.glass-link{width:50px;height:50px}.pillar-head{grid-template-columns:1fr;gap:10px}.subscribe-panel{padding:34px 24px;border-radius:24px}.form{grid-template-columns:1fr}.form button{text-align:left;padding:14px 0}.proof-item{grid-template-columns:1fr;gap:10px}.proof-item span{grid-column:auto}.about-details{grid-template-columns:1fr}.about-details div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}.collab{grid-template-columns:1fr;gap:36px}.collab-deco{display:none}.footer-grid{grid-template-columns:1fr;gap:18px}.footer-title{grid-column:1;grid-row:auto}.footer-links{grid-column:1;grid-row:auto;flex-wrap:wrap}.copyright{grid-column:1;grid-row:auto}
+    .belief-grid{grid-template-columns:1fr;gap:20px}.belief-marker{position:static;flex-direction:row;align-items:center;gap:20px}.belief-rule{width:100%;height:1px;background:linear-gradient(90deg,rgba(18,23,34,.4),rgba(18,23,34,0))}.belief-number{font-size:52px}.pullquote{padding:26px 24px 26px 28px}.work-guide{grid-template-columns:1fr;gap:8px}.work-grid{grid-template-columns:1fr}.work-card:nth-child(n){min-height:440px}.work-bottom{align-items:center}.glass-link{width:50px;height:50px}.subscribe-panel{padding:34px 24px;border-radius:24px}.form{grid-template-columns:1fr}.form button{text-align:left;padding:14px 0}.proof-item{grid-template-columns:1fr;gap:10px}.proof-item span{grid-column:auto}.about-details{grid-template-columns:1fr}.about-details div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}.collab{grid-template-columns:1fr;gap:36px}.collab-deco{display:none}.footer-grid{grid-template-columns:1fr;gap:18px}.footer-title{grid-column:1;grid-row:auto}.footer-links{grid-column:1;grid-row:auto;flex-wrap:wrap}.copyright{grid-column:1;grid-row:auto}
     .page-head{padding-top:96px}.post-hero{border-radius:14px}.post-nextprev{grid-template-columns:1fr}.post-nextprev .next{text-align:left}.post-row{grid-template-columns:74px 1fr;gap:12px}.post-thumb{width:74px;height:58px}
   }
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
@@ -386,7 +406,6 @@
 <main id="top" class="view">
   <header class="hero">
     <div class="hero-media" aria-hidden="true"><img src="images/hero-skyscrapers.jpg" alt="Skyscrapers rising into fog, shot looking upward"></div>
-    <div class="hero-prism" aria-hidden="true"></div>
     <div class="shell">
     <div class="hero-content">
       <p class="eyebrow">Product-led Growth · Funnel Conversion Optimization</p>
@@ -429,7 +448,7 @@
   <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow">Selected proof</p><h2 class="display">Evidence, stated through outcomes rather than chronology.</h2></div><p>What changed, not simply where Piyush worked.</p></div><div class="proof-list reveal" id="proofList"></div></div></section>
 
   <section class="section" id="about"><div class="chapter">05</div><div class="shell about-grid reveal">
-    <div class="about-visual"><img id="aboutPhoto" src="images/about-photo.jpg" alt="Piyush working at a laptop in a sunlit office"><div class="about-scrim"></div><div class="about-caption"><b id="aboutName">Piyush Roy</b><span id="aboutLocation">New Delhi</span></div></div>
+    <div class="about-visual"><img id="aboutPhoto" src="images/about-photo.jpg" alt="Piyush working at a laptop in a sunlit office" loading="lazy" decoding="async"><div class="about-scrim"></div><div class="about-caption"><b id="aboutName">Piyush Roy</b><span id="aboutLocation">New Delhi</span></div></div>
     <div class="about-copy">
       <p class="lede" id="aboutLede">I'm Piyush, based in New Delhi. I spend my time making investment products simpler than the industry usually allows.</p>
       <p class="support" id="aboutSupport1">At Perccent, Cybrilla and a few platforms before them, the work has always circled the same question — what does this person actually need to see to make a good decision, and what can we remove.</p>
@@ -448,7 +467,7 @@
     <div class="collab-side">
       <div class="collab-arrow">→</div>
       <p class="collab-side-text">Interested in working together? Let's build something <em>meaningful</em>.</p>
-      <a class="collab-cta" href="mailto:hello@example.com"><span>Write to Piyush</span><span class="collab-cta__icon">→</span></a>
+      <a class="collab-cta" href="mailto:piyush@funnelprolabs.com"><span>Write to Piyush</span><span class="collab-cta__icon">→</span></a>
     </div>
   </div></section>
 </main>
@@ -476,10 +495,29 @@
     <div class="post-nextprev" id="postNextPrev"></div>
   </div>
 </section>
-<footer><div class="shell footer-grid"><p class="footer-title">Piyush Roy</p><div class="footer-links"><a href="#subscribe">Subscribe</a><a href="#">LinkedIn</a><a href="#">X</a><a href="#">RSS</a></div><div class="copyright">© 2026</div></div></footer>
+<section id="view-privacy" class="view section" hidden>
+  <div class="shell page-head">
+    <a class="back-link reveal" href="#top">← Back to site</a>
+    <p class="eyebrow reveal" style="margin-top:26px">Privacy</p>
+    <h1 class="display reveal">Privacy policy.</h1>
+    <p class="reveal">Last updated July 2026. Plain terms, no legalese where it can be avoided.</p>
+  </div>
+  <div class="shell" style="padding-top:44px;max-width:760px">
+    <div class="post-body reveal">
+      <p><strong>What this site collects.</strong> This site does not use analytics, tracking cookies, or advertising scripts. The only personal information collected is the email address you choose to submit through the subscribe form, which is sent directly to Buttondown, a third-party newsletter provider, and used solely to send you occasional writing from Piyush.</p>
+      <p><strong>Third parties involved.</strong> Two services are used to run this site: Netlify (hosting) and Buttondown (email newsletter delivery). Each may process standard technical data — such as IP address and browser type — as part of normal web hosting and email delivery. Piyush does not access, sell, or share this data beyond what these providers require to operate.</p>
+      <p><strong>Your choices.</strong> Every newsletter email includes an unsubscribe link, and unsubscribing removes your address from Buttondown immediately. To request that your data be deleted sooner, or to ask any question about how it's handled, email <a href="mailto:piyush@funnelprolabs.com" style="color:var(--indigo)">piyush@funnelprolabs.com</a>.</p>
+      <p><strong>Changes.</strong> If this policy changes in a meaningful way, the "last updated" date above will change with it.</p>
+    </div>
+  </div>
+</section>
+<footer><div class="shell footer-grid"><p class="footer-title">Piyush Roy</p><div class="footer-links"><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#/privacy">Privacy</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
 <script>
+  const yearEl=document.getElementById('copyrightYear');
+  if(yearEl) yearEl.textContent=new Date().getFullYear();
+
   const bar=document.getElementById('progressBar');
   const updateProgress=()=>{const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;bar.style.width=(max?window.scrollY/max*100:0)+'%'};
   addEventListener('scroll',updateProgress,{passive:true});updateProgress();
@@ -494,11 +532,18 @@
 
   let POSTS=[];
 
+  function formatDate(iso){
+    if(!iso) return '';
+    const d=new Date(iso+'T00:00:00');
+    if(isNaN(d)) return iso;
+    return d.toLocaleDateString('en-US',{month:'long',year:'numeric'});
+  }
+
   function essayCardHTML(p,delay){
-    return `<a class="essay reveal" href="#/post/${p.slug}" style="transition-delay:${delay}s;--accent:var(--${p.accent})"><div class="essay-media"><img src="${p.image}" alt="" loading="lazy"></div><div><span class="essay-date">${p.date}</span><h4>${p.title}</h4><p>${p.excerpt}</p></div><div class="essay-meta"><span>${p.category}</span><span>${p.readTime}</span></div></a>`;
+    return `<a class="essay reveal" href="#/post/${p.slug}" style="transition-delay:${delay}s;--accent:var(--${p.accent})"><div class="essay-media"><img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async"></div><div><span class="essay-date">${formatDate(p.date)}</span><h4>${p.title}</h4><p>${p.excerpt}</p></div><div class="essay-meta"><span>${p.category}</span><span>${p.readTime}</span></div></a>`;
   }
   function postRowHTML(p){
-    return `<a class="post-row reveal" href="#/post/${p.slug}" style="--accent:var(--${p.accent})"><strong>${p.date}</strong><div class="post-thumb"><img src="${p.image}" alt="" loading="lazy"></div><div><h3>${p.title}</h3><p>${p.excerpt}</p></div><span class="meta">${p.category} · ${p.readTime}</span></a>`;
+    return `<a class="post-row reveal" href="#/post/${p.slug}" style="--accent:var(--${p.accent})"><strong>${formatDate(p.date)}</strong><div class="post-thumb"><img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async"></div><div><h3>${p.title}</h3><p>${p.excerpt}</p></div><span class="meta">${p.category} · ${p.readTime}</span></a>`;
   }
 
   function renderLists(){
@@ -513,9 +558,11 @@
     section.style.setProperty('--accent','var(--'+p.accent+')');
     document.getElementById('postCategory').textContent=p.category;
     document.getElementById('postTitle').textContent=p.title;
-    document.getElementById('postDate').textContent=p.date;
+    document.getElementById('postDate').textContent=formatDate(p.date);
     document.getElementById('postReadTime').textContent=p.readTime+' read';
-    document.getElementById('postHeroImg').src=p.image;
+    const heroImg=document.getElementById('postHeroImg');
+    heroImg.src=p.image;
+    heroImg.alt=p.title;
     const bodyEl=document.getElementById('postBody');
     bodyEl.innerHTML=(typeof marked!=='undefined'?marked.parse(p.body||''):('<p>'+(p.body||'').replace(/\n\n/g,'</p><p>')+'</p>'));
     if(p.pullquote){
@@ -534,6 +581,14 @@
     document.getElementById('postNextPrev').innerHTML=nav;
   }
 
+  const DEFAULT_TITLE='Piyush Roy — Portfolio';
+  const DEFAULT_DESC='Piyush Roy — selected work, writing and perspective.';
+  function setDocMeta(title,desc){
+    document.title=title;
+    const m=document.querySelector('meta[name="description"]');
+    if(m) m.setAttribute('content',desc);
+  }
+
   function route(){
     document.querySelectorAll('.view').forEach(v=>{ v.hidden=true; });
     const hash=location.hash;
@@ -541,12 +596,17 @@
     if(hash.indexOf('#/post/')===0){
       const slug=hash.slice(7);
       const p=POSTS.find(x=>x.slug===slug);
-      if(p){ renderPost(p); activateView(document.getElementById('view-post')); showHome=false; window.scrollTo(0,0); }
+      if(p){ renderPost(p); activateView(document.getElementById('view-post')); showHome=false; window.scrollTo(0,0); setDocMeta(p.title+' — Piyush Roy',p.excerpt||DEFAULT_DESC); }
     } else if(hash==='#/blog'){
       activateView(document.getElementById('view-blog')); showHome=false; window.scrollTo(0,0);
+      setDocMeta('Blog — Piyush Roy','All writing on product, growth and fintech strategy, newest first.');
+    } else if(hash==='#/privacy'){
+      activateView(document.getElementById('view-privacy')); showHome=false; window.scrollTo(0,0);
+      setDocMeta('Privacy Policy — Piyush Roy','How this site handles your data.');
     }
     if(showHome){
       document.getElementById('top').hidden=false;
+      setDocMeta(DEFAULT_TITLE,DEFAULT_DESC);
       const anchorId=hash.replace('#','');
       if(anchorId && anchorId!=='top' && document.getElementById(anchorId)){
         requestAnimationFrame(()=>document.getElementById(anchorId).scrollIntoView({behavior:'smooth'}));
@@ -561,7 +621,7 @@
   function renderWorkGrid(projects){
     const grid=document.getElementById('workGrid');
     if(!grid) return;
-    grid.innerHTML=projects.map(p=>`<a class="work-card reveal" href="#"><img src="${p.image}" alt="${p.alt||''}"><div class="work-top"><span>${p.company}</span><span>${p.meta}</span></div><div class="work-bottom"><h3 class="work-title">${p.title}</h3><span class="glass-link">↗</span></div></a>`).join('');
+    grid.innerHTML=projects.map(p=>`<div class="work-card reveal" tabindex="0"><img src="${p.image}" alt="${p.alt||''}" loading="lazy" decoding="async"><div class="work-top"><span>${p.company}</span><span>${p.meta}</span></div><div class="work-bottom"><h3 class="work-title">${p.title}</h3><span class="glass-link" aria-hidden="true">↗</span></div></div>`).join('');
   }
   function renderProofList(proof){
     const list=document.getElementById('proofList');
@@ -588,13 +648,16 @@
     renderProofList(data.proof||[]);
     renderAbout(data.about);
     document.querySelectorAll('#workGrid .reveal, #proofList').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el);} });
-  }).catch(()=>{});
+  }).catch(err=>console.error('Failed to load content/site.json:',err));
 
   fetch('content/posts.json').then(r=>r.json()).then(data=>{
-    POSTS=data.posts||[];
+    // Always sort newest-first by actual date, regardless of the order
+    // posts happen to be stored in (Decap CMS appends new entries to the
+    // end of the list, so this can't rely on file order).
+    POSTS=(data.posts||[]).slice().sort((a,b)=>new Date(b.date)-new Date(a.date));
     renderLists();
     route();
-  }).catch(()=>{ route(); });
+  }).catch(err=>{ console.error('Failed to load content/posts.json:',err); route(); });
 
 
   const navToggle=document.getElementById('navToggle');
@@ -604,11 +667,13 @@
   function closeMenu(){
     mobileMenu.classList.remove('open');
     navToggle.setAttribute('aria-expanded','false');
+    navToggle.setAttribute('aria-label','Open menu');
     document.body.classList.remove('menu-open');
   }
   function openMenu(){
     mobileMenu.classList.add('open');
     navToggle.setAttribute('aria-expanded','true');
+    navToggle.setAttribute('aria-label','Close menu');
     document.body.classList.add('menu-open');
   }
   navToggle.addEventListener('click',()=>{
@@ -624,10 +689,25 @@
   const words=['proven frameworks','analytics','results'];let i=0;const word=document.getElementById('changingWord');
   setInterval(()=>{word.classList.add('out');setTimeout(()=>{i=(i+1)%words.length;word.textContent=words[i];word.classList.remove('out')},420)},3400);
 
-  document.querySelectorAll('.work-card').forEach(card=>{
-    card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(1100px) rotateX(${y*-1.4}deg) rotateY(${x*1.4}deg)`});
-    card.addEventListener('pointerleave',()=>card.style.transform='');
-  });
+  // Event delegation, not per-card listeners: work cards are added later by
+  // an async fetch, so binding directly to .work-card elements here (before
+  // they exist) silently did nothing. Binding to the container works
+  // regardless of when the cards get rendered.
+  const workGridEl=document.getElementById('workGrid');
+  if(workGridEl){
+    workGridEl.addEventListener('pointermove',e=>{
+      const card=e.target.closest('.work-card');
+      if(!card) return;
+      const r=card.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5;
+      const y=(e.clientY-r.top)/r.height-.5;
+      card.style.transform=`perspective(1100px) rotateX(${y*-1.4}deg) rotateY(${x*1.4}deg)`;
+    });
+    workGridEl.addEventListener('pointerleave',e=>{
+      const card=e.target.closest && e.target.closest('.work-card');
+      if(card) card.style.transform='';
+    },true);
+  }
 
   const heroEl=document.querySelector('.hero');
   if(heroEl && matchMedia('(prefers-reduced-motion: no-preference)').matches && matchMedia('(min-width: 961px)').matches){
