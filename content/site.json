@@ -66,14 +66,14 @@
     }
   ],
   "about": {
-    "photo": "images/about-photo.jpg",
-    "name": "Piyush Roy",
-    "location": "New Delhi",
-    "lede": "I'm Piyush, based in New Delhi. I spend my time making investment products simpler than the industry usually allows.",
     "support1": "At Perccent, Cybrilla and a few platforms before them, the work has always circled the same question — what does this person actually need to see to make a good decision, and what can we remove.",
     "support2": "Outside work, I make time for long walks, old books and conversations that wander somewhere useful.",
-    "quote": "The best interfaces disappear. The best decisions feel obvious in hindsight.",
     "currentlyExploring": "Behavioural finance, decision design, and why simplicity is harder to ship than features.",
-    "elsewhere": "LinkedIn"
+    "name": "Piyush Roy",
+    "elsewhere": "LinkedIn",
+    "photo": "blob:https://playful-meringue-cde42d.netlify.app/da9cec4b-ebed-4af6-a1d2-836eb21a3124",
+    "location": "New Delhi",
+    "lede": "I'm Piyush, based in New Delhi. I spend my time making investment products simpler than the industry usually allows.",
+    "quote": "The best interfaces disappear. The best decisions feel obvious in hindsight."
   }
 }
