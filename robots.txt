@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: https://playful-meringue-cde42d.netlify.app/sitemap.xml
+Sitemap: https://piyushroy.netlify.app/sitemap.xml
