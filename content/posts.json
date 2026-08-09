@@ -71,17 +71,6 @@
       "title": "Why your dashboard has too many numbers",
       "image": "https://picsum.photos/seed/dashboard-numbers/1400/900",
       "category": "Product & platform strategy"
-    },
-    {
-      "excerpt": "The best fintech teams design with constraints,",
-      "body": "The best fintech teams design with constraints, not around them.\nEvery product team building in financial services eventually hits the same wall: a compliance requirement that seems to demand an extra screen, an extra disclosure, an extra moment of friction. The reflex is to treat this as a tax on the experience ",
-      "readTime": "5 min",
-      "accent": "indigo",
-      "slug": "compliance-not-enemy-of",
-      "date": "2026-07-30",
-      "title": "check test",
-      "image": "/admin/uploads/building-blocks.png",
-      "category": "Growth without noise"
     }
   ]
 }
