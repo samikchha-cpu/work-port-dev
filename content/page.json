@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "eyebrow": "Audience, Positioning, Distribution",
+    "role": "8+ years of converting “My product isn't growing” into “My product grows on auto-pilot”.",
+    "changingWords": [
+      "proven frameworks",
+      "analytics",
+      "results"
+    ],
+    "support": "Selected work across digital products and experiences that come out of growing them.",
+    "location": "New Delhi, India",
+    "role1": "Product Marketing Consultant",
+    "role2": "Fractional CMO"
+  },
+  "belief": {
+    "label": "The belief",
+    "lede": "I believe every great product deserves a fair shot.",
+    "support": "Building a great product is only half the job. The other half is getting it in front of the right people, again and again. Finding the right positioning helps brands choose the right distribution mix and carry one consistent message to their ideal audience.",
+    "pullquote": "Distribution is king. Period."
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "headline": "Companies, problems, and outcomes worth studying",
+    "note": "Hover a card to reveal its original colour and prism reflection."
+  },
+  "writing": {
+    "eyebrow": "Blog",
+    "headline": "Writing on product, growth and the decisions between them.",
+    "description": "From what I've observed. Not what I've read or been told."
+  },
+  "subscribe": {
+    "eyebrow": "Subscribe",
+    "headline": "Where I think out loud.",
+    "description": "Weekly findings from live client projects, full teardowns, and the deeper analysis that doesn't fit anywhere else. Someone sends a sharp question, I answer it here. One reply, everyone learns.",
+    "note": "No clutter. Unsubscribe whenever you like."
+  },
+  "collab": {
+    "eyebrow": "Collaboration",
+    "headlinePre": "I occasionally take on work where",
+    "headlineHighlight": "financial product clarity",
+    "headlinePost": "and growth strategy meet.",
+    "support": "I collaborate with teams and founders to simplify complex financial ideas, shape better user experiences, and build products that create real impact.",
+    "sideText": "Interested in working together? Let's build something meaningful."
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "headline": "What people say after working together.",
+    "description": "Straight from the people behind the work."
+  }
+}

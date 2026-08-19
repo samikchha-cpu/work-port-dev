@@ -26,7 +26,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-<link rel="manifest" href="site.webmanifest" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Piyush Roy" />
@@ -198,18 +197,18 @@
   .belief-number{font-family:Georgia,serif;font-size:96px;color:var(--bronze);line-height:1}
   .belief-rule{width:1px;height:130px;margin-left:2px;background:linear-gradient(180deg,rgba(18,23,34,.4),rgba(18,23,34,0))}
   .belief-copy{max-width:1000px}
-  .belief-copy .lede{margin:0 0 26px;font-family:Georgia,serif;font-size:clamp(30px,4vw,58px);line-height:1.17;letter-spacing:-.04em;color:var(--ink)}
+  .belief-copy .lede{margin:0 0 26px;max-width:820px;font-family:Georgia,serif;font-size:clamp(30px,4vw,58px);line-height:1.17;letter-spacing:-.04em;color:var(--ink)}
   .belief-copy .support{margin:0;max-width:820px;font-family:Georgia,serif;font-size:clamp(20px,2.1vw,27px);line-height:1.5;letter-spacing:-.015em;color:var(--muted)}
-  .pullquote{position:relative;margin-top:56px;padding:34px 40px 34px 44px;max-width:760px;border-radius:4px 18px 18px 4px;background:linear-gradient(120deg,rgba(49,72,199,.07),rgba(198,147,103,.09));overflow:hidden}
+  .pullquote{position:relative;margin-top:56px;padding:34px 40px 34px 44px;max-width:760px;border-radius:18px;background:linear-gradient(120deg,rgba(49,72,199,.07),rgba(198,147,103,.09));overflow:hidden}
   .pullquote:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--indigo),var(--bronze))}
-  .pullquote:after{content:"“";position:absolute;right:22px;top:-6px;font-family:Georgia,serif;font-size:96px;line-height:1;color:rgba(18,23,34,.06);pointer-events:none}
-  .pullquote span{position:relative;display:block;font:700 13px/1.65 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+  .pullquote:after{content:"“";position:absolute;right:20px;top:8px;font-family:Georgia,serif;font-size:52px;line-height:1;color:rgba(18,23,34,.08);pointer-events:none}
+  .pullquote span{position:relative;display:block;max-width:calc(100% - 50px);font:700 13px/1.65 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
 
   /* work */
   .work-section{background:radial-gradient(circle at 86% 4%,rgba(49,72,199,.16),transparent 28%),linear-gradient(180deg,#111722,#0b1019 76%);color:#fbf8f2;overflow:hidden}
   .work-section .eyebrow{color:#bcb5ff}.work-section .section-head>p{color:#aaa8a2}
   .work-section .chapter{-webkit-text-stroke-color:rgba(255,255,255,.09)}
-  .work-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:16px 0;margin-bottom:30px;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);color:#8e8d88;font-size:11px;text-transform:uppercase;letter-spacing:.14em}
+  .work-section .section-head{grid-template-columns:1fr}
   .work-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:38px;gap:16px}
   .work-card{position:relative;overflow:hidden;min-height:360px;border:1px solid rgba(255,255,255,.18);border-radius:22px;isolation:isolate;background:#242424;transform:translateZ(0)}
   .work-card:nth-child(1){grid-column:span 7;grid-row:span 12}.work-card:nth-child(2){grid-column:span 5;grid-row:span 12}
@@ -228,6 +227,39 @@
   .glass-link{flex:none;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.12);backdrop-filter:blur(12px);font-size:20px;transition:transform .35s var(--ease),background .35s ease}
   .work-card:hover .glass-link{transform:rotate(45deg);background:rgba(255,255,255,.22)}
   .work-note{margin-top:22px;color:#8e8d88;font-size:12px}
+
+  /* case study panel */
+  .case-backdrop{position:fixed;inset:0;z-index:80;background:rgba(11,16,25,.6);backdrop-filter:blur(6px) saturate(1.1);opacity:0;pointer-events:none;transition:opacity .45s var(--ease)}
+  .case-backdrop.open{opacity:1;pointer-events:auto}
+  .case-panel{position:fixed;top:104px;right:0;bottom:0;z-index:81;width:min(560px,92vw);background:var(--paper);color:var(--ink);box-shadow:-30px 0 60px rgba(0,0,0,.35);border-top-left-radius:20px;transform:translateX(100%);transition:transform .5s var(--ease);overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .case-panel.open{transform:translateX(0)}
+  .case-inner{padding:44px 40px 60px}
+  .case-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .case-eyebrow{margin:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo)}
+  .case-close{flex:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line);border-radius:100px;background:transparent;color:var(--ink);font-size:12px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:background .25s ease,border-color .25s ease}
+  .case-close:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .case-headline{margin:28px 0 14px;font:400 clamp(30px,3.6vw,42px)/1.08 Georgia,serif;letter-spacing:-.02em}
+  .case-subhead{margin:0 0 30px;color:var(--muted);font-size:16px;line-height:1.65}
+  .case-block{padding:22px 0;border-top:1px solid var(--line)}
+  .case-block:first-of-type{border-top:1px solid var(--line)}
+  .case-label{margin:0 0 8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze)}
+  .case-block p{margin:0;line-height:1.7;font-size:15.5px}
+  .case-results{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+  .case-stat{padding:16px 12px;border:1px solid var(--line);border-radius:14px;text-align:center}
+  .case-stat b{display:block;font:400 26px/1 Georgia,serif;color:var(--indigo)}
+  .case-stat span{display:block;margin-top:6px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .case-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+  .case-cta{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:100px;font-size:13.5px;letter-spacing:.02em;text-decoration:none;transition:transform .25s var(--ease),background .25s ease}
+  .case-cta.primary{background:var(--ink);color:var(--paper)}
+  .case-cta.primary:hover{transform:translateY(-2px)}
+  .case-cta.secondary{border:1px solid var(--line);color:var(--ink)}
+  .case-cta.secondary:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  body.case-open{overflow:hidden}
+  @media(max-width:680px){
+    .case-panel{top:84px}
+    .case-inner{padding:30px 22px 44px}
+    .case-results{grid-template-columns:1fr}
+  }
 
   /* writing */
   .essay-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
@@ -256,10 +288,26 @@
   .form{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid rgba(255,255,255,.44)}.form input{min-width:0;padding:18px 0;border:0;outline:0;background:transparent;color:#fff}.form input::placeholder{color:#8e8d92}.form button{border:0;background:transparent;color:#fff;font-weight:700;cursor:pointer}
   .form-note{font-size:11px!important}
 
-  /* proof */
-  .proof-list{border-top:1px solid var(--ink)}
-  .proof-item{display:grid;grid-template-columns:76px 1fr 220px;gap:30px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line)}
-  .proof-item strong{color:var(--bronze);font-size:12px;letter-spacing:.1em}.proof-item p{margin:0;font:400 clamp(25px,2.7vw,39px)/1.22 Georgia,serif}.proof-item span{color:var(--muted);font-size:13px;line-height:1.55}
+  /* testimonials */
+  .testimonial-wrap{position:relative}
+  .testimonial-grid{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 8px;margin:0 -4px;scrollbar-width:none;-ms-overflow-style:none}
+  .testimonial-grid::-webkit-scrollbar{display:none}
+  .testimonial-card{flex:0 0 min(440px,86vw);scroll-snap-align:start;border:1px solid var(--line);border-radius:20px;background:var(--paper-2);padding:34px 32px;transition:transform .45s var(--ease),box-shadow .45s var(--ease);opacity:0;transform:translateY(22px)}
+  .testimonial-card.visible{opacity:1;transform:translateY(0)}
+  .testimonial-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px -20px rgba(18,23,34,.25)}
+  .testimonial-nav button{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:48px;height:48px;border-radius:50%;border:1px solid var(--ink);background:var(--ink);box-shadow:0 8px 20px -6px rgba(18,23,34,.4);display:grid;place-items:center;cursor:pointer;font-size:17px;color:var(--paper);transition:background .25s ease,color .25s ease,transform .25s ease,opacity .25s ease}
+  #testimonialPrev{left:-10px}
+  #testimonialNext{right:-10px}
+  .testimonial-nav button:hover{transform:translateY(-50%) scale(1.08)}
+  .testimonial-nav button:disabled{opacity:0;pointer-events:none}
+  @media(max-width:680px){#testimonialPrev{left:-4px}#testimonialNext{right:-4px}.testimonial-nav button{width:40px;height:40px}}
+  .testimonial-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px 6px 10px;border:1px solid var(--line);border-radius:100px;margin-bottom:24px;font-size:13px;font-weight:600;background:var(--paper)}
+  .testimonial-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--indigo);flex:none}
+  .testimonial-badge-avatar{width:22px;height:22px;border-radius:50%;object-fit:cover;flex:none}
+  .testimonial-quote{margin:0;font:400 clamp(18px,1.7vw,21px)/1.55 Georgia,serif;font-style:italic;color:var(--ink)}
+  .testimonial-footer{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;letter-spacing:.02em;color:var(--muted)}
+  .testimonial-company{display:inline-flex;align-items:center;gap:6px;color:var(--bronze);font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.08em}
+  .testimonial-company-logo{width:16px;height:16px;object-fit:contain;flex:none}
 
   /* about */
   .about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:88px;align-items:start}
@@ -363,7 +411,7 @@
 
   @media(max-width:960px){
     .hero,.section-head,.subscribe-panel,.about-grid{grid-template-columns:1fr}.hero{min-height:auto;padding-top:120px}
-    .work-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto}.work-card:nth-child(n){grid-column:auto;grid-row:auto;min-height:460px}.essay-grid{grid-template-columns:1fr}.essay+.essay{border-left:0}.proof-item{grid-template-columns:56px 1fr}.proof-item span{grid-column:2}.subscribe-panel{padding:54px}.about-grid{gap:55px}
+    .work-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto}.work-card:nth-child(n){grid-column:auto;grid-row:auto;min-height:460px}.essay-grid{grid-template-columns:1fr}.essay+.essay{border-left:0}.subscribe-panel{padding:54px}.about-grid{gap:55px}
     .post-row{grid-template-columns:90px 1fr;gap:16px}.post-row strong,.post-row span.meta{display:none}
     .post-nextprev{grid-template-columns:1fr}.post-nextprev .next{text-align:left}
   }
@@ -375,7 +423,7 @@
     .hero-meta{text-shadow:0 1px 2px rgba(241,238,232,.95),0 2px 8px rgba(241,238,232,.9)}
     .hero-meta svg{filter:drop-shadow(0 1px 2px rgba(241,238,232,.9))}
     .section{padding:92px 0}.chapter{top:34px}.hero{padding-top:96px}.hero h1{font-size:clamp(38px,13vw,54px)}.hero-quote{font-size:clamp(18px,5vw,21px)}.hero-meta{flex-direction:column;align-items:flex-start;row-gap:12px}.hero-meta span{padding:0}.hero-meta span+span{padding-left:0}.hero-meta span+span:before{display:none}
-    .belief-grid{grid-template-columns:1fr;gap:20px}.belief-marker{position:static;flex-direction:row;align-items:center;gap:20px}.belief-rule{width:100%;height:1px;background:linear-gradient(90deg,rgba(18,23,34,.4),rgba(18,23,34,0))}.belief-number{font-size:52px}.pullquote{padding:26px 24px 26px 28px}.work-guide{grid-template-columns:1fr;gap:8px}.work-grid{grid-template-columns:1fr}.work-card:nth-child(n){min-height:440px}.work-bottom{align-items:center}.glass-link{width:50px;height:50px}.subscribe-panel{padding:34px 24px;border-radius:24px}.form{grid-template-columns:1fr}.form button{text-align:left;padding:14px 0}.proof-item{grid-template-columns:1fr;gap:10px}.proof-item span{grid-column:auto}.about-details{grid-template-columns:1fr}.about-details div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}.collab{grid-template-columns:1fr;gap:36px}.collab-deco{display:none}.footer-grid{grid-template-columns:1fr;gap:18px}.footer-title{grid-column:1;grid-row:auto}.footer-links{grid-column:1;grid-row:auto;flex-wrap:wrap}.copyright{grid-column:1;grid-row:auto}
+    .belief-grid{grid-template-columns:1fr;gap:20px}.belief-marker{position:static;flex-direction:row;align-items:center;gap:20px}.belief-rule{width:100%;height:1px;background:linear-gradient(90deg,rgba(18,23,34,.4),rgba(18,23,34,0))}.belief-number{font-size:52px}.pullquote{padding:26px 24px 26px 28px}.work-grid{grid-template-columns:1fr}.work-card:nth-child(n){min-height:440px}.work-bottom{align-items:center}.glass-link{width:50px;height:50px}.subscribe-panel{padding:34px 24px;border-radius:24px}.form{grid-template-columns:1fr}.form button{text-align:left;padding:14px 0}.testimonial-card{padding:26px 22px}.about-details{grid-template-columns:1fr}.about-details div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}.collab{grid-template-columns:1fr;gap:36px}.collab-deco{display:none}.footer-grid{grid-template-columns:1fr;gap:18px}.footer-title{grid-column:1;grid-row:auto}.footer-links{grid-column:1;grid-row:auto;flex-wrap:wrap}.copyright{grid-column:1;grid-row:auto}
     .page-head{padding-top:96px}.post-hero{border-radius:14px}.post-nextprev{grid-template-columns:1fr}.post-nextprev .next{text-align:left}.post-row{grid-template-columns:74px 1fr;gap:12px}.post-thumb{width:74px;height:58px}
   }
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
@@ -383,13 +431,18 @@
 </head>
 <body>
 <div class="progress"><span id="progressBar"></span></div>
-<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top">Piyush Roy</a><div class="nav-links"><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="#subscribe">Subscribe</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
+<div class="case-backdrop" id="caseBackdrop"></div>
+<aside class="case-panel" id="casePanel" aria-hidden="true" aria-label="Case study details">
+  <div class="case-inner" id="caseInner"></div>
+</aside>
+
+<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="#subscribe">Subscribe</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
   <nav class="mobile-menu-panel" aria-label="Mobile navigation">
     <div class="mobile-menu-head">
-      <span class="mobile-menu-word">Piyush Roy</span>
+      <span class="mobile-menu-word" id="mobileMenuWord">Piyush Roy</span>
       <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu"></button>
     </div>
     <p class="mobile-menu-eyebrow">Navigate</p>
@@ -408,44 +461,43 @@
     <div class="hero-media" aria-hidden="true"><img src="images/hero-skyscrapers.jpg" alt="Skyscrapers rising into fog, shot looking upward"></div>
     <div class="shell">
     <div class="hero-content">
-      <p class="eyebrow">Product-led Growth · Funnel Conversion Optimization</p>
-      <h1 class="display">Piyush Roy</h1>
-      <p class="hero-role">8+ years of converting &ldquo;My product isn't growing&rdquo; into &ldquo;My product grows on auto-pilot&rdquo;.</p>
+      <p class="eyebrow" id="heroEyebrow">Product-led Growth · Funnel Conversion Optimization</p>
+      <h1 class="display" id="heroName">Piyush Roy</h1>
+      <p class="hero-role" id="heroRole">8+ years of converting &ldquo;My product isn't growing&rdquo; into &ldquo;My product grows on auto-pilot&rdquo;.</p>
       <div class="hero-divider"></div>
       <p class="hero-quote">A body of work shaped by <span class="changing" id="changingWord">proven frameworks</span>.</p>
-      <p class="hero-support">Selected work across SaaS, Training Services &amp; FinTech Products and experiences that come out of growing them.</p>
+      <p class="hero-support" id="heroSupport">Selected work across SaaS, Training Services &amp; FinTech Products and experiences that come out of growing them.</p>
       <div class="hero-meta">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>New Delhi, India</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>Product Marketing Consultant</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Fractional CMO</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span id="heroLocation">New Delhi, India</span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg><span id="heroRole1">Product Marketing Consultant</span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="heroRole2">Fractional CMO</span></span>
       </div>
     </div>
     </div>
   </header>
 
   <section class="section belief"><div class="chapter">01</div><div class="shell belief-grid reveal">
-    <div class="belief-marker"><span class="belief-label">The belief</span><div class="belief-number">01</div><div class="belief-rule"></div></div>
+    <div class="belief-marker"><span class="belief-label" id="beliefLabel">The belief</span><div class="belief-number">01</div><div class="belief-rule"></div></div>
     <div class="belief-copy">
-      <p class="lede">Most financial products fail before the user ever loses money — they fail the moment a dashboard shows twelve numbers when the decision only needed one.</p>
-      <p class="support">The work that matters isn't adding more data, charts or features. It's finding the single number, screen or sentence that actually changes what someone does next — and protecting it from everything that would clutter it.</p>
-      <div class="pullquote"><span>Clarity isn't a design layer. It's the product.</span></div>
+      <p class="lede" id="beliefLede">Most financial products fail before the user ever loses money — they fail the moment a dashboard shows twelve numbers when the decision only needed one.</p>
+      <p class="support" id="beliefSupport">The work that matters isn't adding more data, charts or features. It's finding the single number, screen or sentence that actually changes what someone does next — and protecting it from everything that would clutter it.</p>
+      <div class="pullquote"><span id="beliefPullquote">Clarity isn't a design layer. It's the product.</span></div>
     </div>
   </div></section>
 
   <section class="section work-section" id="work"><div class="chapter">02</div><div class="shell">
-    <div class="section-head reveal"><div><p class="eyebrow">Selected work</p><h2 class="display">Companies, assignments and outcomes worth examining.</h2></div><p>This archive stays monochrome by default. Colour appears only when the reader chooses to inspect a project—making attention itself part of the interaction.</p></div>
-    <div class="work-guide reveal"><span>Context</span><span>Contribution</span><span>Outcome</span></div>
-    <div class="work-grid" id="workGrid"></div><p class="work-note">Hover a card to reveal its original colour and prism reflection.</p>
+    <div class="section-head reveal"><div><p class="eyebrow" id="workEyebrow">Selected work</p><h2 class="display" id="workHeadline">Companies, assignments and outcomes worth examining.</h2></div></div>
+    <div class="work-grid" id="workGrid"></div><p class="work-note" id="workNote">Hover a card to reveal its original colour and prism reflection.</p>
   </div></section>
 
   <section class="section" id="writing"><div class="chapter">03</div><div class="shell">
-    <div class="section-head reveal"><div><p class="eyebrow">Blog</p><h2 class="display">Writing on product, growth and the decisions between them.</h2></div><p>Newest first — recent essays on fintech product strategy and the pressures that test it as platforms scale.</p></div>
+    <div class="section-head reveal"><div><p class="eyebrow" id="writingEyebrow">Blog</p><h2 class="display" id="writingHeadline">Writing on product, growth and the decisions between them.</h2></div><p id="writingDescription">Newest first — recent essays on fintech product strategy and the pressures that test it as platforms scale.</p></div>
     <div class="essay-grid" id="essayGrid"></div><a class="archive" href="#/blog">Show all posts →</a>
   </div></section>
 
-  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow">Subscribe</p><h2 class="display">One useful idea, sent when it is ready.</h2></div><div><p>One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
+  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
 
-  <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow">Selected proof</p><h2 class="display">Evidence, stated through outcomes rather than chronology.</h2></div><p>What changed, not simply where Piyush worked.</p></div><div class="proof-list reveal" id="proofList"></div></div></section>
+  <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow" id="testimonialsEyebrow">Testimonials</p><h2 class="display" id="testimonialsHeadline">What people say after working together.</h2></div><p id="testimonialsDescription">Straight from the people behind the work.</p></div><div class="testimonial-wrap"><div class="testimonial-nav"><button type="button" id="testimonialPrev" aria-label="Previous testimonial">←</button><button type="button" id="testimonialNext" aria-label="Next testimonial">→</button></div><div class="testimonial-grid" id="testimonialList"></div></div></div></section>
 
   <section class="section" id="about"><div class="chapter">05</div><div class="shell about-grid reveal">
     <div class="about-visual"><img id="aboutPhoto" src="images/about-photo.jpg" alt="Piyush working at a laptop in a sunlit office" loading="lazy" decoding="async"><div class="about-scrim"></div><div class="about-caption"><b id="aboutName">Piyush Roy</b><span id="aboutLocation">New Delhi</span></div></div>
@@ -460,13 +512,13 @@
 
   <section class="section collab-section"><div class="collab-deco" aria-hidden="true"></div><div class="chapter">06</div><div class="shell collab reveal">
     <div class="collab-main">
-      <p class="collab-eyebrow"><span class="collab-dot"></span><span class="eyebrow" style="margin:0">Collaboration</span><span class="collab-eyebrow-line"></span></p>
-      <h2 class="display"><span>I occasionally take on work where</span> <span><span class="collab-highlight">financial product clarity</span></span> <span>and growth strategy meet.</span></h2>
-      <p class="collab-support">I collaborate with teams and founders to simplify complex financial ideas, shape better user experiences, and build products that create real impact.</p>
+      <p class="collab-eyebrow"><span class="collab-dot"></span><span class="eyebrow" style="margin:0" id="collabEyebrow">Collaboration</span><span class="collab-eyebrow-line"></span></p>
+      <h2 class="display"><span id="collabHeadlinePre">I occasionally take on work where</span> <span><span class="collab-highlight" id="collabHeadlineHighlight">financial product clarity</span></span> <span id="collabHeadlinePost">and growth strategy meet.</span></h2>
+      <p class="collab-support" id="collabSupport">I collaborate with teams and founders to simplify complex financial ideas, shape better user experiences, and build products that create real impact.</p>
     </div>
     <div class="collab-side">
       <div class="collab-arrow">→</div>
-      <p class="collab-side-text">Interested in working together? Let's build something <em>meaningful</em>.</p>
+      <p class="collab-side-text" id="collabSideText">Interested in working together? Let's build something <em>meaningful</em>.</p>
       <a class="collab-cta" href="mailto:piyush@funnelprolabs.com"><span>Write to Piyush</span><span class="collab-cta__icon">→</span></a>
     </div>
   </div></section>
@@ -511,7 +563,7 @@
     </div>
   </div>
 </section>
-<footer><div class="shell footer-grid"><p class="footer-title">Piyush Roy</p><div class="footer-links"><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#/privacy">Privacy</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
+<footer><div class="shell footer-grid"><p class="footer-title" id="footerName">Piyush Roy</p><div class="footer-links"><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#/privacy">Privacy</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
 <script>
@@ -618,15 +670,46 @@
   }
   addEventListener('hashchange',route);
 
+  let PROJECTS=[];
+
   function renderWorkGrid(projects){
     const grid=document.getElementById('workGrid');
     if(!grid) return;
-    grid.innerHTML=projects.map(p=>`<div class="work-card reveal" tabindex="0"><img src="${p.image}" alt="${p.alt||''}" loading="lazy" decoding="async"><div class="work-top"><span>${p.company}</span><span>${p.meta}</span></div><div class="work-bottom"><h3 class="work-title">${p.title}</h3><span class="glass-link" aria-hidden="true">↗</span></div></div>`).join('');
+    PROJECTS=projects;
+    grid.innerHTML=projects.map((p,i)=>`<div class="work-card reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View case study: ${p.title}" data-case-index="${i}"><img src="${p.image}" alt="${p.alt||''}" loading="lazy" decoding="async"><div class="work-top"><span>${p.company}</span><span>${p.meta}</span></div><div class="work-bottom"><h3 class="work-title">${p.title}</h3><span class="glass-link" aria-hidden="true">↗</span></div></div>`).join('');
   }
-  function renderProofList(proof){
-    const list=document.getElementById('proofList');
+  function renderTestimonials(items){
+    const list=document.getElementById('testimonialList');
     if(!list) return;
-    list.innerHTML=proof.map(p=>`<div class="proof-item"><strong>${p.number}</strong><p>${p.text}</p><span>${p.tags}</span></div>`).join('');
+    list.innerHTML=items.map((t,i)=>`<div class="testimonial-card reveal" style="transition-delay:${(i*0.08).toFixed(2)}s"><div class="testimonial-badge">${t.photo?`<img class="testimonial-badge-avatar" src="${t.photo}" alt="" loading="lazy" decoding="async">`:`<span class="testimonial-badge-dot"></span>`}<span>${t.name||''}</span></div><p class="testimonial-quote">${t.quote}</p><div class="testimonial-footer"><span class="testimonial-role">${t.role||''}</span><span class="testimonial-company">${t.logo?`<img class="testimonial-company-logo" src="${t.logo}" alt="" loading="lazy" decoding="async">`:''}${t.company||''}</span></div></div>`).join('');
+
+    const prevBtn=document.getElementById('testimonialPrev');
+    const nextBtn=document.getElementById('testimonialNext');
+    if(prevBtn && nextBtn && !prevBtn.dataset.bound){
+      prevBtn.dataset.bound='1';
+      const scrollByCard=dir=>{
+        const card=list.querySelector('.testimonial-card');
+        const step=card?card.getBoundingClientRect().width+24:360;
+        const atEnd=list.scrollLeft>=list.scrollWidth-list.clientWidth-4;
+        if(dir>0 && atEnd){ list.scrollTo({left:0,behavior:'smooth'}); return; }
+        list.scrollBy({left:dir*step,behavior:'smooth'});
+      };
+      const updateNavState=()=>{
+        prevBtn.disabled=list.scrollLeft<=4;
+      };
+      let autoplayPaused=false;
+      const autoplayTimer=setInterval(()=>{ if(!autoplayPaused && list.children.length>1) scrollByCard(1); },4500);
+      const pauseAutoplay=()=>{ autoplayPaused=true; };
+      const resumeAutoplay=()=>{ autoplayPaused=false; };
+      list.addEventListener('pointerenter',pauseAutoplay);
+      list.addEventListener('pointerleave',resumeAutoplay);
+      list.addEventListener('touchstart',pauseAutoplay,{passive:true});
+      list.addEventListener('touchend',()=>setTimeout(resumeAutoplay,3000),{passive:true});
+      prevBtn.addEventListener('click',()=>{ scrollByCard(-1); pauseAutoplay(); setTimeout(resumeAutoplay,3000); });
+      nextBtn.addEventListener('click',()=>{ scrollByCard(1); pauseAutoplay(); setTimeout(resumeAutoplay,3000); });
+      list.addEventListener('scroll',updateNavState,{passive:true});
+      updateNavState();
+    }
   }
   function renderAbout(about){
     if(!about) return;
@@ -641,14 +724,69 @@
     if(about.quote) set('aboutQuote','\u201c'+about.quote+'\u201d');
     set('aboutExploring',about.currentlyExploring);
     set('aboutElsewhere',about.elsewhere);
+    // The name shows in four places on the page — nav, mobile menu, the
+    // hero headline, and the footer — all driven from this one field so
+    // there's only one place to update it.
+    set('navWordmark',about.name);
+    set('mobileMenuWord',about.name);
+    set('heroName',about.name);
+    set('footerName',about.name);
+  }
+
+  function renderPage(page){
+    if(!page) return;
+    const set=(id,val)=>{ const el=document.getElementById(id); if(el && val!=null) el.textContent=val; };
+    const hero=page.hero||{};
+    set('heroEyebrow',hero.eyebrow);
+    set('heroRole',hero.role);
+    set('heroSupport',hero.support);
+    set('heroLocation',hero.location);
+    set('heroRole1',hero.role1);
+    set('heroRole2',hero.role2);
+    if(Array.isArray(hero.changingWords) && hero.changingWords.length){
+      window.HERO_CHANGING_WORDS=hero.changingWords;
+    }
+    const belief=page.belief||{};
+    set('beliefLabel',belief.label);
+    set('beliefLede',belief.lede);
+    set('beliefSupport',belief.support);
+    set('beliefPullquote',belief.pullquote);
+    const work=page.work||{};
+    set('workEyebrow',work.eyebrow);
+    set('workHeadline',work.headline);
+    set('workNote',work.note);
+    const writing=page.writing||{};
+    set('writingEyebrow',writing.eyebrow);
+    set('writingHeadline',writing.headline);
+    set('writingDescription',writing.description);
+    const subscribe=page.subscribe||{};
+    set('subscribeEyebrow',subscribe.eyebrow);
+    set('subscribeHeadline',subscribe.headline);
+    set('subscribeDescription',subscribe.description);
+    set('subscribeNote',subscribe.note);
+    const testimonials=page.testimonials||{};
+    set('testimonialsEyebrow',testimonials.eyebrow);
+    set('testimonialsHeadline',testimonials.headline);
+    set('testimonialsDescription',testimonials.description);
+    const collab=page.collab||{};
+    set('collabEyebrow',collab.eyebrow);
+    set('collabHeadlinePre',collab.headlinePre);
+    set('collabHeadlineHighlight',collab.headlineHighlight);
+    set('collabHeadlinePost',collab.headlinePost);
+    set('collabSupport',collab.support);
+    set('collabSideText',collab.sideText);
   }
 
   fetch('content/site.json').then(r=>r.json()).then(data=>{
     renderWorkGrid(data.projects||[]);
-    renderProofList(data.proof||[]);
+    renderTestimonials(data.testimonials||[]);
     renderAbout(data.about);
-    document.querySelectorAll('#workGrid .reveal, #proofList').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el);} });
+    document.querySelectorAll('#workGrid .reveal, #testimonialList .reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el);} });
   }).catch(err=>console.error('Failed to load content/site.json:',err));
+
+  fetch('content/page.json').then(r=>r.json()).then(data=>{
+    renderPage(data);
+  }).catch(err=>console.error('Failed to load content/page.json:',err));
 
   fetch('content/posts.json').then(r=>r.json()).then(data=>{
     // Always sort newest-first by actual date, regardless of the order
@@ -686,8 +824,13 @@
   addEventListener('hashchange',closeMenu);
   matchMedia('(min-width:681px)').addEventListener('change',e=>{ if(e.matches) closeMenu(); });
 
-  const words=['proven frameworks','analytics','results'];let i=0;const word=document.getElementById('changingWord');
-  setInterval(()=>{word.classList.add('out');setTimeout(()=>{i=(i+1)%words.length;word.textContent=words[i];word.classList.remove('out')},420)},3400);
+  let words=['proven frameworks','analytics','results'];let i=0;const word=document.getElementById('changingWord');
+  setInterval(()=>{
+    // Pick up the CMS-provided list if content/page.json has finished loading
+    // by now; falls back to the hardcoded default above otherwise.
+    if(Array.isArray(window.HERO_CHANGING_WORDS) && window.HERO_CHANGING_WORDS.length) words=window.HERO_CHANGING_WORDS;
+    word.classList.add('out');setTimeout(()=>{i=(i+1)%words.length;word.textContent=words[i];word.classList.remove('out')},420)
+  },3400);
 
   // Event delegation, not per-card listeners: work cards are added later by
   // an async fetch, so binding directly to .work-card elements here (before
@@ -707,7 +850,62 @@
       const card=e.target.closest && e.target.closest('.work-card');
       if(card) card.style.transform='';
     },true);
+
+    workGridEl.addEventListener('click',e=>{
+      const card=e.target.closest('.work-card');
+      if(card) openCaseStudy(card);
+    });
+    workGridEl.addEventListener('keydown',e=>{
+      if(e.key!=='Enter' && e.key!==' ') return;
+      const card=e.target.closest('.work-card');
+      if(!card) return;
+      e.preventDefault();
+      openCaseStudy(card);
+    });
   }
+
+  const caseBackdrop=document.getElementById('caseBackdrop');
+  const casePanel=document.getElementById('casePanel');
+  const caseInner=document.getElementById('caseInner');
+  let caseLastTrigger=null;
+
+  function openCaseStudy(card){
+    const p=PROJECTS[Number(card.dataset.caseIndex)];
+    if(!p) return;
+    caseLastTrigger=card;
+    const cs=p.caseStudy||{};
+    const results=(cs.results||[]).slice(0,3);
+    caseInner.innerHTML=`
+      <div class="case-top">
+        <p class="case-eyebrow">Case study · ${cs.tag||p.company}</p>
+        <button class="case-close" id="caseCloseBtn" type="button">Close ✕</button>
+      </div>
+      <h2 class="case-headline">${cs.headline||p.title}</h2>
+      ${cs.subhead?`<p class="case-subhead">${cs.subhead}</p>`:''}
+      ${cs.problem?`<div class="case-block"><p class="case-label">Problem</p><p>${cs.problem}</p></div>`:''}
+      ${cs.challenge?`<div class="case-block"><p class="case-label">Challenge</p><p>${cs.challenge}</p></div>`:''}
+      ${cs.solution?`<div class="case-block"><p class="case-label">Solution</p><p>${cs.solution}</p></div>`:''}
+      ${results.length?`<div class="case-block"><p class="case-label">Results</p><div class="case-results">${results.map(r=>`<div class="case-stat"><b>${r.value}</b><span>${r.label}</span></div>`).join('')}</div></div>`:''}
+      <div class="case-ctas">
+        ${cs.cta1Show!==false?`<a class="case-cta primary" href="${cs.cta1Link||'#subscribe'}">${cs.cta1Label||'Get notes like this →'}</a>`:''}
+        ${cs.cta2Show!==false?`<a class="case-cta secondary" href="${cs.cta2Link||'mailto:piyush@funnelprolabs.com'}">${cs.cta2Label||'Book a discovery call'}</a>`:''}
+      </div>`;
+    casePanel.classList.add('open');
+    caseBackdrop.classList.add('open');
+    casePanel.setAttribute('aria-hidden','false');
+    document.body.classList.add('case-open');
+    requestAnimationFrame(()=>document.getElementById('caseCloseBtn')?.focus());
+  }
+  function closeCaseStudy(){
+    casePanel.classList.remove('open');
+    caseBackdrop.classList.remove('open');
+    casePanel.setAttribute('aria-hidden','true');
+    document.body.classList.remove('case-open');
+    if(caseLastTrigger) caseLastTrigger.focus();
+  }
+  caseBackdrop?.addEventListener('click',closeCaseStudy);
+  caseInner?.addEventListener('click',e=>{ if(e.target.id==='caseCloseBtn') closeCaseStudy(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && casePanel.classList.contains('open')) closeCaseStudy(); });
 
   const heroEl=document.querySelector('.hero');
   if(heroEl && matchMedia('(prefers-reduced-motion: no-preference)').matches && matchMedia('(min-width: 961px)').matches){
