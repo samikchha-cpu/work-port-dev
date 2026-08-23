@@ -777,12 +777,19 @@
     set('collabSideText',collab.sideText);
   }
 
-  fetch('content/site.json').then(r=>r.json()).then(data=>{
+  fetch('content/projects.json').then(r=>r.json()).then(data=>{
     renderWorkGrid(data.projects||[]);
+    document.querySelectorAll('#workGrid .reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el);} });
+  }).catch(err=>console.error('Failed to load content/projects.json:',err));
+
+  fetch('content/testimonials.json').then(r=>r.json()).then(data=>{
     renderTestimonials(data.testimonials||[]);
-    renderAbout(data.about);
-    document.querySelectorAll('#workGrid .reveal, #testimonialList .reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el);} });
-  }).catch(err=>console.error('Failed to load content/site.json:',err));
+    document.querySelectorAll('#testimonialList .reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el);} });
+  }).catch(err=>console.error('Failed to load content/testimonials.json:',err));
+
+  fetch('content/about.json').then(r=>r.json()).then(data=>{
+    renderAbout(data);
+  }).catch(err=>console.error('Failed to load content/about.json:',err));
 
   fetch('content/page.json').then(r=>r.json()).then(data=>{
     renderPage(data);

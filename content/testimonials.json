@@ -1,0 +1,20 @@
+{
+  "testimonials": [
+    {
+      "quote": "PLACEHOLDER — add a real testimonial here before publishing.",
+      "name": "Client name",
+      "role": "Role",
+      "company": "Company",
+      "photo": "",
+      "logo": ""
+    },
+    {
+      "quote": "PLACEHOLDER — add a real testimonial here before publishing.",
+      "name": "Client name",
+      "role": "Role",
+      "company": "Company",
+      "photo": "",
+      "logo": ""
+    }
+  ]
+}
