@@ -519,7 +519,7 @@
     <div class="collab-side">
       <div class="collab-arrow">→</div>
       <p class="collab-side-text" id="collabSideText">Interested in working together? Let's build something <em>meaningful</em>.</p>
-      <a class="collab-cta" href="mailto:piyush@funnelprolabs.com"><span>Write to Piyush</span><span class="collab-cta__icon">→</span></a>
+      <a class="collab-cta" id="collabCtaLink" href="mailto:piyush@funnelprolabs.com"><span>Write to Piyush</span><span class="collab-cta__icon">→</span></a>
     </div>
   </div></section>
 </main>
@@ -775,6 +775,8 @@
     set('collabHeadlinePost',collab.headlinePost);
     set('collabSupport',collab.support);
     set('collabSideText',collab.sideText);
+    const collabCtaEl=document.getElementById('collabCtaLink');
+    if(collabCtaEl && collab.email) collabCtaEl.href='mailto:'+collab.email;
   }
 
   fetch('content/projects.json').then(r=>r.json()).then(data=>{

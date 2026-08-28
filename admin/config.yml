@@ -29,6 +29,7 @@ collections:
               - label: "Cover image"
                 name: "image"
                 widget: "image"
+                required: false
                 hint: "Shows in the dark, monochrome-by-default work grid. Landscape photos work best."
               - label: "Image description (for screen readers)"
                 name: "alt"
@@ -38,14 +39,17 @@ collections:
               - label: "Company / client name"
                 name: "company"
                 widget: "string"
+                required: false
                 hint: "Shown in small caps at the top-left of the card, e.g. 'Perccent'."
               - label: "Context tag"
                 name: "meta"
                 widget: "string"
+                required: false
                 hint: "Shown top-right of the card — usually a year range (e.g. '2025–26') or a short tag like 'Mobile' or 'Ongoing'."
               - label: "Project title"
                 name: "title"
                 widget: "string"
+                required: false
                 hint: "The large headline on the card, e.g. 'Wealth platform and investment journeys'."
               - label: "Case study (shown when someone clicks the card)"
                 name: "caseStudy"
@@ -147,13 +151,16 @@ collections:
               - label: "Quote"
                 name: "quote"
                 widget: "text"
+                required: false
                 hint: "The testimonial itself, in their words."
               - label: "Name"
                 name: "name"
                 widget: "string"
+                required: false
               - label: "Role"
                 name: "role"
                 widget: "string"
+                required: false
                 hint: "e.g. 'Head of Product'."
               - label: "Company"
                 name: "company"
@@ -179,36 +186,45 @@ collections:
           - label: "Photo"
             name: "photo"
             widget: "image"
+            required: false
             hint: "Portrait photo shown beside the about text. A 4:5 (portrait) crop works best."
           - label: "Name"
             name: "name"
             widget: "string"
+            required: false
             hint: "Used everywhere the name appears — the top-left nav, the mobile menu, the big hero headline, and the footer — so it only needs to be set once."
           - label: "Location"
             name: "location"
             widget: "string"
+            required: false
             hint: "Shown as a small caption under the photo, e.g. 'New Delhi'."
           - label: "Opening line"
             name: "lede"
             widget: "text"
+            required: false
             hint: "The first, larger paragraph of the about section."
           - label: "Paragraph 2"
             name: "support1"
             widget: "text"
+            required: false
           - label: "Paragraph 3"
             name: "support2"
             widget: "text"
+            required: false
           - label: "Pull quote"
             name: "quote"
             widget: "string"
+            required: false
             hint: "A short italic line shown after the bio paragraphs. Don't include quotation marks — those are added automatically."
           - label: "Currently exploring"
             name: "currentlyExploring"
             widget: "text"
+            required: false
             hint: "One sentence on what Piyush is reading/thinking about right now."
           - label: "Elsewhere"
             name: "elsewhere"
             widget: "string"
+            required: false
             hint: "Plain text only (not a clickable link) — shown as a small label, e.g. 'LinkedIn'."
 
       - name: "page"
@@ -223,10 +239,12 @@ collections:
               - label: "Eyebrow"
                 name: "eyebrow"
                 widget: "string"
+                required: false
                 hint: "The small label above the name, e.g. 'Product-led Growth · Funnel Conversion Optimization'."
               - label: "Role line"
                 name: "role"
                 widget: "string"
+                required: false
                 hint: "The sentence right under the name."
               - label: "Rotating words"
                 name: "changingWords"
@@ -236,17 +254,21 @@ collections:
               - label: "Support line"
                 name: "support"
                 widget: "text"
+                required: false
                 hint: "The paragraph below the divider line."
               - label: "Location tag"
                 name: "location"
                 widget: "string"
+                required: false
                 hint: "First of the three small tags near the bottom of the hero, e.g. 'New Delhi, India'."
               - label: "Role tag 1"
                 name: "role1"
                 widget: "string"
+                required: false
               - label: "Role tag 2"
                 name: "role2"
                 widget: "string"
+                required: false
 
           - label: "Section 01 — The Belief"
             name: "belief"
@@ -255,17 +277,21 @@ collections:
               - label: "Label"
                 name: "label"
                 widget: "string"
+                required: false
                 hint: "Small label next to the '01' marker, e.g. 'The belief'."
               - label: "Main statement"
                 name: "lede"
                 widget: "text"
+                required: false
                 hint: "The large opening statement of this section."
               - label: "Supporting paragraph"
                 name: "support"
                 widget: "text"
+                required: false
               - label: "Pull-quote"
                 name: "pullquote"
                 widget: "string"
+                required: false
                 hint: "The short highlighted line in the box below the paragraph."
 
           - label: "Section 02 — Selected Work"
@@ -275,12 +301,15 @@ collections:
               - label: "Eyebrow"
                 name: "eyebrow"
                 widget: "string"
+                required: false
               - label: "Headline"
                 name: "headline"
                 widget: "string"
+                required: false
               - label: "Hover hint"
                 name: "note"
                 widget: "string"
+                required: false
                 hint: "Small caption below the work grid, e.g. 'Hover a card to reveal...'."
 
           - label: "Section 03 — Blog"
@@ -290,12 +319,15 @@ collections:
               - label: "Eyebrow"
                 name: "eyebrow"
                 widget: "string"
+                required: false
               - label: "Headline"
                 name: "headline"
                 widget: "string"
+                required: false
               - label: "Description"
                 name: "description"
                 widget: "text"
+                required: false
 
           - label: "Subscribe panel"
             name: "subscribe"
@@ -304,15 +336,19 @@ collections:
               - label: "Eyebrow"
                 name: "eyebrow"
                 widget: "string"
+                required: false
               - label: "Headline"
                 name: "headline"
                 widget: "string"
+                required: false
               - label: "Description"
                 name: "description"
                 widget: "text"
+                required: false
               - label: "Fine print"
                 name: "note"
                 widget: "string"
+                required: false
                 hint: "Small line under the email form, e.g. 'No clutter. Unsubscribe whenever you like.'."
 
           - label: "Section 04 — Testimonials"
@@ -322,12 +358,15 @@ collections:
               - label: "Eyebrow"
                 name: "eyebrow"
                 widget: "string"
+                required: false
               - label: "Headline"
                 name: "headline"
                 widget: "string"
+                required: false
               - label: "Description"
                 name: "description"
                 widget: "text"
+                required: false
 
           - label: "Section 06 — Collaboration"
             name: "collab"
@@ -336,25 +375,36 @@ collections:
               - label: "Eyebrow"
                 name: "eyebrow"
                 widget: "string"
+                required: false
               - label: "Headline — part 1"
                 name: "headlinePre"
                 widget: "string"
+                required: false
                 hint: "First part of the sentence, before the highlighted phrase, e.g. 'I occasionally take on work where'."
               - label: "Headline — highlighted phrase"
                 name: "headlineHighlight"
                 widget: "string"
+                required: false
                 hint: "The middle phrase shown in the accent colour, e.g. 'financial product clarity'."
               - label: "Headline — part 2"
                 name: "headlinePost"
                 widget: "string"
+                required: false
                 hint: "The rest of the sentence, after the highlighted phrase, e.g. 'and growth strategy meet.'."
               - label: "Supporting paragraph"
                 name: "support"
                 widget: "text"
+                required: false
               - label: "Side note"
                 name: "sideText"
                 widget: "text"
+                required: false
                 hint: "The line next to the arrow, e.g. 'Interested in working together? Let's build something meaningful.' (shown as plain text, without italics)."
+              - label: "'Write to Piyush' button — email address"
+                name: "email"
+                widget: "string"
+                required: false
+                hint: "Just the email address, e.g. name@example.com — no 'mailto:' needed. Leave blank to keep the site's current default (piyush@funnelprolabs.com)."
 
   - name: "posts"
     label: "Blog Posts"
@@ -373,16 +423,19 @@ collections:
               - label: "Title"
                 name: "title"
                 widget: "string"
+                required: false
                 hint: "The headline shown everywhere this post appears — cards, the blog archive, and the post page itself."
 
               - label: "Excerpt"
                 name: "excerpt"
                 widget: "text"
+                required: false
                 hint: "One sentence shown under the title on cards and in the archive list. Keep it to a single line if possible."
 
               - label: "Category"
                 name: "category"
                 widget: "select"
+                required: false
                 default: "Growth without noise"
                 options: ["Growth without noise", "Product & platform strategy"]
                 hint: "Which of the two writing 'pillars' this post belongs to."
@@ -390,6 +443,7 @@ collections:
               - label: "Publish date"
                 name: "date"
                 widget: "datetime"
+                required: false
                 format: "YYYY-MM-DD"
                 date_format: "MMMM D, YYYY"
                 time_format: false
@@ -399,12 +453,14 @@ collections:
               - label: "Read time"
                 name: "readTime"
                 widget: "string"
+                required: false
                 default: "5 min"
                 hint: "A rough estimate, e.g. '5 min'. There's no need to be precise."
 
               - label: "Accent color"
                 name: "accent"
                 widget: "select"
+                required: false
                 default: "indigo"
                 options: ["indigo", "peach", "sage", "violet", "bronze"]
                 hint: "Sets the highlight color for this post's category label, pull-quote bar, and hover tint. Rotate through the options so consecutive posts don't share a color."
@@ -412,6 +468,7 @@ collections:
               - label: "Featured image"
                 name: "image"
                 widget: "image"
+                required: false
                 choose_url: true
                 hint: "Shown as the card thumbnail and the large hero image on the post page. You can upload a file or paste an image URL."
 
@@ -424,10 +481,12 @@ collections:
               - label: "Body"
                 name: "body"
                 widget: "text"
+                required: false
                 hint: "The full post. Leave a blank line between paragraphs. Basic Markdown (e.g. **bold**, *italic*, [links](https://example.com)) is supported."
 
               - label: "URL slug"
                 name: "slug"
                 widget: "string"
+                required: false
                 pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase letters, numbers, and hyphens only — no spaces (e.g. my-post-title)."]
                 hint: "Forms the post's web address. Set this once, when first creating the post, and avoid changing it afterwards — editing the slug on a published post breaks any links people have already saved or shared."
