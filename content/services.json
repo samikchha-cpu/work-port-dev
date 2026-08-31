@@ -1,0 +1,49 @@
+{
+  "services": [
+    {
+      "slug": "fintech-growth-audit",
+      "navTitle": "Services",
+      "seoTitle": "Fintech Growth Audit Checklist — Piyush Roy",
+      "seoDescription": "A focused audit checklist for finding the one screen or step quietly capping your fintech or SaaS product's growth — sent straight to your inbox.",
+      "hero": {
+        "eyebrow": "Growth Audit · For fintech & SaaS teams",
+        "headline": "Find the one screen quietly capping your growth.",
+        "visual": "",
+        "support": "Most funnels don't leak everywhere — they leak in one place. This is a short, expert-eye checklist for finding that one screen or step, built from the same clarity-first lens behind the client work on this site.",
+        "ctaLabel": "Get the free audit checklist"
+      },
+      "problem": {
+        "eyebrow": "The problem",
+        "situation": "You can already see the numbers lagging somewhere in the funnel — sign-up, activation, or conversion — but not exactly where or why.",
+        "frustration": "The usual response is another dashboard, another A/B test, or a redesign sprint — expensive ways to go looking for a problem that's often just one confusing screen or one badly-worded step.",
+        "impact": "Every month spent guessing is a month of ad spend and sign-ups quietly leaking out the same door."
+      },
+      "solution": {
+        "eyebrow": "How this works",
+        "headline": "Why · What · How",
+        "why": "In financial products especially, growth problems are almost always clarity problems — one confusing decision point usually costs more than ten missing features.",
+        "what": "A self-audit checklist covering the funnel, onboarding flow and product copy — the same pattern-recognition used across the fintech, SaaS and training-services work shown on this site.",
+        "how": "Work through it against your own product and you'll usually spot the highest-leverage fix within the first few sections — no call required to get value from it."
+      },
+      "socialProof": {
+        "eyebrow": "Proof",
+        "headline": "What clients say",
+        "items": []
+      },
+      "finalCta": {
+        "eyebrow": "Get the checklist",
+        "headlinePre": "If one screen is quietly costing you",
+        "headlineHighlight": "sign-ups and revenue",
+        "headlinePost": "this checklist is the fastest way to find it.",
+        "support": "Enter your details below and the checklist lands in your inbox — no sales call, no obligation.",
+        "sideText": "Takes two minutes. Just the checklist, no spam.",
+        "buttonLabel": "Get the free audit checklist"
+      },
+      "resource": {
+        "name": "Fintech Growth Audit Checklist (PDF)",
+        "type": "pdf",
+        "url": ""
+      }
+    }
+  ]
+}

@@ -146,6 +146,7 @@
   .mobile-menu.open a.mobile-link:nth-child(2){transition-delay:.14s}
   .mobile-menu.open a.mobile-link:nth-child(3){transition-delay:.2s}
   .mobile-menu.open a.mobile-link:nth-child(4){transition-delay:.26s}
+  .mobile-menu.open a.mobile-link:nth-child(5){transition-delay:.32s}
   .mobile-link-index{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:12px;color:#8189ac;font-variant-numeric:tabular-nums}
   .mobile-menu-panel a.mobile-link:hover,.mobile-menu-panel a.mobile-link:active{color:#b7bcf2;padding-left:10px}
   .mobile-menu-panel a.nav-cta{
@@ -427,6 +428,50 @@
     .page-head{padding-top:96px}.post-hero{border-radius:14px}.post-nextprev{grid-template-columns:1fr}.post-nextprev .next{text-align:left}.post-row{grid-template-columns:74px 1fr;gap:12px}.post-thumb{width:74px;height:58px}
   }
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+  /* services page */
+  .service-hero .lede{margin:22px 0 0;max-width:820px;font-family:Georgia,serif;font-size:clamp(30px,4.6vw,58px);line-height:1.1;letter-spacing:-.04em;color:var(--ink)}
+  .service-hero .support{margin:22px 0 0;max-width:640px;color:var(--muted);font-size:17px;line-height:1.75}
+  .service-hero-visual{position:relative;margin-top:36px;height:clamp(200px,32vw,360px);border-radius:22px;overflow:hidden;isolation:isolate}
+  .service-hero-visual img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.35) contrast(1.05) saturate(1.05) brightness(.95)}
+  .service-hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(150deg,var(--indigo) 0%,transparent 62%);mix-blend-mode:multiply;opacity:.4}
+  .service-hero-cta{margin-top:36px}
+  .service-block{padding:80px 0;border-top:1px solid var(--line)}
+  .service-block .lede{margin:0 0 24px;max-width:800px;font-family:Georgia,serif;font-size:clamp(26px,3.4vw,42px);line-height:1.22;letter-spacing:-.03em;color:var(--ink)}
+  .service-block .support{margin:0;max-width:720px;font-family:Georgia,serif;font-size:clamp(18px,1.9vw,22px);line-height:1.55;letter-spacing:-.01em;color:var(--muted)}
+  .service-block .pullquote{margin-top:40px}
+  .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:14px}
+  .approach-card{border:1px solid var(--line);border-radius:20px;background:var(--paper-2);padding:32px 28px;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .approach-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px -22px rgba(18,23,34,.25)}
+  .approach-card .approach-label{display:block;margin-bottom:16px;font-size:11px;font-weight:750;letter-spacing:.16em;text-transform:uppercase;color:var(--indigo)}
+  .approach-card p{margin:0;color:var(--muted);font-size:15px;line-height:1.7}
+  .service-proof-empty{padding:30px 0;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
+  .service-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:56px}
+  .service-card{position:relative;display:block;padding:38px 34px;border:1px solid var(--line);border-radius:22px;background:var(--paper-2);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .service-card:hover{transform:translateY(-6px);box-shadow:0 24px 46px -24px rgba(18,23,34,.28)}
+  .service-card h3{margin:0 0 12px;font:400 clamp(24px,2.6vw,30px)/1.15 Georgia,serif;letter-spacing:-.02em}
+  .service-card p{margin:0;color:var(--muted);font-size:15px;line-height:1.65}
+  .service-card span.arrow{position:absolute;top:34px;right:32px;color:var(--indigo);transition:transform .3s var(--ease)}
+  .service-card:hover span.arrow{transform:translate(4px,-4px)}
+
+  /* lead capture drawer (reuses .case-panel/.case-backdrop visual language) */
+  .lead-field{margin-bottom:26px}
+  .lead-field label{display:block;margin-bottom:8px;font-size:11px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .lead-field input{width:100%;padding:12px 2px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;font-size:16px;color:var(--ink);transition:border-color .25s ease}
+  .lead-field input:focus{outline:0;border-bottom-color:var(--indigo)}
+  .lead-field input[aria-invalid="true"]{border-bottom-color:#b3413a}
+  .lead-field-error{display:block;min-height:16px;margin-top:6px;font-size:12px;color:#b3413a}
+  .lead-submit{width:100%;justify-content:center;border:0;cursor:pointer;font:inherit;margin-top:8px}
+  .lead-submit:disabled{opacity:.55;cursor:progress}
+  .lead-status{margin-top:20px;padding:15px 18px;border-radius:14px;font-size:13.5px;line-height:1.6}
+  .lead-status.success{background:rgba(49,72,199,.08);color:var(--ink);border:1px solid rgba(49,72,199,.22)}
+  .lead-status.error{background:rgba(179,65,58,.08);color:#7a2d29;border:1px solid rgba(179,65,58,.22)}
+  .lead-note{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.65}
+  .lead-note a{text-decoration:underline;color:var(--muted)}
+  @media(max-width:680px){
+    .approach-grid{grid-template-columns:1fr}
+    .service-block{padding:56px 0}
+  }
 </style>
 </head>
 <body>
@@ -436,7 +481,41 @@
   <div class="case-inner" id="caseInner"></div>
 </aside>
 
-<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="#subscribe">Subscribe</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
+<div class="case-backdrop" id="leadBackdrop"></div>
+<aside class="case-panel" id="leadPanel" aria-hidden="true" aria-label="Get the resource" role="dialog" aria-modal="true">
+  <div class="case-inner" id="leadInner">
+    <div class="case-top">
+      <p class="case-eyebrow" id="leadEyebrow">Get started</p>
+      <button class="case-close" id="leadCloseBtn" type="button">Close ✕</button>
+    </div>
+    <h2 class="case-headline" id="leadHeadline">Tell us where to send it.</h2>
+    <p class="case-subhead" id="leadSubhead">A few details, then the resource lands in your inbox.</p>
+    <form id="leadForm" novalidate>
+      <div class="lead-field">
+        <label for="leadName">Full name</label>
+        <input type="text" id="leadName" name="name" autocomplete="name" aria-describedby="leadNameError" required>
+        <span class="lead-field-error" id="leadNameError"></span>
+      </div>
+      <div class="lead-field">
+        <label for="leadEmail">Email address</label>
+        <input type="email" id="leadEmail" name="email" autocomplete="email" aria-describedby="leadEmailError" required>
+        <span class="lead-field-error" id="leadEmailError"></span>
+      </div>
+      <div class="lead-field">
+        <label for="leadPhone">Mobile number</label>
+        <input type="tel" id="leadPhone" name="phone" autocomplete="tel" placeholder="+91 98765 43210" aria-describedby="leadPhoneError leadPhoneHint" required>
+        <span class="lead-field-error" id="leadPhoneError"></span>
+      </div>
+      <button class="case-cta primary lead-submit" id="leadSubmitBtn" type="submit">
+        <span id="leadSubmitLabel">Send it to me →</span>
+      </button>
+      <div class="lead-status" id="leadStatus" role="status" hidden></div>
+      <p class="lead-note" id="leadPhoneHint">Include your country code. Your details are only used to send you this resource — see the <a href="#/privacy">privacy policy</a>.</p>
+    </form>
+  </div>
+</aside>
+
+<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="#/services" class="nav-link">Services</a><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="#subscribe">Subscribe</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
@@ -449,8 +528,9 @@
     <div class="mobile-menu-links">
       <a href="#top" class="mobile-link"><span class="mobile-link-index">01</span>Home</a>
       <a href="#work" class="mobile-link"><span class="mobile-link-index">02</span>Work</a>
-      <a href="#writing" class="mobile-link"><span class="mobile-link-index">03</span>Blog</a>
-      <a href="#about" class="mobile-link"><span class="mobile-link-index">04</span>About</a>
+      <a href="#/services" class="mobile-link"><span class="mobile-link-index">03</span>Services</a>
+      <a href="#writing" class="mobile-link"><span class="mobile-link-index">04</span>Blog</a>
+      <a href="#about" class="mobile-link"><span class="mobile-link-index">05</span>About</a>
     </div>
     <a class="nav-cta" href="#subscribe">Subscribe</a>
   </nav>
@@ -500,7 +580,7 @@
   <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow" id="testimonialsEyebrow">Testimonials</p><h2 class="display" id="testimonialsHeadline">What people say after working together.</h2></div><p id="testimonialsDescription">Straight from the people behind the work.</p></div><div class="testimonial-wrap"><div class="testimonial-nav"><button type="button" id="testimonialPrev" aria-label="Previous testimonial">←</button><button type="button" id="testimonialNext" aria-label="Next testimonial">→</button></div><div class="testimonial-grid" id="testimonialList"></div></div></div></section>
 
   <section class="section" id="about"><div class="chapter">05</div><div class="shell about-grid reveal">
-    <div class="about-visual"><img id="aboutPhoto" src="images/about-photo.jpg" alt="Piyush working at a laptop in a sunlit office" loading="lazy" decoding="async"><div class="about-scrim"></div><div class="about-caption"><b id="aboutName">Piyush Roy</b><span id="aboutLocation">New Delhi</span></div></div>
+    <div class="about-visual"><img id="aboutPhoto" src="images/about-photo.jpg" alt="Piyush working at a laptop in a sunlit office" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='images/about-photo.jpg'"><div class="about-scrim"></div><div class="about-caption"><b id="aboutName">Piyush Roy</b><span id="aboutLocation">New Delhi</span></div></div>
     <div class="about-copy">
       <p class="lede" id="aboutLede">I'm Piyush, based in New Delhi. I spend my time making investment products simpler than the industry usually allows.</p>
       <p class="support" id="aboutSupport1">At Perccent, Cybrilla and a few platforms before them, the work has always circled the same question — what does this person actually need to see to make a good decision, and what can we remove.</p>
@@ -563,7 +643,67 @@
     </div>
   </div>
 </section>
-<footer><div class="shell footer-grid"><p class="footer-title" id="footerName">Piyush Roy</p><div class="footer-links"><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#/privacy">Privacy</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
+<section id="view-services" class="view section" hidden>
+  <div class="shell page-head">
+    <a class="back-link reveal" href="#top">← Back to site</a>
+    <p class="eyebrow reveal" style="margin-top:26px">Services</p>
+    <h1 class="display reveal">Ways to work together.</h1>
+    <p class="reveal">Pick a service below for the full details.</p>
+  </div>
+  <div class="shell" style="padding-top:0">
+    <div class="service-cards" id="serviceCards"></div>
+  </div>
+</section>
+
+<section id="view-service" class="view section" hidden>
+  <div class="shell page-head service-hero">
+    <a class="back-link reveal" href="#/services">← All services</a>
+    <p class="eyebrow reveal" id="serviceEyebrow" style="margin-top:26px"></p>
+    <h1 class="lede reveal" id="serviceHeadline"></h1>
+    <p class="support reveal" id="serviceSupport"></p>
+    <div class="service-hero-visual reveal" id="serviceHeroVisual" hidden><img id="serviceHeroVisualImg" src="" alt="" loading="lazy" decoding="async"></div>
+    <div class="service-hero-cta reveal"><button class="collab-cta" id="serviceHeroCtaBtn" type="button"><span id="serviceHeroCtaLabel">Get started</span><span class="collab-cta__icon">→</span></button></div>
+  </div>
+
+  <section class="shell service-block reveal">
+    <p class="eyebrow" id="serviceProblemEyebrow">The problem</p>
+    <p class="lede" id="serviceProblemSituation"></p>
+    <p class="support" id="serviceProblemFrustration"></p>
+    <div class="pullquote"><span id="serviceProblemImpact"></span></div>
+  </section>
+
+  <section class="shell service-block reveal">
+    <p class="eyebrow" id="serviceSolutionEyebrow">How this works</p>
+    <h2 class="display" id="serviceSolutionHeadline" style="margin:0 0 8px;font-size:clamp(30px,3.6vw,46px)"></h2>
+    <div class="approach-grid">
+      <div class="approach-card"><span class="approach-label">Why</span><p id="serviceWhy"></p></div>
+      <div class="approach-card"><span class="approach-label">What</span><p id="serviceWhat"></p></div>
+      <div class="approach-card"><span class="approach-label">How</span><p id="serviceHow"></p></div>
+    </div>
+  </section>
+
+  <section class="shell service-block reveal" id="serviceProofSection">
+    <p class="eyebrow" id="serviceProofEyebrow">Proof</p>
+    <h2 class="display" id="serviceProofHeadline" style="margin:0 0 30px;font-size:clamp(30px,3.6vw,46px)"></h2>
+    <div class="testimonial-grid" id="serviceProofList"></div>
+    <p class="service-proof-empty" id="serviceProofEmpty" hidden>Client results for this service will appear here as they're gathered.</p>
+  </section>
+
+  <section class="section collab-section service-block" style="border-top:1px solid var(--line)"><div class="collab-deco" aria-hidden="true"></div><div class="shell collab reveal">
+    <div class="collab-main">
+      <p class="collab-eyebrow"><span class="collab-dot"></span><span class="eyebrow" style="margin:0" id="serviceCtaEyebrow">Get started</span><span class="collab-eyebrow-line"></span></p>
+      <h2 class="display"><span id="serviceCtaHeadlinePre"></span> <span><span class="collab-highlight" id="serviceCtaHeadlineHighlight"></span></span> <span id="serviceCtaHeadlinePost"></span></h2>
+      <p class="collab-support" id="serviceCtaSupport"></p>
+    </div>
+    <div class="collab-side">
+      <div class="collab-arrow">→</div>
+      <p class="collab-side-text" id="serviceCtaSideText"></p>
+      <button class="collab-cta" id="serviceFinalCtaBtn" type="button"><span id="serviceFinalCtaLabel">Get started</span><span class="collab-cta__icon">→</span></button>
+    </div>
+  </div></section>
+</section>
+
+<footer><div class="shell footer-grid"><p class="footer-title" id="footerName">Piyush Roy</p><div class="footer-links"><a href="#/services">Services</a><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#/privacy">Privacy</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
 <script>
@@ -583,6 +723,12 @@
   }
 
   let POSTS=[];
+  let SERVICES=[];
+  let currentService=null;
+  // Local, always-available fallback used whenever a CMS image field is
+  // blank or its URL fails to load (e.g. an external placeholder service
+  // being rate-limited, or a deleted media file). Never points off-site.
+  const FALLBACK_IMAGE='images/work-office-1.jpg';
 
   function formatDate(iso){
     if(!iso) return '';
@@ -592,10 +738,10 @@
   }
 
   function essayCardHTML(p,delay){
-    return `<a class="essay reveal" href="#/post/${p.slug}" style="transition-delay:${delay}s;--accent:var(--${p.accent})"><div class="essay-media"><img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async"></div><div><span class="essay-date">${formatDate(p.date)}</span><h4>${p.title}</h4><p>${p.excerpt}</p></div><div class="essay-meta"><span>${p.category}</span><span>${p.readTime}</span></div></a>`;
+    return `<a class="essay reveal" href="#/post/${p.slug}" style="transition-delay:${delay}s;--accent:var(--${p.accent})"><div class="essay-media"><img src="${p.image||FALLBACK_IMAGE}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"></div><div><span class="essay-date">${formatDate(p.date)}</span><h4>${p.title}</h4><p>${p.excerpt}</p></div><div class="essay-meta"><span>${p.category}</span><span>${p.readTime}</span></div></a>`;
   }
   function postRowHTML(p){
-    return `<a class="post-row reveal" href="#/post/${p.slug}" style="--accent:var(--${p.accent})"><strong>${formatDate(p.date)}</strong><div class="post-thumb"><img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async"></div><div><h3>${p.title}</h3><p>${p.excerpt}</p></div><span class="meta">${p.category} · ${p.readTime}</span></a>`;
+    return `<a class="post-row reveal" href="#/post/${p.slug}" style="--accent:var(--${p.accent})"><strong>${formatDate(p.date)}</strong><div class="post-thumb"><img src="${p.image||FALLBACK_IMAGE}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"></div><div><h3>${p.title}</h3><p>${p.excerpt}</p></div><span class="meta">${p.category} · ${p.readTime}</span></a>`;
   }
 
   function renderLists(){
@@ -613,7 +759,8 @@
     document.getElementById('postDate').textContent=formatDate(p.date);
     document.getElementById('postReadTime').textContent=p.readTime+' read';
     const heroImg=document.getElementById('postHeroImg');
-    heroImg.src=p.image;
+    heroImg.onerror=function(){ this.onerror=null; this.src=FALLBACK_IMAGE; };
+    heroImg.src=p.image||FALLBACK_IMAGE;
     heroImg.alt=p.title;
     const bodyEl=document.getElementById('postBody');
     bodyEl.innerHTML=(typeof marked!=='undefined'?marked.parse(p.body||''):('<p>'+(p.body||'').replace(/\n\n/g,'</p><p>')+'</p>'));
@@ -631,6 +778,73 @@
     else if(newer) nav=`<a class="solo" href="#/post/${newer.slug}"><span class="dir">← Newer</span><h4>${newer.title}</h4></a>`;
     else if(older) nav=`<a class="solo" href="#/post/${older.slug}"><span class="dir">Older →</span><h4>${older.title}</h4></a>`;
     document.getElementById('postNextPrev').innerHTML=nav;
+  }
+
+  function serviceCardHTML(s){
+    const h=s.hero||{};
+    return `<a class="service-card reveal" href="#/service/${s.slug}"><span class="arrow" aria-hidden="true">↗</span><h3>${h.headline||s.navTitle||'Service'}</h3><p>${h.support||''}</p></a>`;
+  }
+
+  function renderServicesIndex(){
+    const grid=document.getElementById('serviceCards');
+    if(grid) grid.innerHTML=SERVICES.map(serviceCardHTML).join('');
+  }
+
+  function renderService(s){
+    currentService=s;
+    const h=s.hero||{}, prob=s.problem||{}, sol=s.solution||{}, proof=s.socialProof||{}, cta=s.finalCta||{};
+    document.getElementById('serviceEyebrow').textContent=h.eyebrow||'';
+    document.getElementById('serviceHeadline').textContent=h.headline||'';
+    document.getElementById('serviceSupport').textContent=h.support||'';
+    const heroVisual=document.getElementById('serviceHeroVisual');
+    const heroVisualImg=document.getElementById('serviceHeroVisualImg');
+    if(h.visual){ heroVisual.hidden=false; heroVisualImg.onerror=function(){ heroVisual.hidden=true; }; heroVisualImg.src=h.visual; heroVisualImg.alt=h.headline||''; }
+    else { heroVisual.hidden=true; heroVisualImg.src=''; }
+    document.getElementById('serviceHeroCtaLabel').textContent=h.ctaLabel||'Get started';
+
+    document.getElementById('serviceProblemEyebrow').textContent=prob.eyebrow||'The problem';
+    document.getElementById('serviceProblemSituation').textContent=prob.situation||'';
+    document.getElementById('serviceProblemFrustration').textContent=prob.frustration||'';
+    document.getElementById('serviceProblemImpact').textContent=prob.impact||'';
+
+    document.getElementById('serviceSolutionEyebrow').textContent=sol.eyebrow||'How this works';
+    document.getElementById('serviceSolutionHeadline').textContent=sol.headline||'';
+    document.getElementById('serviceWhy').textContent=sol.why||'';
+    document.getElementById('serviceWhat').textContent=sol.what||'';
+    document.getElementById('serviceHow').textContent=sol.how||'';
+
+    const proofSection=document.getElementById('serviceProofSection');
+    const proofList=document.getElementById('serviceProofList');
+    const proofEmpty=document.getElementById('serviceProofEmpty');
+    const items=(proof.items||[]).filter(it=>it && (it.quote||it.logo||it.link));
+    document.getElementById('serviceProofEyebrow').textContent=proof.eyebrow||'Proof';
+    document.getElementById('serviceProofHeadline').textContent=proof.headline||'';
+    if(items.length){
+      proofList.hidden=false; proofEmpty.hidden=true;
+      proofList.innerHTML=items.map(it=>{
+        if(it.type==='testimonial'){
+          return `<div class="testimonial-card"><p class="testimonial-quote">&ldquo;${it.quote||''}&rdquo;</p><div class="testimonial-footer"><span>${it.name||''}</span><span class="testimonial-company">${it.role||''}</span></div></div>`;
+        }
+        if(it.type==='video-testimonial'){
+          return `<div class="testimonial-card">${it.quote?`<p class="testimonial-quote">&ldquo;${it.quote}&rdquo;</p>`:''}<div class="testimonial-footer"><span>${it.name||''}</span>${it.videoUrl?`<a class="testimonial-company" href="${it.videoUrl}" target="_blank" rel="noopener noreferrer">▶ Watch</a>`:''}</div></div>`;
+        }
+        // pr / media / licence / patent / other — logo or name, optional link
+        const body=`${it.logo?`<img src="${it.logo}" alt="${it.name||''}" style="max-height:32px;object-fit:contain" onerror="this.style.display='none'">`:''}${it.name?`<p style="margin-top:14px;font-size:15px">${it.name}</p>`:''}${it.quote?`<p style="margin-top:6px;color:var(--muted);font-size:13px">${it.quote}</p>`:''}`;
+        return it.link?`<a class="testimonial-card" href="${it.link}" target="_blank" rel="noopener noreferrer" style="display:block">${body}</a>`:`<div class="testimonial-card">${body}</div>`;
+      }).join('');
+    } else {
+      proofList.hidden=true; proofEmpty.hidden=false;
+    }
+
+    document.getElementById('serviceCtaEyebrow').textContent=cta.eyebrow||'Get started';
+    document.getElementById('serviceCtaHeadlinePre').textContent=cta.headlinePre||'';
+    document.getElementById('serviceCtaHeadlineHighlight').textContent=cta.headlineHighlight||'';
+    document.getElementById('serviceCtaHeadlinePost').textContent=cta.headlinePost||'';
+    document.getElementById('serviceCtaSupport').textContent=cta.support||'';
+    document.getElementById('serviceCtaSideText').textContent=cta.sideText||'';
+    document.getElementById('serviceFinalCtaLabel').textContent=cta.buttonLabel||'Get started';
+
+    document.querySelectorAll('#view-service .reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el); } });
   }
 
   const DEFAULT_TITLE='Piyush Roy — Portfolio';
@@ -655,6 +869,13 @@
     } else if(hash==='#/privacy'){
       activateView(document.getElementById('view-privacy')); showHome=false; window.scrollTo(0,0);
       setDocMeta('Privacy Policy — Piyush Roy','How this site handles your data.');
+    } else if(hash.indexOf('#/service/')===0){
+      const slug=hash.slice(10);
+      const s=SERVICES.find(x=>x.slug===slug);
+      if(s){ renderService(s); activateView(document.getElementById('view-service')); showHome=false; window.scrollTo(0,0); setDocMeta((s.seoTitle||s.hero&&s.hero.headline||'Services')+' — Piyush Roy',s.seoDescription||DEFAULT_DESC); }
+    } else if(hash==='#/services'){
+      activateView(document.getElementById('view-services')); showHome=false; window.scrollTo(0,0);
+      setDocMeta('Services — Piyush Roy','Ways to work with Piyush Roy on fintech product growth and clarity.');
     }
     if(showHome){
       document.getElementById('top').hidden=false;
@@ -676,12 +897,12 @@
     const grid=document.getElementById('workGrid');
     if(!grid) return;
     PROJECTS=projects;
-    grid.innerHTML=projects.map((p,i)=>`<div class="work-card reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View case study: ${p.title}" data-case-index="${i}"><img src="${p.image}" alt="${p.alt||''}" loading="lazy" decoding="async"><div class="work-top"><span>${p.company}</span><span>${p.meta}</span></div><div class="work-bottom"><h3 class="work-title">${p.title}</h3><span class="glass-link" aria-hidden="true">↗</span></div></div>`).join('');
+    grid.innerHTML=projects.map((p,i)=>`<div class="work-card reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View case study: ${p.title}" data-case-index="${i}"><img src="${p.image||FALLBACK_IMAGE}" alt="${p.alt||''}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"><div class="work-top"><span>${p.company}</span><span>${p.meta}</span></div><div class="work-bottom"><h3 class="work-title">${p.title}</h3><span class="glass-link" aria-hidden="true">↗</span></div></div>`).join('');
   }
   function renderTestimonials(items){
     const list=document.getElementById('testimonialList');
     if(!list) return;
-    list.innerHTML=items.map((t,i)=>`<div class="testimonial-card reveal" style="transition-delay:${(i*0.08).toFixed(2)}s"><div class="testimonial-badge">${t.photo?`<img class="testimonial-badge-avatar" src="${t.photo}" alt="" loading="lazy" decoding="async">`:`<span class="testimonial-badge-dot"></span>`}<span>${t.name||''}</span></div><p class="testimonial-quote">${t.quote}</p><div class="testimonial-footer"><span class="testimonial-role">${t.role||''}</span><span class="testimonial-company">${t.logo?`<img class="testimonial-company-logo" src="${t.logo}" alt="" loading="lazy" decoding="async">`:''}${t.company||''}</span></div></div>`).join('');
+    list.innerHTML=items.map((t,i)=>`<div class="testimonial-card reveal" style="transition-delay:${(i*0.08).toFixed(2)}s"><div class="testimonial-badge">${t.photo?`<img class="testimonial-badge-avatar" src="${t.photo}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">`:`<span class="testimonial-badge-dot"></span>`}<span>${t.name||''}</span></div><p class="testimonial-quote">${t.quote}</p><div class="testimonial-footer"><span class="testimonial-role">${t.role||''}</span><span class="testimonial-company">${t.logo?`<img class="testimonial-company-logo" src="${t.logo}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">`:''}${t.company||''}</span></div></div>`).join('');
 
     const prevBtn=document.getElementById('testimonialPrev');
     const nextBtn=document.getElementById('testimonialNext');
@@ -715,7 +936,7 @@
     if(!about) return;
     const set=(id,val)=>{ const el=document.getElementById(id); if(el && val!=null) el.textContent=val; };
     const img=document.getElementById('aboutPhoto');
-    if(img && about.photo) img.src=about.photo;
+    if(img && about.photo){ img.onerror=function(){ this.onerror=null; this.src='images/about-photo.jpg'; }; img.src=about.photo; }
     set('aboutName',about.name);
     set('aboutLocation',about.location);
     set('aboutLede',about.lede);
@@ -797,14 +1018,19 @@
     renderPage(data);
   }).catch(err=>console.error('Failed to load content/page.json:',err));
 
-  fetch('content/posts.json').then(r=>r.json()).then(data=>{
+  Promise.all([
+    fetch('content/posts.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/posts.json:',err); return {posts:[]}; }),
+    fetch('content/services.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/services.json:',err); return {services:[]}; })
+  ]).then(([postsData,servicesData])=>{
     // Always sort newest-first by actual date, regardless of the order
     // posts happen to be stored in (Decap CMS appends new entries to the
     // end of the list, so this can't rely on file order).
-    POSTS=(data.posts||[]).slice().sort((a,b)=>new Date(b.date)-new Date(a.date));
+    POSTS=(postsData.posts||[]).slice().sort((a,b)=>new Date(b.date)-new Date(a.date));
+    SERVICES=servicesData.services||[];
     renderLists();
+    renderServicesIndex();
     route();
-  }).catch(err=>{ console.error('Failed to load content/posts.json:',err); route(); });
+  });
 
 
   const navToggle=document.getElementById('navToggle');
@@ -915,6 +1141,122 @@
   caseBackdrop?.addEventListener('click',closeCaseStudy);
   caseInner?.addEventListener('click',e=>{ if(e.target.id==='caseCloseBtn') closeCaseStudy(); });
   document.addEventListener('keydown',e=>{ if(e.key==='Escape' && casePanel.classList.contains('open')) closeCaseStudy(); });
+
+  // --- Lead-capture drawer (Services page CTA) ---------------------------
+  // NOTE: the form below fully validates and shows loading/success/error
+  // states, but the actual submit still only *simulates* success (see
+  // submitLead below). Phase 2 replaces submitLead's contents with a real
+  // fetch() to wherever leads get stored + the resource-delivery email is
+  // triggered from. Don't link this page from ads/emails until that's done.
+  const leadBackdrop=document.getElementById('leadBackdrop');
+  const leadPanel=document.getElementById('leadPanel');
+  const leadForm=document.getElementById('leadForm');
+  const leadSubmitBtn=document.getElementById('leadSubmitBtn');
+  const leadSubmitLabel=document.getElementById('leadSubmitLabel');
+  const leadStatus=document.getElementById('leadStatus');
+  let leadLastTrigger=null;
+
+  function openLeadForm(triggerEl){
+    leadLastTrigger=triggerEl||null;
+    const cta=(currentService&&currentService.finalCta)||{};
+    document.getElementById('leadEyebrow').textContent=cta.eyebrow||'Get started';
+    document.getElementById('leadHeadline').textContent='Tell us where to send it.';
+    document.getElementById('leadSubhead').textContent=cta.support||'A few details, then the resource lands in your inbox.';
+    leadForm.reset();
+    leadStatus.hidden=true; leadStatus.className='lead-status';
+    ['leadName','leadEmail','leadPhone'].forEach(id=>{
+      const el=document.getElementById(id);
+      el.disabled=false;
+      el.setAttribute('aria-invalid','false');
+      document.getElementById(id+'Error').textContent='';
+    });
+    leadSubmitBtn.disabled=false; leadSubmitBtn.hidden=false; leadSubmitLabel.textContent='Send it to me →';
+    leadPanel.classList.add('open');
+    leadBackdrop.classList.add('open');
+    leadPanel.setAttribute('aria-hidden','false');
+    document.body.classList.add('case-open');
+    requestAnimationFrame(()=>document.getElementById('leadName')?.focus());
+  }
+  function closeLeadForm(){
+    leadPanel.classList.remove('open');
+    leadBackdrop.classList.remove('open');
+    leadPanel.setAttribute('aria-hidden','true');
+    document.body.classList.remove('case-open');
+    if(leadLastTrigger) leadLastTrigger.focus();
+  }
+  leadBackdrop?.addEventListener('click',closeLeadForm);
+  document.getElementById('leadCloseBtn')?.addEventListener('click',closeLeadForm);
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && leadPanel.classList.contains('open')) closeLeadForm(); });
+  document.getElementById('serviceHeroCtaBtn')?.addEventListener('click',e=>openLeadForm(e.currentTarget));
+  document.getElementById('serviceFinalCtaBtn')?.addEventListener('click',e=>openLeadForm(e.currentTarget));
+
+  function setFieldError(id,message){
+    const input=document.getElementById(id);
+    const err=document.getElementById(id+'Error');
+    input.setAttribute('aria-invalid',message?'true':'false');
+    err.textContent=message||'';
+  }
+
+  function validateLeadForm(){
+    let firstInvalid=null;
+    const name=document.getElementById('leadName').value.trim();
+    const email=document.getElementById('leadEmail').value.trim();
+    const phone=document.getElementById('leadPhone').value.trim();
+
+    if(!name){ setFieldError('leadName','Enter your full name.'); firstInvalid=firstInvalid||'leadName'; }
+    else setFieldError('leadName','');
+
+    const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if(!email){ setFieldError('leadEmail','Enter your email address.'); firstInvalid=firstInvalid||'leadEmail'; }
+    else if(!emailOk){ setFieldError('leadEmail','Enter a valid email address.'); firstInvalid=firstInvalid||'leadEmail'; }
+    else setFieldError('leadEmail','');
+
+    // Loosely E.164-shaped: optional leading +, 8-15 digits total, spaces
+    // allowed since people type them naturally (stripped before checking).
+    const phoneDigits=phone.replace(/[\s\-()]/g,'');
+    const phoneOk=/^\+?\d{8,15}$/.test(phoneDigits);
+    if(!phone){ setFieldError('leadPhone','Enter your mobile number.'); firstInvalid=firstInvalid||'leadPhone'; }
+    else if(!phoneOk){ setFieldError('leadPhone','Include your country code, e.g. +91 98765 43210.'); firstInvalid=firstInvalid||'leadPhone'; }
+    else setFieldError('leadPhone','');
+
+    if(firstInvalid) document.getElementById(firstInvalid).focus();
+    return !firstInvalid;
+  }
+
+  // PHASE 2 TODO: replace this simulated call with a real submission —
+  // e.g. fetch('/.netlify/functions/lead-capture', {method:'POST', body: JSON.stringify(payload)})
+  // or a Netlify Forms POST — once the storage + resource-email approach is decided.
+  function submitLead(payload){
+    console.log('[lead capture — Phase 1 stub, not actually sent anywhere yet]',payload);
+    return new Promise(resolve=>setTimeout(resolve,900));
+  }
+
+  leadForm?.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!validateLeadForm()) return;
+    const payload={
+      name:document.getElementById('leadName').value.trim(),
+      email:document.getElementById('leadEmail').value.trim(),
+      phone:document.getElementById('leadPhone').value.trim(),
+      service:currentService?currentService.slug:null,
+      submittedAt:new Date().toISOString(),
+      source:location.hash
+    };
+    leadSubmitBtn.disabled=true; leadSubmitLabel.textContent='Sending…';
+    leadStatus.hidden=true;
+    submitLead(payload).then(()=>{
+      leadStatus.hidden=false;
+      leadStatus.className='lead-status success';
+      leadStatus.textContent="Check your email — we've sent the resource to you.";
+      leadForm.querySelectorAll('input').forEach(i=>i.disabled=true);
+      leadSubmitBtn.hidden=true;
+    }).catch(()=>{
+      leadSubmitBtn.disabled=false; leadSubmitLabel.textContent='Send it to me →';
+      leadStatus.hidden=false;
+      leadStatus.className='lead-status error';
+      leadStatus.textContent="Something went wrong on our end — please try again in a moment.";
+    });
+  });
 
   const heroEl=document.querySelector('.hero');
   if(heroEl && matchMedia('(prefers-reduced-motion: no-preference)').matches && matchMedia('(min-width: 961px)').matches){

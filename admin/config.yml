@@ -406,6 +406,223 @@ collections:
                 required: false
                 hint: "Just the email address, e.g. name@example.com — no 'mailto:' needed. Leave blank to keep the site's current default (piyush@funnelprolabs.com)."
 
+  - name: "services"
+    label: "Services"
+    description: "Each entry here is a full standalone landing page, shown at roypiyush.com/#/services/[slug]. Add more services here later without touching any design — each one automatically gets the same layout. Every field below is marked DRAFT in the starter entry — replace with real copy before this page goes live to visitors."
+    files:
+      - name: "services"
+        label: "All Services"
+        file: "content/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.navTitle}}"
+            collapsed: true
+            fields:
+              - label: "URL slug"
+                name: "slug"
+                widget: "string"
+                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase letters, numbers, and hyphens only — no spaces (e.g. fintech-growth-audit)."]
+                hint: "Forms this service's web address. Set once; avoid changing after sharing the link anywhere (ads, email, social)."
+              - label: "Menu label"
+                name: "navTitle"
+                widget: "string"
+                required: false
+                hint: "Shown in the navbar and mobile menu link to this page, e.g. 'Services'."
+              - label: "SEO — Page title"
+                name: "seoTitle"
+                widget: "string"
+                required: false
+                hint: "Shown in the browser tab and search results. Defaults to the Hero headline if left blank."
+              - label: "SEO — Meta description"
+                name: "seoDescription"
+                widget: "text"
+                required: false
+                hint: "The one or two sentences shown under the title in Google search results."
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - label: "Eyebrow"
+                    name: "eyebrow"
+                    widget: "string"
+                    required: false
+                  - label: "Headline"
+                    name: "headline"
+                    widget: "string"
+                    required: false
+                  - label: "Visual"
+                    name: "visual"
+                    widget: "image"
+                    required: false
+                    hint: "Optional supporting image shown under the sub-heading, styled like the accent-tinted image on blog post pages. Leave blank for a text-only hero."
+                  - label: "Supporting line"
+                    name: "support"
+                    widget: "text"
+                    required: false
+                    hint: "What's on offer, who it's for, and the value the visitor gets. One or two sentences."
+                  - label: "Button label"
+                    name: "ctaLabel"
+                    widget: "string"
+                    required: false
+                    hint: "Defaults to 'Get started' if left blank."
+              - label: "Problem statement"
+                name: "problem"
+                widget: "object"
+                fields:
+                  - label: "Eyebrow"
+                    name: "eyebrow"
+                    widget: "string"
+                    required: false
+                  - label: "Current situation"
+                    name: "situation"
+                    widget: "text"
+                    required: false
+                    hint: "Where the visitor is right now — shown as the large opening line."
+                  - label: "Frustration"
+                    name: "frustration"
+                    widget: "text"
+                    required: false
+                    hint: "Why the usual fixes for this haven't worked."
+                  - label: "Impact"
+                    name: "impact"
+                    widget: "text"
+                    required: false
+                    hint: "What it's costing them to leave this unsolved — shown highlighted, like a pull-quote."
+              - label: "Solution — Why / What / How"
+                name: "solution"
+                widget: "object"
+                fields:
+                  - label: "Eyebrow"
+                    name: "eyebrow"
+                    widget: "string"
+                    required: false
+                  - label: "Headline"
+                    name: "headline"
+                    widget: "string"
+                    required: false
+                  - label: "Why"
+                    name: "why"
+                    widget: "text"
+                    required: false
+                    hint: "Why this problem is worth solving."
+                  - label: "What"
+                    name: "what"
+                    widget: "text"
+                    required: false
+                    hint: "What Piyush actually provides."
+                  - label: "How"
+                    name: "how"
+                    widget: "text"
+                    required: false
+                    hint: "How it gets the visitor to the outcome they want."
+              - label: "Social proof"
+                name: "socialProof"
+                widget: "object"
+                required: false
+                fields:
+                  - label: "Eyebrow"
+                    name: "eyebrow"
+                    widget: "string"
+                    required: false
+                  - label: "Headline"
+                    name: "headline"
+                    widget: "string"
+                    required: false
+                  - label: "Proof items"
+                    name: "items"
+                    widget: "list"
+                    required: false
+                    collapsed: true
+                    summary: "{{fields.type}} — {{fields.name}}"
+                    hint: "Add testimonials, logos, or media mentions as they become available. Leave empty for now — the section hides itself automatically rather than showing anything fabricated."
+                    fields:
+                      - label: "Type"
+                        name: "type"
+                        widget: "select"
+                        options: ["testimonial", "video-testimonial", "pr", "media", "licence", "patent", "other"]
+                        default: "testimonial"
+                      - label: "Quote / description"
+                        name: "quote"
+                        widget: "text"
+                        required: false
+                        hint: "The testimonial text, or a short description for PR/media/licence/patent items."
+                      - label: "Name (person, publication, or credential name)"
+                        name: "name"
+                        widget: "string"
+                        required: false
+                      - label: "Role / Company / Issuer"
+                        name: "role"
+                        widget: "string"
+                        required: false
+                      - label: "Logo or image"
+                        name: "logo"
+                        widget: "image"
+                        required: false
+                      - label: "Video URL (for video testimonials)"
+                        name: "videoUrl"
+                        widget: "string"
+                        required: false
+                      - label: "Link (for PR/media mentions)"
+                        name: "link"
+                        widget: "string"
+                        required: false
+              - label: "Final CTA"
+                name: "finalCta"
+                widget: "object"
+                fields:
+                  - label: "Eyebrow"
+                    name: "eyebrow"
+                    widget: "string"
+                    required: false
+                  - label: "Headline — part 1"
+                    name: "headlinePre"
+                    widget: "string"
+                    required: false
+                  - label: "Headline — highlighted phrase"
+                    name: "headlineHighlight"
+                    widget: "string"
+                    required: false
+                  - label: "Headline — part 2"
+                    name: "headlinePost"
+                    widget: "string"
+                    required: false
+                  - label: "Supporting paragraph"
+                    name: "support"
+                    widget: "text"
+                    required: false
+                  - label: "Side note"
+                    name: "sideText"
+                    widget: "text"
+                    required: false
+                  - label: "Button label"
+                    name: "buttonLabel"
+                    widget: "string"
+                    required: false
+                    hint: "Defaults to 'Get started' if left blank."
+              - label: "Resource sent after signup"
+                name: "resource"
+                widget: "object"
+                required: false
+                fields:
+                  - label: "Internal label"
+                    name: "name"
+                    widget: "string"
+                    required: false
+                    hint: "Not shown publicly — e.g. 'Fintech Growth Audit Checklist (PDF)'. So we both know what this service is meant to deliver."
+                  - label: "Resource type"
+                    name: "type"
+                    widget: "select"
+                    options: ["pdf", "video", "link"]
+                    default: "pdf"
+                    required: false
+                  - label: "Resource URL"
+                    name: "url"
+                    widget: "string"
+                    required: false
+                    hint: "Where the actual PDF/video/page lives. Not delivered automatically yet — wiring the email-send is Phase 2 — but storing it here now means Phase 2 doesn't need a schema change."
+
   - name: "posts"
     label: "Blog Posts"
     description: "New posts always appear first on the site automatically, sorted by the Publish date field below — you don't need to reorder anything here."
