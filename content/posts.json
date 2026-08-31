@@ -21,7 +21,7 @@
       "date": "2026-05-01",
       "pullquote": "Sometimes the roadmap's best item is what gets removed.",
       "title": "The feature that should have been a deletion",
-      "image": "https://picsum.photos/seed/feature-deletion/1400/900",
+      "image": "/admin/uploads/the-feature.png",
       "category": "Growth without noise"
     },
     {
@@ -33,7 +33,7 @@
       "date": "2026-04-01",
       "pullquote": "Every new integration quietly adds a decision the user has to make.",
       "title": "Partnerships scale faster than product clarity",
-      "image": "https://picsum.photos/seed/partnerships-scale/1400/900",
+      "image": "/admin/uploads/partnership.png",
       "category": "Growth without noise"
     },
     {
@@ -45,7 +45,7 @@
       "date": "2026-03-01",
       "pullquote": "Independence only feels safe when the product removes doubt.",
       "title": "What \"DIY investing\" actually requires from a product",
-      "image": "https://picsum.photos/seed/diy-investing/1400/900",
+      "image": "/admin/uploads/diy.png",
       "category": "Product & platform strategy"
     },
     {
@@ -57,7 +57,7 @@
       "date": "2026-02-01",
       "pullquote": "Every extra field is a small bet against the user finishing.",
       "title": "The onboarding screen is a trust decision, not a form",
-      "image": "https://picsum.photos/seed/onboarding-trust/1400/900",
+      "image": "/admin/uploads/onboarding.png",
       "category": "Product & platform strategy"
     },
     {
@@ -69,7 +69,7 @@
       "date": "2026-01-01",
       "pullquote": "Most metrics on screen are there for the builder, not the user.",
       "title": "Why your dashboard has too many numbers",
-      "image": "https://picsum.photos/seed/dashboard-numbers/1400/900",
+      "image": "/admin/uploads/dashboard.png",
       "category": "Product & platform strategy"
     }
   ]
