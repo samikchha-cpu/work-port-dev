@@ -490,7 +490,9 @@
     </div>
     <h2 class="case-headline" id="leadHeadline">Tell us where to send it.</h2>
     <p class="case-subhead" id="leadSubhead">A few details, then the resource lands in your inbox.</p>
-    <form id="leadForm" novalidate>
+    <form id="leadForm" name="lead-capture" data-netlify="true" netlify-honeypot="company-website" novalidate>
+      <input type="hidden" name="form-name" value="lead-capture">
+      <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Don't fill this out if you're human: <input name="company-website" tabindex="-1" autocomplete="off"></label></p>
       <div class="lead-field">
         <label for="leadName">Full name</label>
         <input type="text" id="leadName" name="name" autocomplete="name" aria-describedby="leadNameError" required>
@@ -503,7 +505,7 @@
       </div>
       <div class="lead-field">
         <label for="leadPhone">Mobile number</label>
-        <input type="tel" id="leadPhone" name="phone" autocomplete="tel" placeholder="+91" aria-describedby="leadPhoneError leadPhoneHint" required>
+        <input type="tel" id="leadPhone" name="phone" autocomplete="tel" placeholder="+91 98765 43210" aria-describedby="leadPhoneError leadPhoneHint" required>
         <span class="lead-field-error" id="leadPhoneError"></span>
       </div>
       <button class="case-cta primary lead-submit" id="leadSubmitBtn" type="submit">
@@ -1223,12 +1225,27 @@
     return !firstInvalid;
   }
 
-  // PHASE 2 TODO: replace this simulated call with a real submission —
-  // e.g. fetch('/.netlify/functions/lead-capture', {method:'POST', body: JSON.stringify(payload)})
-  // or a Netlify Forms POST — once the storage + resource-email approach is decided.
+  // Sends the lead to Netlify Forms for real. Netlify stores the
+  // submission and (once Zapier/an equivalent is connected to it)
+  // triggers the resource-delivery email — no further code changes
+  // needed here for that part.
   function submitLead(payload){
-    console.log('[lead capture — Phase 1 stub, not actually sent anywhere yet]',payload);
-    return new Promise(resolve=>setTimeout(resolve,900));
+    const body=new URLSearchParams({
+      'form-name':'lead-capture',
+      name:payload.name,
+      email:payload.email,
+      phone:payload.phone,
+      service:payload.service||'',
+      submittedAt:payload.submittedAt,
+      source:payload.source
+    }).toString();
+    return fetch('/',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body
+    }).then(res=>{
+      if(!res.ok) throw new Error('Netlify Forms responded with '+res.status);
+    });
   }
 
   leadForm?.addEventListener('submit',e=>{
