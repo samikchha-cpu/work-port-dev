@@ -1,0 +1,11 @@
+# This site is a single index.html file with client-side routing (no
+# separate file exists at /services, /post/some-slug, etc.). Without this
+# rule, visiting one of those URLs directly, or refreshing the page while
+# on one, would 404 — Netlify has no real file to serve at that path.
+#
+# This rule says: for any path that doesn't match a real file (Netlify
+# always checks for a real file first — this never overrides /admin,
+# /images/*, /content/*, robots.txt, sitemap.xml, etc.), serve index.html
+# with a 200 status, and let the page's own JavaScript render the right
+# view based on the URL.
+/*    /index.html   200

@@ -512,12 +512,12 @@
         <span id="leadSubmitLabel">Send it to me →</span>
       </button>
       <div class="lead-status" id="leadStatus" role="status" hidden></div>
-      <p class="lead-note" id="leadPhoneHint">Include your country code. Your details are only used to send you this resource — see the <a href="#/privacy">privacy policy</a>.</p>
+      <p class="lead-note" id="leadPhoneHint">Include your country code. Your details are only used to send you this resource — see the <a href="/privacy">privacy policy</a>.</p>
     </form>
   </div>
 </aside>
 
-<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="#/services" class="nav-link">Services</a><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="#subscribe">Subscribe</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
+<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="/services" class="nav-link">Services</a><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="#subscribe">Subscribe</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
@@ -530,7 +530,7 @@
     <div class="mobile-menu-links">
       <a href="#top" class="mobile-link"><span class="mobile-link-index">01</span>Home</a>
       <a href="#work" class="mobile-link"><span class="mobile-link-index">02</span>Work</a>
-      <a href="#/services" class="mobile-link"><span class="mobile-link-index">03</span>Services</a>
+      <a href="/services" class="mobile-link"><span class="mobile-link-index">03</span>Services</a>
       <a href="#writing" class="mobile-link"><span class="mobile-link-index">04</span>Blog</a>
       <a href="#about" class="mobile-link"><span class="mobile-link-index">05</span>About</a>
     </div>
@@ -574,7 +574,7 @@
 
   <section class="section" id="writing"><div class="chapter">03</div><div class="shell">
     <div class="section-head reveal"><div><p class="eyebrow" id="writingEyebrow">Blog</p><h2 class="display" id="writingHeadline">Writing on product, growth and the decisions between them.</h2></div><p id="writingDescription">Newest first — recent essays on fintech product strategy and the pressures that test it as platforms scale.</p></div>
-    <div class="essay-grid" id="essayGrid"></div><a class="archive" href="#/blog">Show all posts →</a>
+    <div class="essay-grid" id="essayGrid"></div><a class="archive" href="/blog">Show all posts →</a>
   </div></section>
 
   <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
@@ -618,7 +618,7 @@
 </section>
 <section id="view-post" class="view section" hidden>
   <div class="shell page-head">
-    <a class="back-link reveal" href="#/blog">← All writing</a>
+    <a class="back-link reveal" href="/blog">← All writing</a>
     <p class="eyebrow reveal" id="postCategory" style="margin-top:26px;color:var(--accent)"></p>
     <h1 class="display reveal" id="postTitle"></h1>
     <div class="post-meta-line reveal"><span id="postDate"></span><span id="postReadTime"></span></div>
@@ -659,7 +659,7 @@
 
 <section id="view-service" class="view section" hidden>
   <div class="shell page-head service-hero">
-    <a class="back-link reveal" href="#/services">← All services</a>
+    <a class="back-link reveal" href="/services">← All services</a>
     <p class="eyebrow reveal" id="serviceEyebrow" style="margin-top:26px"></p>
     <h1 class="lede reveal" id="serviceHeadline"></h1>
     <p class="support reveal" id="serviceSupport"></p>
@@ -705,7 +705,7 @@
   </div></section>
 </section>
 
-<footer><div class="shell footer-grid"><p class="footer-title" id="footerName">Piyush Roy</p><div class="footer-links"><a href="#/services">Services</a><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#/privacy">Privacy</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
+<footer><div class="shell footer-grid"><p class="footer-title" id="footerName">Piyush Roy</p><div class="footer-links"><a href="/services">Services</a><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="/privacy">Privacy</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
 <script>
@@ -740,10 +740,10 @@
   }
 
   function essayCardHTML(p,delay){
-    return `<a class="essay reveal" href="#/post/${p.slug}" style="transition-delay:${delay}s;--accent:var(--${p.accent})"><div class="essay-media"><img src="${p.image||FALLBACK_IMAGE}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"></div><div><span class="essay-date">${formatDate(p.date)}</span><h4>${p.title}</h4><p>${p.excerpt}</p></div><div class="essay-meta"><span>${p.category}</span><span>${p.readTime}</span></div></a>`;
+    return `<a class="essay reveal" href="/post/${p.slug}" style="transition-delay:${delay}s;--accent:var(--${p.accent})"><div class="essay-media"><img src="${p.image||FALLBACK_IMAGE}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"></div><div><span class="essay-date">${formatDate(p.date)}</span><h4>${p.title}</h4><p>${p.excerpt}</p></div><div class="essay-meta"><span>${p.category}</span><span>${p.readTime}</span></div></a>`;
   }
   function postRowHTML(p){
-    return `<a class="post-row reveal" href="#/post/${p.slug}" style="--accent:var(--${p.accent})"><strong>${formatDate(p.date)}</strong><div class="post-thumb"><img src="${p.image||FALLBACK_IMAGE}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"></div><div><h3>${p.title}</h3><p>${p.excerpt}</p></div><span class="meta">${p.category} · ${p.readTime}</span></a>`;
+    return `<a class="post-row reveal" href="/post/${p.slug}" style="--accent:var(--${p.accent})"><strong>${formatDate(p.date)}</strong><div class="post-thumb"><img src="${p.image||FALLBACK_IMAGE}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"></div><div><h3>${p.title}</h3><p>${p.excerpt}</p></div><span class="meta">${p.category} · ${p.readTime}</span></a>`;
   }
 
   function renderLists(){
@@ -776,15 +776,15 @@
     const idx=POSTS.findIndex(x=>x.slug===p.slug);
     const newer=POSTS[idx-1], older=POSTS[idx+1];
     let nav='';
-    if(newer && older) nav=`<a href="#/post/${newer.slug}"><span class="dir">← Newer</span><h4>${newer.title}</h4></a><a class="next" href="#/post/${older.slug}"><span class="dir">Older →</span><h4>${older.title}</h4></a>`;
-    else if(newer) nav=`<a class="solo" href="#/post/${newer.slug}"><span class="dir">← Newer</span><h4>${newer.title}</h4></a>`;
-    else if(older) nav=`<a class="solo" href="#/post/${older.slug}"><span class="dir">Older →</span><h4>${older.title}</h4></a>`;
+    if(newer && older) nav=`<a href="/post/${newer.slug}"><span class="dir">← Newer</span><h4>${newer.title}</h4></a><a class="next" href="/post/${older.slug}"><span class="dir">Older →</span><h4>${older.title}</h4></a>`;
+    else if(newer) nav=`<a class="solo" href="/post/${newer.slug}"><span class="dir">← Newer</span><h4>${newer.title}</h4></a>`;
+    else if(older) nav=`<a class="solo" href="/post/${older.slug}"><span class="dir">Older →</span><h4>${older.title}</h4></a>`;
     document.getElementById('postNextPrev').innerHTML=nav;
   }
 
   function serviceCardHTML(s){
     const h=s.hero||{};
-    return `<a class="service-card reveal" href="#/service/${s.slug}"><span class="arrow" aria-hidden="true">↗</span><h3>${h.headline||s.navTitle||'Service'}</h3><p>${h.support||''}</p></a>`;
+    return `<a class="service-card reveal" href="/service/${s.slug}"><span class="arrow" aria-hidden="true">↗</span><h3>${h.headline||s.navTitle||'Service'}</h3><p>${h.support||''}</p></a>`;
   }
 
   function renderServicesIndex(){
@@ -851,38 +851,48 @@
 
   const DEFAULT_TITLE='Piyush Roy — Portfolio';
   const DEFAULT_DESC='Piyush Roy — selected work, writing and perspective.';
-  function setDocMeta(title,desc){
+  function setDocMeta(title,desc,path){
     document.title=title;
+    const desc_=desc||DEFAULT_DESC;
     const m=document.querySelector('meta[name="description"]');
-    if(m) m.setAttribute('content',desc);
+    if(m) m.setAttribute('content',desc_);
+    const url='https://roypiyush.com'+(path&&path!=='/'?path:'/');
+    const canonical=document.querySelector('link[rel="canonical"]');
+    if(canonical) canonical.setAttribute('href',url);
+    const ogUrl=document.querySelector('meta[property="og:url"]');
+    if(ogUrl) ogUrl.setAttribute('content',url);
+    const ogTitle=document.querySelector('meta[property="og:title"]');
+    if(ogTitle) ogTitle.setAttribute('content',title);
+    const ogDesc=document.querySelector('meta[property="og:description"]');
+    if(ogDesc) ogDesc.setAttribute('content',desc_);
   }
 
   function route(){
     document.querySelectorAll('.view').forEach(v=>{ v.hidden=true; });
-    const hash=location.hash;
+    const path=location.pathname.replace(/\/+$/,'')||'/';
     let showHome=true;
-    if(hash.indexOf('#/post/')===0){
-      const slug=hash.slice(7);
+    if(path.indexOf('/post/')===0){
+      const slug=path.slice(6);
       const p=POSTS.find(x=>x.slug===slug);
-      if(p){ renderPost(p); activateView(document.getElementById('view-post')); showHome=false; window.scrollTo(0,0); setDocMeta(p.title+' — Piyush Roy',p.excerpt||DEFAULT_DESC); }
-    } else if(hash==='#/blog'){
+      if(p){ renderPost(p); activateView(document.getElementById('view-post')); showHome=false; window.scrollTo(0,0); setDocMeta(p.title+' — Piyush Roy',p.excerpt||DEFAULT_DESC,path); }
+    } else if(path==='/blog'){
       activateView(document.getElementById('view-blog')); showHome=false; window.scrollTo(0,0);
-      setDocMeta('Blog — Piyush Roy','All writing on product, growth and fintech strategy, newest first.');
-    } else if(hash==='#/privacy'){
+      setDocMeta('Blog — Piyush Roy','All writing on product, growth and fintech strategy, newest first.',path);
+    } else if(path==='/privacy'){
       activateView(document.getElementById('view-privacy')); showHome=false; window.scrollTo(0,0);
-      setDocMeta('Privacy Policy — Piyush Roy','How this site handles your data.');
-    } else if(hash.indexOf('#/service/')===0){
-      const slug=hash.slice(10);
+      setDocMeta('Privacy Policy — Piyush Roy','How this site handles your data.',path);
+    } else if(path.indexOf('/service/')===0){
+      const slug=path.slice(9);
       const s=SERVICES.find(x=>x.slug===slug);
-      if(s){ renderService(s); activateView(document.getElementById('view-service')); showHome=false; window.scrollTo(0,0); setDocMeta((s.seoTitle||s.hero&&s.hero.headline||'Services')+' — Piyush Roy',s.seoDescription||DEFAULT_DESC); }
-    } else if(hash==='#/services'){
+      if(s){ renderService(s); activateView(document.getElementById('view-service')); showHome=false; window.scrollTo(0,0); setDocMeta((s.seoTitle||s.hero&&s.hero.headline||'Services')+' — Piyush Roy',s.seoDescription||DEFAULT_DESC,path); }
+    } else if(path==='/services'){
       activateView(document.getElementById('view-services')); showHome=false; window.scrollTo(0,0);
-      setDocMeta('Services — Piyush Roy','Ways to work with Piyush Roy on fintech product growth and clarity.');
+      setDocMeta('Services — Piyush Roy','Ways to work with Piyush Roy on fintech product growth and clarity.',path);
     }
     if(showHome){
       document.getElementById('top').hidden=false;
-      setDocMeta(DEFAULT_TITLE,DEFAULT_DESC);
-      const anchorId=hash.replace('#','');
+      setDocMeta(DEFAULT_TITLE,DEFAULT_DESC,'/');
+      const anchorId=location.hash.replace('#','');
       if(anchorId && anchorId!=='top' && document.getElementById(anchorId)){
         requestAnimationFrame(()=>document.getElementById(anchorId).scrollIntoView({behavior:'smooth'}));
       } else {
@@ -891,6 +901,42 @@
     }
     document.querySelectorAll('.reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el); } });
   }
+
+  // Real-path navigation (History API) for actual pages. Same-page anchors
+  // like #work/#about/#writing keep working exactly as before, unchanged,
+  // since they aren't separate pages — only /services, /service/<slug>,
+  // /blog, /post/<slug> and /privacy are real, independently-indexable URLs.
+  function navigate(path){
+    if(location.pathname!==path) history.pushState(null,'',path);
+    route();
+    closeMenu();
+  }
+  document.addEventListener('click',function(e){
+    if(e.button!==0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.defaultPrevented) return;
+    const a=e.target.closest('a');
+    if(!a) return;
+    const href=a.getAttribute('href');
+    if(!href || a.target==='_blank' || a.hasAttribute('download')) return;
+    if(href.indexOf('mailto:')===0 || href.indexOf('tel:')===0) return;
+    if(/^https?:\/\//.test(href) && a.hostname && a.hostname!==location.hostname) return;
+    if(href.charAt(0)==='#'){
+      // A same-page anchor. If we're currently on some other real page
+      // (e.g. /blog), jump home first, then let the normal anchor-scroll
+      // logic (above, inside route()) take it from there.
+      if(location.pathname!=='/'){
+        e.preventDefault();
+        history.pushState(null,'','/'+href);
+        route();
+        closeMenu();
+      }
+      return;
+    }
+    if(href.charAt(0)==='/'){
+      e.preventDefault();
+      navigate(href);
+    }
+  });
+  addEventListener('popstate',route);
   addEventListener('hashchange',route);
 
   let PROJECTS=[];
@@ -1257,7 +1303,7 @@
       phone:document.getElementById('leadPhone').value.trim(),
       service:currentService?currentService.slug:null,
       submittedAt:new Date().toISOString(),
-      source:location.hash
+      source:location.pathname
     };
     leadSubmitBtn.disabled=true; leadSubmitLabel.textContent='Sending…';
     leadStatus.hidden=true;
