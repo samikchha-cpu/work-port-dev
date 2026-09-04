@@ -22,10 +22,10 @@
 <link rel="canonical" href="https://roypiyush.com/" />
 <meta name="theme-color" content="#121722" />
 
-<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Piyush Roy" />
@@ -540,7 +540,7 @@
 
 <main id="top" class="view">
   <header class="hero">
-    <div class="hero-media" aria-hidden="true"><img src="images/hero-skyscrapers.jpg" alt="Skyscrapers rising into fog, shot looking upward"></div>
+    <div class="hero-media" aria-hidden="true"><img src="/images/hero-skyscrapers.jpg" alt="Skyscrapers rising into fog, shot looking upward"></div>
     <div class="shell">
     <div class="hero-content">
       <p class="eyebrow" id="heroEyebrow">Product-led Growth · Funnel Conversion Optimization</p>
@@ -582,7 +582,7 @@
   <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow" id="testimonialsEyebrow">Testimonials</p><h2 class="display" id="testimonialsHeadline">What people say after working together.</h2></div><p id="testimonialsDescription">Straight from the people behind the work.</p></div><div class="testimonial-wrap"><div class="testimonial-nav"><button type="button" id="testimonialPrev" aria-label="Previous testimonial">←</button><button type="button" id="testimonialNext" aria-label="Next testimonial">→</button></div><div class="testimonial-grid" id="testimonialList"></div></div></div></section>
 
   <section class="section" id="about"><div class="chapter">05</div><div class="shell about-grid reveal">
-    <div class="about-visual"><img id="aboutPhoto" src="images/about-photo.jpg" alt="Piyush working at a laptop in a sunlit office" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='images/about-photo.jpg'"><div class="about-scrim"></div><div class="about-caption"><b id="aboutName">Piyush Roy</b><span id="aboutLocation">New Delhi</span></div></div>
+    <div class="about-visual"><img id="aboutPhoto" src="/images/about-photo.jpg" alt="Piyush working at a laptop in a sunlit office" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/images/about-photo.jpg'"><div class="about-scrim"></div><div class="about-caption"><b id="aboutName">Piyush Roy</b><span id="aboutLocation">New Delhi</span></div></div>
     <div class="about-copy">
       <p class="lede" id="aboutLede">I'm Piyush, based in New Delhi. I spend my time making investment products simpler than the industry usually allows.</p>
       <p class="support" id="aboutSupport1">At Perccent, Cybrilla and a few platforms before them, the work has always circled the same question — what does this person actually need to see to make a good decision, and what can we remove.</p>
@@ -730,7 +730,7 @@
   // Local, always-available fallback used whenever a CMS image field is
   // blank or its URL fails to load (e.g. an external placeholder service
   // being rate-limited, or a deleted media file). Never points off-site.
-  const FALLBACK_IMAGE='images/work-office-1.jpg';
+  const FALLBACK_IMAGE='/images/work-office-1.jpg';
 
   function formatDate(iso){
     if(!iso) return '';
@@ -984,7 +984,7 @@
     if(!about) return;
     const set=(id,val)=>{ const el=document.getElementById(id); if(el && val!=null) el.textContent=val; };
     const img=document.getElementById('aboutPhoto');
-    if(img && about.photo){ img.onerror=function(){ this.onerror=null; this.src='images/about-photo.jpg'; }; img.src=about.photo; }
+    if(img && about.photo){ img.onerror=function(){ this.onerror=null; this.src='/images/about-photo.jpg'; }; img.src=about.photo; }
     set('aboutName',about.name);
     set('aboutLocation',about.location);
     set('aboutLede',about.lede);
@@ -1048,27 +1048,27 @@
     if(collabCtaEl && collab.email) collabCtaEl.href='mailto:'+collab.email;
   }
 
-  fetch('content/projects.json').then(r=>r.json()).then(data=>{
+  fetch('/content/projects.json').then(r=>r.json()).then(data=>{
     renderWorkGrid(data.projects||[]);
     document.querySelectorAll('#workGrid .reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el);} });
   }).catch(err=>console.error('Failed to load content/projects.json:',err));
 
-  fetch('content/testimonials.json').then(r=>r.json()).then(data=>{
+  fetch('/content/testimonials.json').then(r=>r.json()).then(data=>{
     renderTestimonials(data.testimonials||[]);
     document.querySelectorAll('#testimonialList .reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el);} });
   }).catch(err=>console.error('Failed to load content/testimonials.json:',err));
 
-  fetch('content/about.json').then(r=>r.json()).then(data=>{
+  fetch('/content/about.json').then(r=>r.json()).then(data=>{
     renderAbout(data);
   }).catch(err=>console.error('Failed to load content/about.json:',err));
 
-  fetch('content/page.json').then(r=>r.json()).then(data=>{
+  fetch('/content/page.json').then(r=>r.json()).then(data=>{
     renderPage(data);
   }).catch(err=>console.error('Failed to load content/page.json:',err));
 
   Promise.all([
-    fetch('content/posts.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/posts.json:',err); return {posts:[]}; }),
-    fetch('content/services.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/services.json:',err); return {services:[]}; })
+    fetch('/content/posts.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/posts.json:',err); return {posts:[]}; }),
+    fetch('/content/services.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/services.json:',err); return {services:[]}; })
   ]).then(([postsData,servicesData])=>{
     // Always sort newest-first by actual date, regardless of the order
     // posts happen to be stored in (Decap CMS appends new entries to the
