@@ -25,17 +25,22 @@
     {
       "image": "images/work-fund-detail.jpg",
       "alt": "Fund detail screen on a mobile phone",
-      "company": "Perccent",
+      "company": "MFStack",
       "meta": "Mobile",
-      "title": "A clearer mobile investing experience",
+      "title": "A software development agency that later launched its own product.",
       "caseStudy": {
         "tag": "",
-        "headline": "",
-        "subhead": "",
-        "problem": "PLACEHOLDER — describe the problem this project solved before publishing.",
-        "challenge": "PLACEHOLDER — describe the constraint that made it hard.",
-        "solution": "PLACEHOLDER — describe what you actually did.",
-        "results": []
+        "headline": "MFStack",
+        "subhead": "A software development agency that later launched its own product.\n",
+        "problem": "Strong technical work, but deals kept slipping to competitors and lead inflow was inconsistent. The capability was there, the edge wasn't landing with buyers.\n\n",
+        "challenge": "Find the positioning and the right ICP that would make their strength legible to prospects, and turn that clarity into closed deals.\n",
+        "solution": "Working closely with their team, we mapped what they were genuinely better at than the competition and what they weren't. I built the positioning around that honest read, then translated it into a sales narrative the team could carry into every conversation. We rebuilt the script around the new story and tracked how conversations changed over the following months.\n\n",
+        "results": [
+          {
+            "value": "With a sharper story, they started winning deals they hadn't before including first-of-their-kind engagements like corporate treasury management. One of those builds became the base-layer stack that later grew into MFStack, their own white-labeled app for MFDs and RIAs. The positioning didn't just close deals. It surfaced a product."
+          }
+        ],
+        "cta1Show": false
       }
     },
     {
