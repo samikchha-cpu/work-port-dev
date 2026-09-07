@@ -245,10 +245,12 @@
   .case-block:first-of-type{border-top:1px solid var(--line)}
   .case-label{margin:0 0 8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze)}
   .case-block p{margin:0;line-height:1.7;font-size:15.5px}
-  .case-results{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+  .case-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:8px}
   .case-stat{padding:16px 12px;border:1px solid var(--line);border-radius:14px;text-align:center}
   .case-stat b{display:block;font:400 26px/1 Georgia,serif;color:var(--indigo)}
   .case-stat span{display:block;margin-top:6px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .case-stat.long{text-align:left}
+  .case-stat.long b{font:400 15px/1.5 -apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink)}
   .case-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
   .case-cta{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:100px;font-size:13.5px;letter-spacing:.02em;text-decoration:none;transition:transform .25s var(--ease),background .25s ease}
   .case-cta.primary{background:var(--ink);color:var(--paper)}
@@ -1168,7 +1170,7 @@
       ${cs.problem?`<div class="case-block"><p class="case-label">Problem</p><p>${cs.problem}</p></div>`:''}
       ${cs.challenge?`<div class="case-block"><p class="case-label">Challenge</p><p>${cs.challenge}</p></div>`:''}
       ${cs.solution?`<div class="case-block"><p class="case-label">Solution</p><p>${cs.solution}</p></div>`:''}
-      ${results.length?`<div class="case-block"><p class="case-label">Results</p><div class="case-results">${results.map(r=>`<div class="case-stat"><b>${r.value}</b><span>${r.label}</span></div>`).join('')}</div></div>`:''}
+      ${results.length?`<div class="case-block"><p class="case-label">Results</p><div class="case-results">${results.map(r=>`<div class="case-stat${(r.value||'').length>22?' long':''}"><b>${r.value}</b><span>${r.label}</span></div>`).join('')}</div></div>`:''}
       <div class="case-ctas">
         ${cs.cta1Show!==false?`<a class="case-cta primary" href="${cs.cta1Link||'#subscribe'}">${cs.cta1Label||'Get notes like this →'}</a>`:''}
         ${cs.cta2Show!==false?`<a class="case-cta secondary" href="${cs.cta2Link||'mailto:piyush@funnelprolabs.com'}">${cs.cta2Label||'Book a discovery call'}</a>`:''}
