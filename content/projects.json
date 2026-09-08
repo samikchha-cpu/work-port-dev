@@ -4,7 +4,7 @@
       "image": "images/work-perccent.jpg",
       "alt": "Percent investment dashboard on a laptop",
       "company": "Cybriila",
-      "meta": "2025–26",
+      "meta": "",
       "title": "SEBI-licensed RTA offering end-to-end mutual fund APIs.",
       "caseStudy": {
         "tag": "",
@@ -26,7 +26,7 @@
       "image": "images/work-fund-detail.jpg",
       "alt": "Fund detail screen on a mobile phone",
       "company": "MFStack",
-      "meta": "Mobile",
+      "meta": "",
       "title": "",
       "caseStudy": {
         "tag": "",
@@ -46,33 +46,43 @@
     {
       "image": "images/work-office-1.jpg",
       "alt": "Person working on a laptop in an office",
-      "company": "Cybrilla",
-      "meta": "2023–26",
-      "title": "Fintech partnerships and platform strategy",
+      "company": "Perccent",
+      "meta": "",
+      "title": "A digital B2C mutual fund distribution platform with a human in the loop.",
       "caseStudy": {
         "tag": "",
-        "headline": "",
-        "subhead": "",
-        "problem": "PLACEHOLDER — describe the problem this project solved before publishing.",
-        "challenge": "PLACEHOLDER — describe the constraint that made it hard.",
-        "solution": "PLACEHOLDER — describe what you actually did.",
-        "results": []
+        "headline": "Perccent",
+        "subhead": "A digital B2C mutual fund distribution platform with a human in the loop.\n",
+        "problem": "A poor activation-to-investment ratio on the platform. People signed up. Far fewer invested.\n",
+        "challenge": " The platform was targeting low-income users, who are mostly cash-strapped, so roughly 40% of incoming leads were really looking for a short-term personal loan, not a place to invest. The task was to find a target audience with actual surplus to put to work.",
+        "solution": "I spent over two months with the founders, digging into the numbers to understand what was really happening. With a CAC north of ₹2,000 and 72% attrition inside the first 40 days, the company was burning cash fast. We ran a SWOT analysis to find a defensible position in a crowded market and built a pivot plan around it. Two things stood out, a real human in the investment journey was highly valuable to users, and the founders with 20+ years of experience each, had a strong distribution network of their own. Targeting those users in phase one made obvious sense.\n\n",
+        "results": [
+          {
+            "value": "Perccent has over 13,000 registered users today, most earning above ₹25 lakh a year. The average investment ticket is up 20x. And first-30-day attrition, once 72%, now sits under 20%."
+          }
+        ],
+        "cta1Show": false
       }
     },
     {
       "image": "images/work-office-hallway.jpg",
       "alt": "Modern office interior hallway",
-      "company": "Hyperbola",
-      "meta": "2024",
-      "title": "A clearer digital wealth proposition",
+      "company": "FinArk",
+      "meta": "",
+      "title": "A performance data provider for mutual funds.",
       "caseStudy": {
         "tag": "",
-        "headline": "",
-        "subhead": "",
-        "problem": "PLACEHOLDER — describe the problem this project solved before publishing.",
-        "challenge": "PLACEHOLDER — describe the constraint that made it hard.",
-        "solution": "PLACEHOLDER — describe what you actually did.",
-        "results": []
+        "headline": "FinArk",
+        "subhead": "A performance data provider for mutual funds.\n",
+        "problem": "Almost no conversion from the free tier to paid.\n\n",
+        "challenge": " Investors were comparing FinArk's features and credibility against established names like Morningstar and Value Research. Some businesses started the trial but never converted to paying users.\n",
+        "solution": "I was honest about the starting point, a 0-to-1 startup can't match incumbents on feature parity from day one and with data, there's little room to differentiate on the offering itself, since the source, format, and presentation are largely standardised. So we took the two positions that were actually ours to take, better uptime and a clear cost advantage. From there, I reworked the sales script to handle the feature and credibility objections head-on, and recommended old-school, direct demand channels, cold calling and partnership-led funnels to build a pipeline.",
+        "results": [
+          {
+            "value": "FinArk converted every 1 in 3 trial users in the first three months of running this."
+          }
+        ],
+        "cta1Show": false
       }
     },
     {
