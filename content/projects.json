@@ -7,19 +7,21 @@
       "meta": "",
       "title": "SEBI-licensed RTA offering end-to-end mutual fund APIs.",
       "caseStudy": {
-        "tag": "",
-        "headline": "Cybriila",
         "subhead": "SEBI-licensed RTA offering end-to-end mutual fund APIs.\n",
-        "problem": "Grow revenue by onboarding new customers and getting them to scale their monthly transaction volume.\n\n",
         "challenge": "Carve out a clear position in a crowded field against players like BSE, NSE, and MFU and become the default choice for new-age fintechs.\n",
-        "solution": "We couldn't out-build the giants, so we didn't try to. We picked one or two things we could do better than anyone and went deep. Fintechs want speed. They want to test a prototype in weeks, not months. So that became our core promise: distribute mutual funds in 3 weeks. The second: fully managed daily ops, because no fintech wants to run day-to-day operations. Then we made sure the sales team carried that exact message to exactly the right customers.\n\n",
+        "cta2Label": "Explore Services",
+        "headline": "Cybriila",
         "results": [
           {
             "label": "",
             "value": "We grew from ~12 customers in April '22 to over 160 by April '26, including BharatPe, Bachatt, Jar, and Stable Money. Today, Cybrilla processes over 6M transactions a month."
           }
         ],
-        "cta1Show": false
+        "solution": "We couldn't out-build the giants, so we didn't try to. We picked one or two things we could do better than anyone and went deep. Fintechs want speed. They want to test a prototype in weeks, not months. So that became our core promise: distribute mutual funds in 3 weeks. The second: fully managed daily ops, because no fintech wants to run day-to-day operations. Then we made sure the sales team carried that exact message to exactly the right customers.\n\n",
+        "tag": "",
+        "cta2Link": "https://roypiyush.com/services",
+        "cta1Show": false,
+        "problem": "Grow revenue by onboarding new customers and getting them to scale their monthly transaction volume.\n\n"
       }
     },
     {
