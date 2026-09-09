@@ -27,7 +27,7 @@
       "alt": "Fund detail screen on a mobile phone",
       "company": "MFStack",
       "meta": "",
-      "title": "",
+      "title": "A software development agency that later launched its own product.",
       "caseStudy": {
         "tag": "",
         "headline": "MFStack",
@@ -88,33 +88,43 @@
     {
       "image": "images/work-documents.jpg",
       "alt": "Person reviewing documents beside a laptop",
-      "company": "PlusCash",
-      "meta": "2024",
-      "title": "DIY investing across web and mobile",
+      "company": "RuDo Wealth",
+      "meta": "",
+      "title": "B2C WealthTech platform focused on NRIs",
       "caseStudy": {
         "tag": "",
-        "headline": "",
-        "subhead": "",
-        "problem": "PLACEHOLDER — describe the problem this project solved before publishing.",
-        "challenge": "PLACEHOLDER — describe the constraint that made it hard.",
-        "solution": "PLACEHOLDER — describe what you actually did.",
-        "results": []
+        "headline": "RuDo Wealth",
+        "subhead": "B2C WealthTech platform focused on NRIs\n",
+        "problem": "The founders knew they wanted to build, but not where to start.\n",
+        "challenge": "With hundreds of platforms already covering most use cases, the task was to read the competitive landscape and find a product position worth owning.\n\n\n",
+        "solution": "I proposed a ground-up market and competitor analysis to get a bird's-eye view of the landscape: where the mutual fund industry was heading (growth, slowdown, or contraction), the use cases people were actively searching for, and who the competitors were and how they positioned themselves. I spent three to four weeks on desk research and user interviews, then took my findings to Alok and the team.\n",
+        "results": [
+          {
+            "value": "Both founders were struck by the trend and by how much money was being left on the table. Of the directions on offer, they chose the NRI use-case. Both are settled in UAE, a hotspot for NRIs investing back into India, and they already had distribution channels of their own to bring the first customers onboard."
+          }
+        ],
+        "cta1Show": false
       }
     },
     {
       "image": "images/work-desk.jpg",
       "alt": "Desk with laptop, coffee and notebook",
-      "company": "Independent",
-      "meta": "Ongoing",
-      "title": "Essays, frameworks and strategic notes",
+      "company": "K9 School",
+      "meta": "",
+      "title": "India's leading dog behaviour correction and training institute.",
       "caseStudy": {
         "tag": "",
-        "headline": "",
-        "subhead": "",
-        "problem": "PLACEHOLDER — describe the problem this project solved before publishing.",
-        "challenge": "PLACEHOLDER — describe the constraint that made it hard.",
-        "solution": "PLACEHOLDER — describe what you actually did.",
-        "results": []
+        "headline": "K9 School",
+        "subhead": "India's leading dog behaviour correction and training institute.\n",
+        "problem": "Low lead volume, and most of what came in was the wrong fit for the training services.\n",
+        "challenge": "K9 School ran on an outsourced model with separate vendors for marketing, the landing page, funnel automation, and more. The real problem wasn't any single vendor; it was that none of them were coordinated toward a business outcome. Everyone was heads-down completing their own checklist.\n",
+        "solution": "The talent was already there. So I didn't try to replace anyone but focused on owning the coordination no one else was. I worked with the core team to map the full funnel and find where it leaked. The first thing we found: a landing page with a 98% bounce rate which meant nearly every ad rupee was being spent to send people to a door that didn't open. Once we had the funnel mapped, I had every vendor report their numbers daily, and we tracked each KPI across the funnel without exception. The leaks started surfacing almost immediately, and we fixed them one by one.\n",
+        "results": [
+          {
+            "value": "Within three days of fixing the bounce rate, K9 School was generating 20x more leads. The demand had been there all along, it was the funnel choking it off. From there we closed leak after leak and restored a steady flow of enquiries and subsequently sales."
+          }
+        ],
+        "cta1Show": false
       }
     }
   ]
