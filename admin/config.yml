@@ -408,7 +408,7 @@ collections:
 
   - name: "services"
     label: "Services"
-    description: "Each entry here is a full standalone landing page, shown at roypiyush.com/#/services/[slug]. Add more services here later without touching any design — each one automatically gets the same layout. Every field below is marked DRAFT in the starter entry — replace with real copy before this page goes live to visitors."
+    description: "Each entry here is a full standalone landing page, shown at roypiyush.com/service/[slug]. Add more services here later without touching any design — each one automatically gets the same layout, and sections with no content simply don't show on the page."
     files:
       - name: "services"
         label: "All Services"
@@ -423,7 +423,7 @@ collections:
               - label: "URL slug"
                 name: "slug"
                 widget: "string"
-                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase letters, numbers, and hyphens only — no spaces (e.g. fintech-growth-audit)."]
+                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase letters, numbers, and hyphens only — no spaces (e.g. get-more-qualified-leads)."]
                 hint: "Forms this service's web address. Set once; avoid changing after sharing the link anywhere (ads, email, social)."
               - label: "Menu label"
                 name: "navTitle"
@@ -456,121 +456,173 @@ collections:
                     name: "visual"
                     widget: "image"
                     required: false
-                    hint: "Optional supporting image shown under the sub-heading, styled like the accent-tinted image on blog post pages. Leave blank for a text-only hero."
-                  - label: "Supporting line"
-                    name: "support"
+                    hint: "Optional supporting image shown under the sub-heading. Leave blank for a text-only hero."
+                  - label: "Sub-headline"
+                    name: "subheadline"
                     widget: "text"
                     required: false
-                    hint: "What's on offer, who it's for, and the value the visitor gets. One or two sentences."
+                    hint: "What's on offer, who it's for, and the value the visitor gets. Also used as the description on the Services index card."
+                  - label: "Line just above the button"
+                    name: "ctaSupportLine"
+                    widget: "text"
+                    required: false
+                    hint: "E.g. 'Get the exact framework to build a consistent flow of qualified leads.'"
                   - label: "Button label"
-                    name: "ctaLabel"
+                    name: "buttonLabel"
                     widget: "string"
                     required: false
-                    hint: "Defaults to 'Get started' if left blank."
-              - label: "Problem statement"
-                name: "problem"
+                    hint: "Defaults to 'Get started' if left blank. E.g. 'Get the Free Framework'."
+                  - label: "Proof line (under the button)"
+                    name: "proofText"
+                    widget: "string"
+                    required: false
+                    hint: "E.g. '6,700+ downloads'. Leave blank to hide."
+              - label: "Lead-form drawer text"
+                name: "leadForm"
                 widget: "object"
+                required: false
+                hint: "Text shown inside the 'Get the checklist' drawer that opens when any button on this page is clicked."
                 fields:
                   - label: "Eyebrow"
                     name: "eyebrow"
                     widget: "string"
                     required: false
-                  - label: "Current situation"
-                    name: "situation"
+                    hint: "Defaults to 'Get the framework' if left blank."
+                  - label: "Sub-headline"
+                    name: "subheadline"
                     widget: "text"
                     required: false
-                    hint: "Where the visitor is right now — shown as the large opening line."
-                  - label: "Frustration"
-                    name: "frustration"
-                    widget: "text"
-                    required: false
-                    hint: "Why the usual fixes for this haven't worked."
-                  - label: "Impact"
-                    name: "impact"
-                    widget: "text"
-                    required: false
-                    hint: "What it's costing them to leave this unsolved — shown highlighted, like a pull-quote."
-              - label: "Solution — Why / What / How"
-                name: "solution"
-                widget: "object"
-                fields:
-                  - label: "Eyebrow"
-                    name: "eyebrow"
-                    widget: "string"
-                    required: false
-                  - label: "Headline"
-                    name: "headline"
-                    widget: "string"
-                    required: false
-                  - label: "Why"
-                    name: "why"
-                    widget: "text"
-                    required: false
-                    hint: "Why this problem is worth solving."
-                  - label: "What"
-                    name: "what"
-                    widget: "text"
-                    required: false
-                    hint: "What Piyush actually provides."
-                  - label: "How"
-                    name: "how"
-                    widget: "text"
-                    required: false
-                    hint: "How it gets the visitor to the outcome they want."
-              - label: "Social proof"
-                name: "socialProof"
+                    hint: "Defaults to 'Enter your details below and the checklist lands in your inbox.' if left blank."
+              - label: "Why Does It Matter?"
+                name: "whyItMatters"
                 widget: "object"
                 required: false
                 fields:
-                  - label: "Eyebrow"
-                    name: "eyebrow"
+                  - label: "Section title"
+                    name: "sectionTitle"
                     widget: "string"
                     required: false
+                    hint: "Defaults to 'Why Does It Matter?' if left blank. Shown as the small blue section label."
                   - label: "Headline"
                     name: "headline"
+                    widget: "text"
+                    required: false
+                  - label: "Sub-headline"
+                    name: "subheadline"
+                    widget: "text"
+                    required: false
+                  - label: "Quote"
+                    name: "quote"
+                    widget: "text"
+                    required: false
+                    hint: "Shown highlighted, like a pull-quote. Leave blank to hide."
+              - label: "How To Solve It"
+                name: "solution"
+                widget: "object"
+                required: false
+                fields:
+                  - label: "Section title"
+                    name: "sectionTitle"
                     widget: "string"
                     required: false
-                  - label: "Proof items"
+                    hint: "Defaults to 'How to solve it, systematically?' if left blank."
+                  - label: "Intro paragraph"
+                    name: "intro"
+                    widget: "text"
+                    required: false
+                  - label: "Pillars"
+                    name: "pillars"
+                    widget: "list"
+                    required: false
+                    collapsed: true
+                    summary: "{{fields.title}}"
+                    hint: "Add as many as this service needs — each one becomes a card. They're auto-numbered 'Pillar 01', 'Pillar 02', etc. in the order listed here."
+                    fields:
+                      - label: "Title"
+                        name: "title"
+                        widget: "string"
+                        required: false
+                        hint: "E.g. 'Who you're targeting (ICP & positioning)'."
+                      - label: "Body"
+                        name: "body"
+                        widget: "text"
+                        required: false
+                  - label: "Outro paragraph"
+                    name: "outro"
+                    widget: "text"
+                    required: false
+                    hint: "The closing line after the pillars, e.g. 'What separates the products that fix this from the ones that don't is...'"
+                  - label: "Repeated CTA — text above the button"
+                    name: "ctaText"
+                    widget: "text"
+                    required: false
+                    hint: "E.g. 'The free framework is the full playbook'. Leave this and the button label both blank to hide this repeated CTA."
+                  - label: "Repeated CTA — button label"
+                    name: "buttonLabel"
+                    widget: "string"
+                    required: false
+                  - label: "Repeated CTA — proof line"
+                    name: "proofText"
+                    widget: "string"
+                    required: false
+              - label: "Who Needs To Focus On This?"
+                name: "whoThisIsFor"
+                widget: "object"
+                required: false
+                fields:
+                  - label: "Section title"
+                    name: "sectionTitle"
+                    widget: "string"
+                    required: false
+                    hint: "Defaults to 'Who needs to focus on this?' if left blank."
+                  - label: "Intro paragraph"
+                    name: "intro"
+                    widget: "text"
+                    required: false
+                  - label: "Bullet points"
+                    name: "bullets"
+                    widget: "list"
+                    required: false
+                    summary: "{{fields.text}}"
+                    fields:
+                      - label: "Text"
+                        name: "text"
+                        widget: "text"
+                        required: false
+                  - label: "Outro paragraph"
+                    name: "outro"
+                    widget: "text"
+                    required: false
+              - label: "FAQs"
+                name: "faqs"
+                widget: "object"
+                required: false
+                fields:
+                  - label: "Section title"
+                    name: "sectionTitle"
+                    widget: "string"
+                    required: false
+                    hint: "Defaults to 'Frequently Asked Questions (FAQs)' if left blank."
+                  - label: "Questions"
                     name: "items"
                     widget: "list"
                     required: false
                     collapsed: true
-                    summary: "{{fields.type}} — {{fields.name}}"
-                    hint: "Add testimonials, logos, or media mentions as they become available. Leave empty for now — the section hides itself automatically rather than showing anything fabricated."
+                    summary: "{{fields.question}}"
                     fields:
-                      - label: "Type"
-                        name: "type"
-                        widget: "select"
-                        options: ["testimonial", "video-testimonial", "pr", "media", "licence", "patent", "other"]
-                        default: "testimonial"
-                      - label: "Quote / description"
-                        name: "quote"
+                      - label: "Question"
+                        name: "question"
+                        widget: "string"
+                        required: false
+                      - label: "Answer"
+                        name: "answer"
                         widget: "text"
                         required: false
-                        hint: "The testimonial text, or a short description for PR/media/licence/patent items."
-                      - label: "Name (person, publication, or credential name)"
-                        name: "name"
-                        widget: "string"
-                        required: false
-                      - label: "Role / Company / Issuer"
-                        name: "role"
-                        widget: "string"
-                        required: false
-                      - label: "Logo or image"
-                        name: "logo"
-                        widget: "image"
-                        required: false
-                      - label: "Video URL (for video testimonials)"
-                        name: "videoUrl"
-                        widget: "string"
-                        required: false
-                      - label: "Link (for PR/media mentions)"
-                        name: "link"
-                        widget: "string"
-                        required: false
-              - label: "Final CTA"
-                name: "finalCta"
+              - label: "Closing CTA (optional)"
+                name: "closingCta"
                 widget: "object"
+                required: false
+                hint: "An extra closing section at the very end of the page, styled like the homepage's Collaboration section. Leave every field blank to hide this section entirely — the repeated CTA under 'How To Solve It' may already be enough."
                 fields:
                   - label: "Eyebrow"
                     name: "eyebrow"
@@ -610,7 +662,7 @@ collections:
                     name: "name"
                     widget: "string"
                     required: false
-                    hint: "Not shown publicly — e.g. 'Fintech Growth Audit Checklist (PDF)'. So we both know what this service is meant to deliver."
+                    hint: "Not shown publicly — e.g. 'Lead Gen Framework (PDF)'. So we both know what this service is meant to deliver."
                   - label: "Resource type"
                     name: "type"
                     widget: "select"

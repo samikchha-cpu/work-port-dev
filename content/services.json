@@ -1,46 +1,85 @@
 {
   "services": [
     {
-      "slug": "fintech-growth-audit",
+      "slug": "get-more-qualified-leads",
       "navTitle": "Services",
-      "seoTitle": "Fintech Growth Audit Checklist — Piyush Roy",
-      "seoDescription": "A focused audit checklist for finding the one screen or step quietly capping your fintech or SaaS product's growth — sent straight to your inbox.",
+      "seoTitle": "Get More Qualified Leads — Piyush Roy",
+      "seoDescription": "A free framework for founders burning ad budget on leads that were never a fit — fix targeting, messaging and the offer, in that order.",
       "hero": {
-        "eyebrow": "Growth Audit · For fintech & SaaS teams",
-        "headline": "Find the one screen quietly capping your growth.",
+        "eyebrow": "Get More Qualified Leads",
+        "headline": "You're burning ads budget on leads that were never a fit.",
         "visual": "",
-        "support": "Most funnels don't leak everywhere — they leak in one place. This is a short, expert-eye checklist for finding that one screen or step, built from the same clarity-first lens behind the client work on this site.",
-        "ctaLabel": "Get the free audit checklist"
+        "subheadline": "It's rarely just one thing. Poor targeting, a weak value proposition, unoptimised ads, and landing pages that don't convert. Together, they drain your spend and fill your pipeline with people who were never going to buy.",
+        "ctaSupportLine": "Get the exact framework to build a consistent flow of qualified leads.",
+        "buttonLabel": "Get the Free Framework",
+        "proofText": "6,700+ downloads"
       },
-      "problem": {
-        "eyebrow": "The problem",
-        "situation": "You can already see the numbers lagging somewhere in the funnel — sign-up, activation, or conversion — but not exactly where or why.",
-        "frustration": "The usual response is another dashboard, another A/B test, or a redesign sprint — expensive ways to go looking for a problem that's often just one confusing screen or one badly-worded step.",
-        "impact": "Every month spent guessing is a month of ad spend and sign-ups quietly leaking out the same door."
+      "whyItMatters": {
+        "sectionTitle": "Why Does It Matters?",
+        "headline": "Most products don't die because they're bad. They die from never building a repeatable way to get and convert qualified demand.",
+        "subheadline": "So founders do the obvious thing. Raise the ad budget, add another channel. But if the funnel underneath is leaking, more spend just pours more money through the same holes.",
+        "quote": "More budget scales a campaign that works. It won't fix the one that doesn't. Fix the leak first."
       },
       "solution": {
-        "eyebrow": "How this works",
-        "headline": "Why · What · How",
-        "why": "In financial products especially, growth problems are almost always clarity problems — one confusing decision point usually costs more than ten missing features.",
-        "what": "A self-audit checklist covering the funnel, onboarding flow and product copy — the same pattern-recognition used across the fintech, SaaS and training-services work shown on this site.",
-        "how": "Work through it against your own product and you'll usually spot the highest-leverage fix within the first few sections — no call required to get value from it."
+        "sectionTitle": "How to solve it, systematically?",
+        "intro": "If a competitor is generating and converting leads with a similar product, the demand is real and the market isn't your problem. When lead gen still struggles, it's almost always one of three things: who you're targeting, how you speak to them, or what you're offering. Here's exactly how I work through each",
+        "pillars": [
+          {
+            "title": "Who you're targeting (ICP & positioning)",
+            "body": "Before a single rupee goes into ads, write down one clear line each: who exactly buys this, what they're really struggling with that your product solves, and why they'd choose you over the alternative. Most teams skip this, which is why their targeting is scattered and their messaging tries to speak to everyone. Nail it and every rupee downstream lands on the right person with the right problem."
+          },
+          {
+            "title": "How you speak to them (copy & experience)",
+            "body": "Now that you're in front of the right people, your ad and landing page have one job: name the exact pain they walked in with, so clearly they feel understood in seconds. Use a proven structure like Problem, Agitate, Solution (PAS). It works well for me and my clients and then test it relentlessly, because the first version is almost never the winner."
+          },
+          {
+            "title": "What you're offering (the offer)",
+            "body": "The most neglected, and the most invisible. A stranger on your page is skeptical by default. Me too. But nobody resists an offer that would make them feel stupid to walk away from. Most teams pour money into traffic and never touch the offer. Make yours faster, safer, or lower-risk to say yes to and the same traffic suddenly converts better."
+          }
+        ],
+        "outro": "What separates the products that fix this from the ones that don't is the conviction to execute. Doing all three, in the right order, and holding the line through the testing until it works.",
+        "ctaText": "The free framework is the full playbook",
+        "buttonLabel": "Get the Free Framework",
+        "proofText": "6,700+ downloads"
       },
-      "socialProof": {
-        "eyebrow": "Proof",
-        "headline": "What clients say",
-        "items": []
+      "whoThisIsFor": {
+        "sectionTitle": "Who needs to focus on this?",
+        "intro": "This is for founders who've already done the hard part. You've built a product people genuinely find valuable. What's not working yet is the engine that gets it in front of the right people, consistently. If that's you, and any of these sounds familiar, your bottleneck is lead generation:",
+        "bullets": [
+          { "text": "You're an indie hacker with a product people love, but growth has plateaued below $2,000 MRR and you can't get it to climb predictably." },
+          { "text": "You run a B2C SaaS past product-market fit but you're stuck under your first 1,000 paying users and acquisition feels clueless." },
+          { "text": "You're a digital services provider delivering great work but you've to accept every project, good or bad, because the pipeline isn't there." },
+          { "text": "You're a coach, trainer, or consultant with a strong offer, but every cohort launch is a scramble to fill seats instead of a waitlist." }
+        ],
+        "outro": "If that's where you are, more effort isn't the answer. A proven lead-generation framework is."
       },
-      "finalCta": {
-        "eyebrow": "Get the checklist",
-        "headlinePre": "If one screen is quietly costing you",
-        "headlineHighlight": "sign-ups and revenue",
-        "headlinePost": "this checklist is the fastest way to find it.",
-        "support": "Enter your details below and the checklist lands in your inbox — no sales call, no obligation.",
-        "sideText": "Takes two minutes. Just the checklist, no spam.",
-        "buttonLabel": "Get the free audit checklist"
+      "faqs": {
+        "sectionTitle": "Frequently Asked Questions (FAQs)",
+        "items": [
+          {
+            "question": "How do I know I have a lead problem and not a closing problem?",
+            "answer": "Most founders can't tell, and guessing wrong costs a quarter. Quick test: if people are booking demos and going quiet after them, that's a closing problem. No amount of new leads will fix it. If you're spending on ads generating traffic but no enquiries, downloads or sign-up to free tier, that's a lead problem, and it starts upstream of the ad."
+          },
+          {
+            "question": "We've rewritten our landing page twice already and nothing changed. Why would this be different?",
+            "answer": "Because two rewrites that changed nothing is evidence. It tells us the leak probably isn't on the page. A page can only convert the people your targeting sends to it, using the promise your positioning gave it. Rewrite the words on top of the wrong audience and the wrong promise, and you get a prettier page with the same numbers. That's why positioning comes first here, and copy comes second. Most of the time the third rewrite isn't the fix. It's a symptom."
+          },
+          {
+            "question": "Isn't this really an ads problem? We just need more traffic.",
+            "answer": "Sometimes. But more traffic multiplies whatever your funnel already does. If your page converts the wrong people today, doubling spend doubles the wrong people and your sales team pays for it in wasted calls. I'll look at the ad, the page, and the promise between them together, because that's usually where the leak is. If the honest answer turns out to be 'your funnel is fine, you just need more budget,' I'll tell you that and you can stop reading."
+          },
+          {
+            "question": "Can you guarantee a number of leads?",
+            "answer": "Only if you guarantee execution as I suggest. Typically, I don't control your budget, your market's buying cycle, or your product. What I will commit to: we agree upfront on the one metric this work is meant to move, we measure it before we touch anything, and you'll know within the engagement whether it moved. Lead generation is like 1+1=2. I'll ensure we're doing 1+1 correctly. 2 is inevitable."
+          },
+          {
+            "question": "What if you decide you can't help us?",
+            "answer": "Then I'll say so, ideally before you've paid me for anything large. Some problems look like lead generation and aren't: pricing that's wrong for the segment, a product that isn't ready, or a market that's too small to support the growth target. Copy doesn't fix any of those, and I'd rather lose the engagement than take money for work I know won't move your number. The fastest way to find out is one session, not a proposal."
+          }
+        ]
       },
       "resource": {
-        "name": "Fintech Growth Audit Checklist (PDF)",
+        "name": "Lead Gen Framework (PDF)",
         "type": "pdf",
         "url": ""
       }
