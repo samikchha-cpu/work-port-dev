@@ -1,25 +1,32 @@
 {
   "services": [
     {
+      "whoThisIsFor": {
+        "sectionTitle": "Who needs to focus on this?",
+        "intro": "This is for founders who've already done the hard part. You've built a product people genuinely find valuable. What's not working yet is the engine that gets it in front of the right people, consistently. If that's you, and any of these sounds familiar, your bottleneck is lead generation:",
+        "bullets": [
+          {
+            "text": "You're an indie hacker with a product people love, but growth has plateaued below $2,000 MRR and you can't get it to climb predictably."
+          },
+          {
+            "text": "You run a B2C SaaS past product-market fit but you're stuck under your first 1,000 paying users and acquisition feels clueless."
+          },
+          {
+            "text": "You're a digital services provider delivering great work but you've to accept every project, good or bad, because the pipeline isn't there."
+          },
+          {
+            "text": "You're a coach, trainer, or consultant with a strong offer, but every cohort launch is a scramble to fill seats instead of a waitlist."
+          }
+        ],
+        "outro": "If that's where you are, more effort isn't the answer. A proven lead-generation framework is."
+      },
       "slug": "get-more-qualified-leads",
+      "resource": {
+        "name": "Lead Gen Framework (PDF)",
+        "type": "pdf",
+        "url": ""
+      },
       "navTitle": "Services",
-      "seoTitle": "Get More Qualified Leads — Piyush Roy",
-      "seoDescription": "A free framework for founders burning ad budget on leads that were never a fit — fix targeting, messaging and the offer, in that order.",
-      "hero": {
-        "eyebrow": "Get More Qualified Leads",
-        "headline": "You're burning ads budget on leads that were never a fit.",
-        "visual": "",
-        "subheadline": "It's rarely just one thing. Poor targeting, a weak value proposition, unoptimised ads, and landing pages that don't convert. Together, they drain your spend and fill your pipeline with people who were never going to buy.",
-        "ctaSupportLine": "Let's figure out what's not working right.",
-        "buttonLabel": "Talk to an Expert",
-        "secondaryButtonLabel": "Subscribe to Newsletter"
-      },
-      "whyItMatters": {
-        "sectionTitle": "Why Does It Matters?",
-        "headline": "Most products don't die because they're bad. They die from never building a repeatable way to get and convert qualified demand.",
-        "subheadline": "So founders do the obvious thing. Raise the ad budget, add another channel. But if the funnel underneath is leaking, more spend just pours more money through the same holes.",
-        "quote": "More budget scales a campaign that works. It won't fix the one that doesn't. Fix the leak first."
-      },
       "solution": {
         "sectionTitle": "How to solve it, systematically?",
         "intro": "If a competitor is generating and converting leads with a similar product, the demand is real and the market isn't your problem. When lead gen still struggles, it's almost always one of three things: who you're targeting, how you speak to them, or what you're offering. Here's exactly how I work through each",
@@ -42,17 +49,16 @@
         "buttonLabel": "Talk to an Expert",
         "secondaryButtonLabel": "Subscribe to Newsletter"
       },
-      "whoThisIsFor": {
-        "sectionTitle": "Who needs to focus on this?",
-        "intro": "This is for founders who've already done the hard part. You've built a product people genuinely find valuable. What's not working yet is the engine that gets it in front of the right people, consistently. If that's you, and any of these sounds familiar, your bottleneck is lead generation:",
-        "bullets": [
-          { "text": "You're an indie hacker with a product people love, but growth has plateaued below $2,000 MRR and you can't get it to climb predictably." },
-          { "text": "You run a B2C SaaS past product-market fit but you're stuck under your first 1,000 paying users and acquisition feels clueless." },
-          { "text": "You're a digital services provider delivering great work but you've to accept every project, good or bad, because the pipeline isn't there." },
-          { "text": "You're a coach, trainer, or consultant with a strong offer, but every cohort launch is a scramble to fill seats instead of a waitlist." }
-        ],
-        "outro": "If that's where you are, more effort isn't the answer. A proven lead-generation framework is."
+      "hero": {
+        "eyebrow": "Get More Qualified Leads",
+        "headline": "You're burning ads budget on leads that were never a fit.",
+        "visual": "/admin/uploads/chatgpt-image-sep-20-2026-01_29_10-pm.png",
+        "subheadline": "It's rarely just one thing. Poor targeting, a weak value proposition, unoptimised ads, and landing pages that don't convert. Together, they drain your spend and fill your pipeline with people who were never going to buy.",
+        "ctaSupportLine": "Let's figure out what's not working right.",
+        "buttonLabel": "Talk to an Expert",
+        "secondaryButtonLabel": "Subscribe to Newsletter"
       },
+      "seoTitle": "Get More Qualified Leads — Piyush Roy",
       "faqs": {
         "sectionTitle": "Frequently Asked Questions (FAQs)",
         "items": [
@@ -78,11 +84,13 @@
           }
         ]
       },
-      "resource": {
-        "name": "Lead Gen Framework (PDF)",
-        "type": "pdf",
-        "url": ""
-      }
+      "whyItMatters": {
+        "sectionTitle": "Why Does It Matters?",
+        "headline": "Most products don't die because they're bad. They die from never building a repeatable way to get and convert qualified demand.",
+        "subheadline": "So founders do the obvious thing. Raise the ad budget, add another channel. But if the funnel underneath is leaking, more spend just pours more money through the same holes.",
+        "quote": "More budget scales a campaign that works. It won't fix the one that doesn't. Fix the leak first."
+      },
+      "seoDescription": "A free framework for founders burning ad budget on leads that were never a fit — fix targeting, messaging and the offer, in that order."
     }
   ]
 }
