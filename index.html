@@ -12,6 +12,18 @@
     })();
   </script>
 <meta charset="utf-8" />
+<!-- Google Analytics 4. send_page_view is off on purpose: this site is a
+     client-side-routed single page, so page views are sent manually from
+     route() on every real navigation (see trackPageView). -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFBDT01EJQ"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-PFBDT01EJQ',{send_page_view:false});
+  // Safe wrapper: never lets an analytics problem (ad blocker etc.) break the site.
+  function trackEvent(name,params){ try{ gtag('event',name,params||{}); }catch(e){} }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Piyush Roy — selected work, writing and perspective." />
 <title>Piyush Roy — Portfolio</title>
@@ -622,7 +634,7 @@
     <div class="essay-grid" id="essayGrid"></div><a class="archive" href="/blog">Show all posts →</a>
   </div></section>
 
-  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
+  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="trackEvent('newsletter_signup',{form_name:'homepage-buttondown'});window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
 
   <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow" id="testimonialsEyebrow">Testimonials</p><h2 class="display" id="testimonialsHeadline">What people say after working together.</h2></div><p id="testimonialsDescription">Straight from the people behind the work.</p></div><div class="testimonial-wrap"><div class="testimonial-nav"><button type="button" id="testimonialPrev" aria-label="Previous testimonial">←</button><button type="button" id="testimonialNext" aria-label="Next testimonial">→</button></div><div class="testimonial-grid" id="testimonialList"></div></div></div></section>
 
@@ -960,6 +972,16 @@
     if(ogDesc) ogDesc.setAttribute('content',desc_);
   }
 
+  // GA4 page views for a client-side-routed site. Only fires when the path
+  // really changes, so in-page anchor scrolls (#work, #about…) and the
+  // hashchange-triggered route() calls don't inflate the numbers.
+  let lastTrackedPath=null;
+  function trackPageView(){
+    const p=location.pathname.replace(/\/+$/,'')||'/';
+    if(p===lastTrackedPath) return;
+    lastTrackedPath=p;
+    trackEvent('page_view',{page_title:document.title,page_location:location.origin+p,page_path:p});
+  }
   function route(){
     document.querySelectorAll('.view').forEach(v=>{ v.hidden=true; });
     const path=location.pathname.replace(/\/+$/,'')||'/';
@@ -993,6 +1015,7 @@
       }
     }
     document.querySelectorAll('.reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el); } });
+    trackPageView();
   }
 
   // Real-path navigation (History API) for actual pages. Same-page anchors
@@ -1369,10 +1392,12 @@
     else if(!emailOk){ setFieldError('expertEmail','Enter a valid email address.'); firstInvalid=firstInvalid||'expertEmail'; }
     else setFieldError('expertEmail','');
 
-    // Loosely E.164-shaped: optional leading +, 8-15 digits total, spaces
-    // allowed since people type them naturally (stripped before checking).
+    // E.164-shaped: leading + is REQUIRED (this is what actually enforces a
+    // country code, per the field's label/placeholder), 8-15 digits after
+    // it, spaces/dashes/parens allowed since people type them naturally
+    // (stripped before checking).
     const phoneDigits=phone.replace(/[\s\-()]/g,'');
-    const phoneOk=/^\+?\d{8,15}$/.test(phoneDigits);
+    const phoneOk=/^\+\d{8,15}$/.test(phoneDigits);
     if(!phone){ setFieldError('expertPhone','Enter your mobile number.'); firstInvalid=firstInvalid||'expertPhone'; }
     else if(!phoneOk){ setFieldError('expertPhone','Include your country code, e.g. +91 98765 43210.'); firstInvalid=firstInvalid||'expertPhone'; }
     else setFieldError('expertPhone','');
@@ -1434,6 +1459,8 @@
       status.textContent="Thanks — we'll be in touch shortly.";
       expertForm.querySelectorAll('input,textarea').forEach(i=>i.disabled=true);
       submitBtn.hidden=true;
+      // GA4 conversion — no personal data is sent, only which form + service page.
+      trackEvent('generate_lead',{form_name:'talk-to-expert',service:payload.service});
     }).catch(()=>{
       submitBtn.disabled=false; submitBtn.querySelector('span').textContent='Send →';
       status.hidden=false;
@@ -1468,6 +1495,8 @@
       status.textContent="You're subscribed — thanks for joining.";
       newsletterForm.querySelectorAll('input').forEach(i=>i.disabled=true);
       submitBtn.hidden=true;
+      // GA4 conversion — no personal data is sent, only which form + service page.
+      trackEvent('newsletter_signup',{form_name:'newsletter-signup',service:payload.service});
     }).catch(()=>{
       submitBtn.disabled=false; submitBtn.querySelector('span').textContent='Subscribe →';
       status.hidden=false;
