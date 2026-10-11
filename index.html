@@ -371,6 +371,10 @@
   .collab-cta.secondary:hover{color:var(--paper)}
   .collab-cta__icon{display:inline-block;transition:transform .4s var(--ease)}
   .collab-cta:hover .collab-cta__icon{transform:translateX(5px)}
+  /* service-page primary CTAs: filled indigo so the main action stands out */
+#view-service .collab-cta:not(.secondary){background:var(--indigo);color:var(--paper-2);box-shadow:0 10px 24px -12px rgba(49,72,199,.65);transition:color .4s ease,border-color .4s ease,box-shadow .3s ease}
+#view-service .collab-cta:not(.secondary):before{background:var(--ink)}
+#view-service .collab-cta:not(.secondary):hover,#view-service .collab-cta:not(.secondary):focus-visible{border-color:var(--ink);box-shadow:0 12px 26px -12px rgba(18,23,34,.55)}
   @keyframes iconDrift{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
   footer{padding:64px 0 48px;border-top:1px solid var(--line)}
   .footer-grid{display:grid;grid-template-columns:1fr auto;gap:24px 46px;align-items:center}
@@ -491,6 +495,7 @@
   .lead-field-error{display:block;min-height:16px;margin-top:6px;font-size:12px;color:#b3413a}
   .lead-submit{width:100%;justify-content:center;border:0;cursor:pointer;font:inherit;margin-top:8px}
   .lead-submit:disabled{opacity:.55;cursor:progress}
+  .lead-submit[hidden]{display:none}
   .lead-status{margin-top:20px;padding:15px 18px;border-radius:14px;font-size:13.5px;line-height:1.6}
   .lead-status.success{background:rgba(49,72,199,.08);color:var(--ink);border:1px solid rgba(49,72,199,.22)}
   .lead-status.error{background:rgba(179,65,58,.08);color:#7a2d29;border:1px solid rgba(179,65,58,.22)}
