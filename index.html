@@ -246,6 +246,8 @@
   .case-backdrop.open{opacity:1;pointer-events:auto}
   .case-panel{position:fixed;top:104px;right:0;bottom:0;z-index:81;width:min(560px,92vw);background:var(--paper);color:var(--ink);box-shadow:-30px 0 60px rgba(0,0,0,.35);border-top-left-radius:20px;transform:translateX(100%);transition:transform .5s var(--ease);overflow-y:auto;-webkit-overflow-scrolling:touch}
   .case-panel.open{transform:translateX(0)}
+  .case-panel{transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.case-panel:not(.open){box-shadow:none}
   .case-inner{padding:44px 40px 60px}
   .case-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:22px;border-bottom:1px solid var(--line)}
   .case-eyebrow{margin:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo)}
