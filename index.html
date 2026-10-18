@@ -575,6 +575,12 @@
       </button>
       <div class="lead-status" id="newsStatus" role="status" hidden></div>
     </form>
+    <form name="homepage-newsletter" data-netlify="true" netlify-honeypot="company-website-4" hidden>
+      <input type="hidden" name="form-name" value="homepage-newsletter">
+      <input type="email" name="email">
+      <input type="text" name="source">
+      <input name="company-website-4">
+    </form>
     <form id="modalButtondownForm" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="modalButtondownPopup" style="display:none" aria-hidden="true">
       <input type="email" name="email" id="modalButtondownEmail">
     </form>
@@ -641,7 +647,7 @@
     <div class="essay-grid" id="essayGrid"></div><a class="archive" href="/blog">Show all posts →</a>
   </div></section>
 
-  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="trackEvent('newsletter_signup',{form_name:'homepage-buttondown'});window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
+  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="trackEvent('newsletter_signup',{form_name:'homepage-buttondown'});fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({'form-name':'homepage-newsletter',email:this.email.value,source:'homepage'}).toString()}).catch(function(){});window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
 
   <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow" id="testimonialsEyebrow">Testimonials</p><h2 class="display" id="testimonialsHeadline">What people say after working together.</h2></div><p id="testimonialsDescription">Straight from the people behind the work.</p></div><div class="testimonial-wrap"><div class="testimonial-nav"><button type="button" id="testimonialPrev" aria-label="Previous testimonial">←</button><button type="button" id="testimonialNext" aria-label="Next testimonial">→</button></div><div class="testimonial-grid" id="testimonialList"></div></div></div></section>
 
