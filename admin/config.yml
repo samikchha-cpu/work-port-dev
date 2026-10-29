@@ -406,6 +406,81 @@ collections:
                 required: false
                 hint: "Just the email address, e.g. name@example.com — no 'mailto:' needed. Leave blank to keep the site's current default (piyush@funnelprolabs.com)."
 
+      - name: "reachout"
+        label: "Reach out Page"
+        description: "Text on roypiyush.com/reachout — the page every service's 'Talk to an Expert' button goes to. The form's fields themselves (and the country-code list) are fixed; here you can change the wording around them, the revenue ranges, and the LinkedIn / email links. Anything left blank falls back to the built-in text."
+        file: "content/reachout.json"
+        fields:
+          - label: "Eyebrow"
+            name: "eyebrow"
+            widget: "string"
+            required: false
+            hint: "Small label above the headline, e.g. 'Reach out'."
+          - label: "Headline"
+            name: "headline"
+            widget: "string"
+            required: false
+          - label: "Intro line"
+            name: "intro"
+            widget: "text"
+            required: false
+            hint: "Shown under the headline."
+          - label: "Form labels"
+            name: "labels"
+            widget: "object"
+            required: false
+            collapsed: true
+            hint: "The small captions above each form field. Changing a label only changes the wording — it never changes the field name that arrives in Netlify."
+            fields:
+              - {label: "Name field", name: "name", widget: "string", required: false}
+              - {label: "Email field", name: "email", widget: "string", required: false}
+              - {label: "Mobile number field", name: "phone", widget: "string", required: false}
+              - {label: "Annual revenue field", name: "revenue", widget: "string", required: false}
+              - {label: "Business details field", name: "business", widget: "string", required: false}
+              - {label: "Send button", name: "submit", widget: "string", required: false}
+          - label: "Annual revenue options"
+            name: "revenueOptions"
+            widget: "list"
+            required: false
+            field: {label: "Range", name: "option", widget: "string"}
+            hint: "The choices in the Annual revenue dropdown, in the order shown. The text you type here is exactly what is saved in Netlify for each submission, so keep the wording consistent over time."
+          - label: "Message after sending"
+            name: "successMessage"
+            widget: "text"
+            required: false
+            hint: "Shown in place of the Send button once the form is submitted."
+          - label: "Side panel — heading"
+            name: "asideHeading"
+            widget: "string"
+            required: false
+          - label: "Side panel — line under heading"
+            name: "asideText"
+            widget: "text"
+            required: false
+          - label: "LinkedIn — page link"
+            name: "linkedinUrl"
+            widget: "string"
+            required: false
+            hint: "Full link starting with https://, e.g. https://www.linkedin.com/in/your-name/"
+          - label: "LinkedIn — link text"
+            name: "linkedinText"
+            widget: "string"
+            required: false
+          - label: "Email address"
+            name: "email"
+            widget: "string"
+            required: false
+            hint: "Just the address, e.g. name@example.com — no 'mailto:' needed. Shown next to the email icon."
+          - label: "SEO — Page title"
+            name: "seoTitle"
+            widget: "string"
+            required: false
+            hint: "Shown in the browser tab and search results."
+          - label: "SEO — Meta description"
+            name: "seoDescription"
+            widget: "text"
+            required: false
+
   - name: "services"
     label: "Services"
     description: "Each entry here is a full standalone landing page, shown at roypiyush.com/service/[slug]. Add more services here later without touching any design — each one automatically gets the same layout, and sections with no content simply don't show on the page."
@@ -471,7 +546,7 @@ collections:
                     name: "buttonLabel"
                     widget: "string"
                     required: false
-                    hint: "Defaults to 'Talk to an Expert' if left blank. Opens the 'Talk to an Expert' form (name, email, phone, business)."
+                    hint: "Defaults to 'Talk to an Expert' if left blank. Takes the visitor to the Reach out page (roypiyush.com/reachout) — the page's text is edited under Site Content → Reach out Page."
                   - label: "Secondary button label"
                     name: "secondaryButtonLabel"
                     widget: "string"

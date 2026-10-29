@@ -159,6 +159,7 @@
   .mobile-menu.open a.mobile-link:nth-child(3){transition-delay:.2s}
   .mobile-menu.open a.mobile-link:nth-child(4){transition-delay:.26s}
   .mobile-menu.open a.mobile-link:nth-child(5){transition-delay:.32s}
+  .mobile-menu.open a.mobile-link:nth-child(6){transition-delay:.38s}
   .mobile-link-index{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:12px;color:#8189ac;font-variant-numeric:tabular-nums}
   .mobile-menu-panel a.mobile-link:hover,.mobile-menu-panel a.mobile-link:active{color:#b7bcf2;padding-left:10px}
   .mobile-menu-panel a.nav-cta{
@@ -168,7 +169,7 @@
     box-shadow:0 14px 30px rgba(49,72,199,.35);
     opacity:0;transform:translateX(14px);transition:transform .45s var(--ease),opacity .4s ease,box-shadow .25s ease;
   }
-  .mobile-menu.open a.nav-cta{opacity:1;transform:translateX(0);transition-delay:.32s}
+  .mobile-menu.open a.nav-cta{opacity:1;transform:translateX(0);transition-delay:.44s}
   .mobile-menu-panel a.nav-cta:active{transform:scale(.97)}
   body.menu-open{overflow:hidden}
 
@@ -374,9 +375,39 @@
   .collab-cta__icon{display:inline-block;transition:transform .4s var(--ease)}
   .collab-cta:hover .collab-cta__icon{transform:translateX(5px)}
   /* service-page primary CTAs: filled indigo so the main action stands out */
-#view-service .collab-cta:not(.secondary){background:var(--indigo);color:var(--paper-2);box-shadow:0 10px 24px -12px rgba(49,72,199,.65);transition:color .4s ease,border-color .4s ease,box-shadow .3s ease}
-#view-service .collab-cta:not(.secondary):before{background:var(--ink)}
-#view-service .collab-cta:not(.secondary):hover,#view-service .collab-cta:not(.secondary):focus-visible{border-color:var(--ink);box-shadow:0 12px 26px -12px rgba(18,23,34,.55)}
+:is(#view-service,#view-reachout) .collab-cta:not(.secondary){background:var(--indigo);color:var(--paper-2);box-shadow:0 10px 24px -12px rgba(49,72,199,.65);transition:color .4s ease,border-color .4s ease,box-shadow .3s ease}
+:is(#view-service,#view-reachout) .collab-cta:not(.secondary):before{background:var(--ink)}
+:is(#view-service,#view-reachout) .collab-cta:not(.secondary):hover,:is(#view-service,#view-reachout) .collab-cta:not(.secondary):focus-visible{border-color:var(--ink);box-shadow:0 12px 26px -12px rgba(18,23,34,.55)}
+
+  /* ---------- Reach out page ---------- */
+  #view-reachout .reach-grid{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:0;max-width:1040px;padding-top:44px}
+  #view-reachout .reach-form{padding-right:56px}
+  #view-reachout .reach-aside{padding-left:44px;border-left:1px solid var(--line)}
+  #view-reachout .reach-aside h2{margin:0 0 10px;font:400 clamp(24px,2.4vw,30px)/1.2 Georgia,serif;letter-spacing:-.02em}
+  #view-reachout .reach-aside>p{margin:0 0 30px;color:var(--muted);font-size:15.5px;line-height:1.7}
+  .reach-contact{display:flex;align-items:center;gap:16px;padding:18px 0;border-top:1px solid var(--line);color:var(--ink);transition:color .25s ease}
+  .reach-contact:last-of-type{border-bottom:1px solid var(--line)}
+  .reach-contact:hover{color:var(--indigo)}
+  .reach-icon{flex:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--indigo);display:grid;place-items:center;color:var(--indigo);transition:background .3s ease,color .3s ease}
+  .reach-icon svg{width:20px;height:20px}
+  .reach-contact:hover .reach-icon{background:var(--indigo);color:var(--paper-2)}
+  .reach-contact small{display:block;font-size:11px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .reach-contact span.reach-value{display:block;margin-top:3px;font-size:15px;font-weight:600;overflow-wrap:break-word}
+  .reach-form .lead-field select{width:100%;padding:12px 28px 12px 2px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234b4f56' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 4px center;appearance:none;-webkit-appearance:none;font-size:16px;font-family:inherit;color:var(--ink);cursor:pointer;text-overflow:ellipsis;transition:border-color .25s ease}
+  .reach-form .lead-field select:focus{outline:0;border-bottom-color:var(--indigo)}
+  .reach-form .lead-field select[aria-invalid="true"]{border-bottom-color:#b3413a}
+  .reach-form .lead-field select:invalid{color:var(--muted)}
+  .reach-phone{display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr);gap:20px}
+  .reach-submit{margin-top:6px;cursor:pointer;font-family:inherit}
+  .reach-submit:disabled{opacity:.55;cursor:progress}
+  .reach-submit[hidden]{display:none}
+  .reach-form .lead-status[hidden]{display:none}
+  @media(max-width:860px){
+    #view-reachout .reach-grid{grid-template-columns:1fr;padding-top:32px}
+    #view-reachout .reach-form{padding-right:0}
+    #view-reachout .reach-aside{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:44px;padding-top:36px}
+  }
+  @media(max-width:520px){.reach-phone{grid-template-columns:1fr;gap:0}}
   @keyframes iconDrift{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
   footer{padding:64px 0 48px;border-top:1px solid var(--line)}
   .footer-grid{display:grid;grid-template-columns:1fr auto;gap:24px 46px;align-items:center}
@@ -519,46 +550,20 @@
 </aside>
 
 <div class="case-backdrop" id="leadBackdrop"></div>
-<aside class="case-panel" id="leadPanel" aria-hidden="true" aria-label="Get in touch" role="dialog" aria-modal="true">
+<aside class="case-panel" id="leadPanel" aria-hidden="true" aria-label="Subscribe to newsletter" role="dialog" aria-modal="true">
   <div class="case-inner" id="leadInner">
     <div class="case-top">
-      <p class="case-eyebrow" id="leadEyebrow">Talk to an expert</p>
+      <p class="case-eyebrow" id="leadEyebrow">Subscribe to newsletter</p>
       <button class="case-close" id="leadCloseBtn" type="button">Close ✕</button>
     </div>
-    <h2 class="case-headline" id="leadHeadline">Tell us a bit about you.</h2>
-    <p class="case-subhead" id="leadSubhead">A few details, then we'll be in touch.</p>
+    <h2 class="case-headline" id="leadHeadline">Stay in the loop.</h2>
+    <p class="case-subhead" id="leadSubhead">Just your name and email — no spam.</p>
 
-    <form id="expertForm" name="talk-to-expert" data-netlify="true" netlify-honeypot="company-website-2" novalidate>
-      <input type="hidden" name="form-name" value="talk-to-expert">
-      <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Don't fill this out if you're human: <input name="company-website-2" tabindex="-1" autocomplete="off"></label></p>
-      <div class="lead-field">
-        <label for="expertName">First name</label>
-        <input type="text" id="expertName" name="name" autocomplete="given-name" aria-describedby="expertNameError" required>
-        <span class="lead-field-error" id="expertNameError"></span>
-      </div>
-      <div class="lead-field">
-        <label for="expertEmail">Email address</label>
-        <input type="email" id="expertEmail" name="email" autocomplete="email" aria-describedby="expertEmailError" required>
-        <span class="lead-field-error" id="expertEmailError"></span>
-      </div>
-      <div class="lead-field">
-        <label for="expertPhone">Mobile number (with country code)</label>
-        <input type="tel" id="expertPhone" name="phone" autocomplete="tel" placeholder="+91 98765 43210" aria-describedby="expertPhoneError" required>
-        <span class="lead-field-error" id="expertPhoneError"></span>
-      </div>
-      <div class="lead-field">
-        <label for="expertBusiness">Tell us more about your business</label>
-        <textarea id="expertBusiness" name="business" rows="3" aria-describedby="expertBusinessError" required></textarea>
-        <span class="lead-field-error" id="expertBusinessError"></span>
-      </div>
-      <button class="case-cta primary lead-submit" id="expertSubmitBtn" type="submit">
-        <span id="expertSubmitLabel">Send →</span>
-      </button>
-      <div class="lead-status" id="expertStatus" role="status" hidden></div>
-    </form>
-
-    <form id="newsletterForm" name="newsletter-signup" data-netlify="true" netlify-honeypot="company-website-3" novalidate hidden>
+    <form id="newsletterForm" name="newsletter-signup" data-netlify="true" netlify-honeypot="company-website-3" novalidate>
       <input type="hidden" name="form-name" value="newsletter-signup">
+      <input type="hidden" name="source">
+      <input type="hidden" name="service">
+      <input type="hidden" name="submittedAt">
       <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Don't fill this out if you're human: <input name="company-website-3" tabindex="-1" autocomplete="off"></label></p>
       <div class="lead-field">
         <label for="newsName">First name</label>
@@ -575,19 +580,13 @@
       </button>
       <div class="lead-status" id="newsStatus" role="status" hidden></div>
     </form>
-    <form name="homepage-newsletter" data-netlify="true" netlify-honeypot="company-website-4" hidden>
-      <input type="hidden" name="form-name" value="homepage-newsletter">
-      <input type="email" name="email">
-      <input type="text" name="source">
-      <input name="company-website-4">
-    </form>
     <form id="modalButtondownForm" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="modalButtondownPopup" style="display:none" aria-hidden="true">
       <input type="email" name="email" id="modalButtondownEmail">
     </form>
   </div>
 </aside>
 
-<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="/services" class="nav-link">Services</a><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="#subscribe">Subscribe</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
+<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="/services" class="nav-link">Services</a><a href="#writing" class="nav-link">Blog</a><a href="#subscribe" class="nav-link">Subscribe</a><a class="nav-cta" href="/reachout">Reach out</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
@@ -603,8 +602,9 @@
       <a href="/services" class="mobile-link"><span class="mobile-link-index">03</span>Services</a>
       <a href="#writing" class="mobile-link"><span class="mobile-link-index">04</span>Blog</a>
       <a href="#about" class="mobile-link"><span class="mobile-link-index">05</span>About</a>
+      <a href="#subscribe" class="mobile-link"><span class="mobile-link-index">06</span>Subscribe</a>
     </div>
-    <a class="nav-cta" href="#subscribe">Subscribe</a>
+    <a class="nav-cta" href="/reachout">Reach out</a>
   </nav>
 </div>
 
@@ -647,7 +647,7 @@
     <div class="essay-grid" id="essayGrid"></div><a class="archive" href="/blog">Show all posts →</a>
   </div></section>
 
-  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="trackEvent('newsletter_signup',{form_name:'homepage-buttondown'});fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({'form-name':'homepage-newsletter',email:this.email.value,source:'homepage'}).toString()}).catch(function(){});window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
+  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="trackEvent('newsletter_signup',{form_name:'newsletter-signup',source:'homepage'});fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({'form-name':'newsletter-signup',email:this.email.value,source:'homepage',submittedAt:new Date().toISOString()}).toString()}).catch(function(){});window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
 
   <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow" id="testimonialsEyebrow">Testimonials</p><h2 class="display" id="testimonialsHeadline">What people say after working together.</h2></div><p id="testimonialsDescription">Straight from the people behind the work.</p></div><div class="testimonial-wrap"><div class="testimonial-nav"><button type="button" id="testimonialPrev" aria-label="Previous testimonial">←</button><button type="button" id="testimonialNext" aria-label="Next testimonial">→</button></div><div class="testimonial-grid" id="testimonialList"></div></div></div></section>
 
@@ -712,6 +712,74 @@
       <p><strong>Third parties involved.</strong> Two services are used to run this site: Netlify (hosting) and Buttondown (email newsletter delivery). Each may process standard technical data — such as IP address and browser type — as part of normal web hosting and email delivery. Piyush does not access, sell, or share this data beyond what these providers require to operate.</p>
       <p><strong>Your choices.</strong> Every newsletter email includes an unsubscribe link, and unsubscribing removes your address from Buttondown immediately. To request that your data be deleted sooner, or to ask any question about how it's handled, email <a href="mailto:piyush@funnelprolabs.com" style="color:var(--indigo)">piyush@funnelprolabs.com</a>.</p>
       <p><strong>Changes.</strong> If this policy changes in a meaningful way, the "last updated" date above will change with it.</p>
+    </div>
+  </div>
+</section>
+<section id="view-reachout" class="view section" hidden>
+  <div class="shell page-head">
+    <a class="back-link reveal" href="#top">← Back to site</a>
+    <p class="eyebrow reveal" id="reachEyebrow" style="margin-top:26px">Reach out</p>
+    <h1 class="display reveal" id="reachHeadline">Let’s talk about your business.</h1>
+    <p class="reveal" id="reachIntro">Share a few details and you’ll hear back shortly.</p>
+  </div>
+  <div class="shell">
+    <div class="reach-grid">
+      <form class="reach-form reveal" id="reachForm" name="reachout" data-netlify="true" netlify-honeypot="company-website-5" novalidate>
+        <input type="hidden" name="form-name" value="reachout">
+        <input type="hidden" name="service">
+        <input type="hidden" name="source">
+        <input type="hidden" name="submittedAt">
+        <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Don't fill this out if you're human: <input name="company-website-5" tabindex="-1" autocomplete="off"></label></p>
+        <div class="lead-field">
+          <label for="reachName" id="reachNameLabel">Name</label>
+          <input type="text" id="reachName" name="name" autocomplete="name" aria-describedby="reachNameError" required>
+          <span class="lead-field-error" id="reachNameError"></span>
+        </div>
+        <div class="lead-field">
+          <label for="reachEmail" id="reachEmailLabel">Email address</label>
+          <input type="email" id="reachEmail" name="email" autocomplete="email" aria-describedby="reachEmailError" required>
+          <span class="lead-field-error" id="reachEmailError"></span>
+        </div>
+        <div class="lead-field">
+          <label for="reachPhone" id="reachPhoneLabel">Mobile number</label>
+          <div class="reach-phone">
+            <select id="reachIsd" name="isd" aria-label="Country code (ISD)" autocomplete="tel-country-code"><option value="+91" selected>India (+91)</option></select>
+            <input type="tel" id="reachPhone" name="phone" autocomplete="tel-national" inputmode="tel" placeholder="98765 43210" aria-describedby="reachPhoneError" required>
+          </div>
+          <span class="lead-field-error" id="reachPhoneError"></span>
+        </div>
+        <div class="lead-field">
+          <label for="reachRevenue" id="reachRevenueLabel">Annual revenue</label>
+          <select id="reachRevenue" name="annualRevenue" aria-describedby="reachRevenueError" required>
+            <option value="" selected disabled>Select a range</option>
+            <option value="Pre-Revenue">Pre-Revenue</option>
+            <option value="&lt; $100,000">&lt; $100,000</option>
+            <option value="$100,000 - 500,000">$100,000 - 500,000</option>
+            <option value="$500,000 - 1M">$500,000 - 1M</option>
+            <option value="$1M +">$1M +</option>
+          </select>
+          <span class="lead-field-error" id="reachRevenueError"></span>
+        </div>
+        <div class="lead-field">
+          <label for="reachBusiness" id="reachBusinessLabel">Tell us more about your business</label>
+          <textarea id="reachBusiness" name="business" rows="4" aria-describedby="reachBusinessError" required></textarea>
+          <span class="lead-field-error" id="reachBusinessError"></span>
+        </div>
+        <button class="collab-cta reach-submit" id="reachSubmitBtn" type="submit"><span id="reachSubmitLabel">Send</span><span class="collab-cta__icon">→</span></button>
+        <div class="lead-status" id="reachStatus" role="status" hidden></div>
+      </form>
+      <aside class="reach-aside reveal" aria-label="Contact Piyush directly">
+        <h2 id="reachAsideHeading">Prefer to reach out directly?</h2>
+        <p id="reachAsideText">You can also find Piyush here.</p>
+        <a class="reach-contact" id="reachLinkedin" href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer" aria-label="Piyush on LinkedIn">
+          <span class="reach-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3V9.75zm6.5 0h3.83v1.57h.05c.53-1.01 1.84-2.07 3.79-2.07 4.05 0 4.8 2.67 4.8 6.13v5.87h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4V9.75z"/></svg></span>
+          <span><small>LinkedIn</small><span class="reach-value" id="reachLinkedinText">Connect on LinkedIn</span></span>
+        </a>
+        <a class="reach-contact" id="reachMail" href="mailto:piyush@funnelprolabs.com" aria-label="Email Piyush">
+          <span class="reach-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5l8.5 6 8.5-6"/></svg></span>
+          <span><small>Email</small><span class="reach-value" id="reachMailText">piyush@funnelprolabs.com</span></span>
+        </a>
+      </aside>
     </div>
   </div>
 </section>
@@ -1013,6 +1081,9 @@
       const slug=path.slice(9);
       const s=SERVICES.find(x=>x.slug===slug);
       if(s){ renderService(s); activateView(document.getElementById('view-service')); showHome=false; window.scrollTo(0,0); setDocMeta((s.seoTitle||s.hero&&s.hero.headline||'Services')+' — Piyush Roy',s.seoDescription||DEFAULT_DESC,path); }
+    } else if(path==='/reachout'){
+      activateView(document.getElementById('view-reachout')); initReachout(); showHome=false; window.scrollTo(0,0);
+      setDocMeta(REACHOUT.seoTitle,REACHOUT.seoDescription,path);
     } else if(path==='/services'){
       activateView(document.getElementById('view-services')); showHome=false; window.scrollTo(0,0);
       setDocMeta('Services — Piyush Roy','Ways to work with Piyush Roy on fintech product growth and clarity.',path);
@@ -1191,6 +1262,48 @@
     renderAbout(data);
   }).catch(err=>console.error('Failed to load content/about.json:',err));
 
+  // ---------- Reach out page: CMS-editable copy (content/reachout.json) ----------
+  // Everything has a built-in default, so the page still works if the file is
+  // missing or a field is left blank. Form FIELD NAMES are fixed in code on
+  // purpose (renaming a label never changes what arrives in Netlify).
+  const REACHOUT={
+    seoTitle:'Reach out — Piyush Roy',
+    seoDescription:'Share a few details about your business and get in touch with Piyush Roy.',
+    success:"Thanks — your details have been received. You'll hear back shortly.",
+    submitLabel:'Send'
+  };
+  function applyReachoutContent(c){
+    if(!c || typeof c!=='object') return;
+    const txt=v=>(typeof v==='string' && v.trim())?v.trim():'';
+    const set=(id,v)=>{ const el=document.getElementById(id); const t=txt(v); if(el && t) el.textContent=t; };
+    set('reachEyebrow',c.eyebrow); set('reachHeadline',c.headline); set('reachIntro',c.intro);
+    const L=c.labels||{};
+    set('reachNameLabel',L.name); set('reachEmailLabel',L.email); set('reachPhoneLabel',L.phone);
+    set('reachRevenueLabel',L.revenue); set('reachBusinessLabel',L.business);
+    if(txt(L.submit)){ REACHOUT.submitLabel=txt(L.submit); set('reachSubmitLabel',L.submit); }
+    if(txt(c.successMessage)) REACHOUT.success=txt(c.successMessage);
+    const opts=(Array.isArray(c.revenueOptions)?c.revenueOptions:[]).map(o=>txt(typeof o==='string'?o:(o&&o.option))).filter(Boolean);
+    const sel=document.getElementById('reachRevenue');
+    if(sel && opts.length){
+      sel.innerHTML='';
+      const ph=document.createElement('option'); ph.value=''; ph.textContent='Select a range'; ph.disabled=true; ph.selected=true; sel.appendChild(ph);
+      opts.forEach(o=>{ const op=document.createElement('option'); op.value=o; op.textContent=o; sel.appendChild(op); });
+    }
+    set('reachAsideHeading',c.asideHeading); set('reachAsideText',c.asideText);
+    const li=document.getElementById('reachLinkedin');
+    if(li && /^https:\/\//.test(txt(c.linkedinUrl))) li.href=txt(c.linkedinUrl);
+    set('reachLinkedinText',c.linkedinText);
+    const mail=txt(c.email);
+    if(mail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)){
+      document.getElementById('reachMail').href='mailto:'+mail;
+      document.getElementById('reachMailText').textContent=mail;
+    }
+    if(txt(c.seoTitle)) REACHOUT.seoTitle=txt(c.seoTitle);
+    if(txt(c.seoDescription)) REACHOUT.seoDescription=txt(c.seoDescription);
+    if(location.pathname.replace(/\/+$/,'')==='/reachout') setDocMeta(REACHOUT.seoTitle,REACHOUT.seoDescription,'/reachout');
+  }
+  fetch('/content/reachout.json').then(r=>r.json()).then(applyReachoutContent).catch(()=>{});
+
   fetch('/content/page.json').then(r=>r.json()).then(data=>{
     renderPage(data);
   }).catch(err=>console.error('Failed to load content/page.json:',err));
@@ -1320,50 +1433,38 @@
   document.addEventListener('keydown',e=>{ if(e.key==='Escape' && casePanel.classList.contains('open')) closeCaseStudy(); });
 
   // --- Lead-capture drawer (Services page CTAs) --------------------------
-  // Two real, separate Netlify Forms: "talk-to-expert" and
-  // "newsletter-signup". Both submit for real today — leads land in
-  // Netlify's Forms dashboard (Site → Forms), where each shows up as its
-  // own separate, exportable list (CSV). Connect an automation (e.g.
-  // Zapier) to the "talk-to-expert" form's webhook whenever the follow-up
-  // email is ready. The "newsletter-signup" submission ALSO fires a real
-  // Buttondown subscribe request (same endpoint/technique as the homepage
-  // #subscribe form) so these people actually join the mailing list —
-  // Netlify still keeps its own copy of the lead for reference/export.
+  // Two real, separate Netlify Forms:
+  //   "reachout"          — the /reachout page form (all service CTAs go there).
+  //   "newsletter-signup" — the ONE newsletter list. Every Subscribe entry point
+  //                         (homepage/nav/footer form AND this drawer) posts to it,
+  //                         and also subscribes the person on Buttondown.
+  // Each shows up as its own exportable list in Netlify (Site -> Forms).
   const leadBackdrop=document.getElementById('leadBackdrop');
   const leadPanel=document.getElementById('leadPanel');
-  const expertForm=document.getElementById('expertForm');
   const newsletterForm=document.getElementById('newsletterForm');
   let leadLastTrigger=null;
 
   function openLeadForm(mode,triggerEl){
+    // Newsletter only — "Talk to an Expert" now goes to the /reachout page.
     leadLastTrigger=triggerEl||null;
-    const isExpert=mode!=='newsletter';
-    expertForm.hidden=!isExpert;
-    newsletterForm.hidden=isExpert;
-    const activeForm=isExpert?expertForm:newsletterForm;
-
-    document.getElementById('leadEyebrow').textContent=isExpert?'Talk to an expert':'Subscribe to newsletter';
-    document.getElementById('leadHeadline').textContent=isExpert?'Tell us a bit about you.':'Stay in the loop.';
-    document.getElementById('leadSubhead').textContent=isExpert?"A few details, then we'll be in touch.":'Just your name and email — no spam.';
-
-    activeForm.reset();
-    const status=activeForm.querySelector('.lead-status');
+    newsletterForm.reset();
+    const status=newsletterForm.querySelector('.lead-status');
     status.hidden=true; status.className='lead-status';
-    activeForm.querySelectorAll('input,textarea').forEach(el=>{
+    newsletterForm.querySelectorAll('input,textarea').forEach(el=>{
       el.disabled=false;
       el.setAttribute('aria-invalid','false');
       const err=document.getElementById(el.id+'Error');
       if(err) err.textContent='';
     });
-    const submitBtn=activeForm.querySelector('.lead-submit');
+    const submitBtn=newsletterForm.querySelector('.lead-submit');
     submitBtn.disabled=false; submitBtn.hidden=false;
-    submitBtn.querySelector('span').textContent=isExpert?'Send →':'Subscribe →';
+    submitBtn.querySelector('span').textContent='Subscribe →';
 
     leadPanel.classList.add('open');
     leadBackdrop.classList.add('open');
     leadPanel.setAttribute('aria-hidden','false');
     document.body.classList.add('case-open');
-    requestAnimationFrame(()=>activeForm.querySelector('input')?.focus());
+    requestAnimationFrame(()=>document.getElementById('newsName')?.focus());
   }
   function closeLeadForm(){
     leadPanel.classList.remove('open');
@@ -1376,11 +1477,15 @@
   document.getElementById('leadCloseBtn')?.addEventListener('click',closeLeadForm);
   document.addEventListener('keydown',e=>{ if(e.key==='Escape' && leadPanel.classList.contains('open')) closeLeadForm(); });
 
-  document.getElementById('serviceHeroCtaBtn')?.addEventListener('click',e=>openLeadForm('expert',e.currentTarget));
+  // Every service "primary" CTA goes to the Reach out page (carrying which service it came from).
+  function goReachout(){
+    navigate('/reachout'+(currentService&&currentService.slug?'?service='+encodeURIComponent(currentService.slug):''));
+  }
+  document.getElementById('serviceHeroCtaBtn')?.addEventListener('click',goReachout);
   document.getElementById('serviceHeroSecondaryBtn')?.addEventListener('click',e=>openLeadForm('newsletter',e.currentTarget));
-  document.getElementById('serviceSolutionCtaBtn')?.addEventListener('click',e=>openLeadForm('expert',e.currentTarget));
+  document.getElementById('serviceSolutionCtaBtn')?.addEventListener('click',goReachout);
   document.getElementById('serviceSolutionSecondaryBtn')?.addEventListener('click',e=>openLeadForm('newsletter',e.currentTarget));
-  document.getElementById('serviceFinalCtaBtn')?.addEventListener('click',e=>openLeadForm('expert',e.currentTarget));
+  document.getElementById('serviceFinalCtaBtn')?.addEventListener('click',goReachout);
   document.getElementById('serviceFinalSecondaryBtn')?.addEventListener('click',e=>openLeadForm('newsletter',e.currentTarget));
 
   function setFieldError(id,message){
@@ -1388,38 +1493,6 @@
     const err=document.getElementById(id+'Error');
     input.setAttribute('aria-invalid',message?'true':'false');
     if(err) err.textContent=message||'';
-  }
-
-  function validateExpertForm(){
-    let firstInvalid=null;
-    const name=document.getElementById('expertName').value.trim();
-    const email=document.getElementById('expertEmail').value.trim();
-    const phone=document.getElementById('expertPhone').value.trim();
-    const business=document.getElementById('expertBusiness').value.trim();
-
-    if(!name){ setFieldError('expertName','Enter your first name.'); firstInvalid=firstInvalid||'expertName'; }
-    else setFieldError('expertName','');
-
-    const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if(!email){ setFieldError('expertEmail','Enter your email address.'); firstInvalid=firstInvalid||'expertEmail'; }
-    else if(!emailOk){ setFieldError('expertEmail','Enter a valid email address.'); firstInvalid=firstInvalid||'expertEmail'; }
-    else setFieldError('expertEmail','');
-
-    // E.164-shaped: leading + is REQUIRED (this is what actually enforces a
-    // country code, per the field's label/placeholder), 8-15 digits after
-    // it, spaces/dashes/parens allowed since people type them naturally
-    // (stripped before checking).
-    const phoneDigits=phone.replace(/[\s\-()]/g,'');
-    const phoneOk=/^\+\d{8,15}$/.test(phoneDigits);
-    if(!phone){ setFieldError('expertPhone','Enter your mobile number.'); firstInvalid=firstInvalid||'expertPhone'; }
-    else if(!phoneOk){ setFieldError('expertPhone','Include your country code, e.g. +91 98765 43210.'); firstInvalid=firstInvalid||'expertPhone'; }
-    else setFieldError('expertPhone','');
-
-    if(!business){ setFieldError('expertBusiness','Tell us a little about your business.'); firstInvalid=firstInvalid||'expertBusiness'; }
-    else setFieldError('expertBusiness','');
-
-    if(firstInvalid) document.getElementById(firstInvalid).focus();
-    return !firstInvalid;
   }
 
   function validateNewsletterForm(){
@@ -1450,32 +1523,89 @@
     });
   }
 
-  expertForm?.addEventListener('submit',e=>{
+  // ---------- Reach out page ----------
+  const ISD_LIST=[["Afghanistan",93],["Albania",355],["Algeria",213],["American Samoa","1"],["Andorra",376],["Angola",244],["Anguilla","1"],["Antigua & Barbuda","1"],["Argentina",54],["Armenia",374],["Aruba",297],["Australia",61],["Austria",43],["Azerbaijan",994],["Bahamas","1"],["Bahrain",973],["Bangladesh",880],["Barbados","1"],["Belarus",375],["Belgium",32],["Belize",501],["Benin",229],["Bermuda","1"],["Bhutan",975],["Bolivia",591],["Bosnia & Herzegovina",387],["Botswana",267],["Brazil",55],["Brunei",673],["Bulgaria",359],["Burkina Faso",226],["Burundi",257],["Cambodia",855],["Cameroon",237],["Canada","1"],["Cape Verde",238],["Cayman Islands","1"],["Central African Republic",236],["Chad",235],["Chile",56],["China",86],["Colombia",57],["Comoros",269],["Congo (DRC)",243],["Congo (Republic)",242],["Costa Rica",506],["Côte d’Ivoire",225],["Croatia",385],["Cuba",53],["Curaçao",599],["Cyprus",357],["Czechia",420],["Denmark",45],["Djibouti",253],["Dominica","1"],["Dominican Republic","1"],["Ecuador",593],["Egypt",20],["El Salvador",503],["Equatorial Guinea",240],["Eritrea",291],["Estonia",372],["Eswatini",268],["Ethiopia",251],["Fiji",679],["Finland",358],["France",33],["French Guiana",594],["French Polynesia",689],["Gabon",241],["Gambia",220],["Georgia",995],["Germany",49],["Ghana",233],["Gibraltar",350],["Greece",30],["Greenland",299],["Grenada","1"],["Guadeloupe",590],["Guam","1"],["Guatemala",502],["Guinea",224],["Guinea-Bissau",245],["Guyana",592],["Haiti",509],["Honduras",504],["Hong Kong",852],["Hungary",36],["Iceland",354],["India",91],["Indonesia",62],["Iran",98],["Iraq",964],["Ireland",353],["Israel",972],["Italy",39],["Jamaica","1"],["Japan",81],["Jordan",962],["Kazakhstan",7],["Kenya",254],["Kiribati",686],["Kosovo",383],["Kuwait",965],["Kyrgyzstan",996],["Laos",856],["Latvia",371],["Lebanon",961],["Lesotho",266],["Liberia",231],["Libya",218],["Liechtenstein",423],["Lithuania",370],["Luxembourg",352],["Macao",853],["Madagascar",261],["Malawi",265],["Malaysia",60],["Maldives",960],["Mali",223],["Malta",356],["Martinique",596],["Mauritania",222],["Mauritius",230],["Mexico",52],["Moldova",373],["Monaco",377],["Mongolia",976],["Montenegro",382],["Montserrat","1"],["Morocco",212],["Mozambique",258],["Myanmar",95],["Namibia",264],["Nepal",977],["Netherlands",31],["New Caledonia",687],["New Zealand",64],["Nicaragua",505],["Niger",227],["Nigeria",234],["North Korea",850],["North Macedonia",389],["Norway",47],["Oman",968],["Pakistan",92],["Palestine",970],["Panama",507],["Papua New Guinea",675],["Paraguay",595],["Peru",51],["Philippines",63],["Poland",48],["Portugal",351],["Puerto Rico","1"],["Qatar",974],["Réunion",262],["Romania",40],["Russia",7],["Rwanda",250],["Saint Kitts & Nevis","1"],["Saint Lucia","1"],["Saint Vincent & Grenadines","1"],["Samoa",685],["San Marino",378],["São Tomé & Príncipe",239],["Saudi Arabia",966],["Senegal",221],["Serbia",381],["Seychelles",248],["Sierra Leone",232],["Singapore",65],["Slovakia",421],["Slovenia",386],["Solomon Islands",677],["Somalia",252],["South Africa",27],["South Korea",82],["South Sudan",211],["Spain",34],["Sri Lanka",94],["Sudan",249],["Suriname",597],["Sweden",46],["Switzerland",41],["Syria",963],["Taiwan",886],["Tajikistan",992],["Tanzania",255],["Thailand",66],["Timor-Leste",670],["Togo",228],["Tonga",676],["Trinidad & Tobago","1"],["Tunisia",216],["Türkiye",90],["Turkmenistan",993],["Turks & Caicos","1"],["Uganda",256],["Ukraine",380],["UAE",971],["UK",44],["USA","1"],["Uruguay",598],["Uzbekistan",998],["Vanuatu",678],["Vatican City",379],["Venezuela",58],["Vietnam",84],["Virgin Islands (UK)","1"],["Virgin Islands (US)","1"],["Yemen",967],["Zambia",260],["Zimbabwe",263]];
+  const reachForm=document.getElementById('reachForm');
+  const reachIsd=document.getElementById('reachIsd');
+  if(reachIsd){
+    reachIsd.innerHTML=ISD_LIST.map(([n,c])=>`<option value="+${c}"${n==='India'?' selected':''}>${n} (+${c})</option>`).join('');
+  }
+  let reachSent=false;
+  function initReachout(){
+    if(!reachForm) return;
+    if(reachSent){
+      reachForm.reset();
+      reachIsd.value='+91';
+      reachForm.querySelectorAll('input,textarea,select').forEach(el=>{ el.disabled=false; el.setAttribute('aria-invalid','false'); });
+      reachForm.querySelectorAll('.lead-field-error').forEach(el=>{ el.textContent=''; });
+      document.getElementById('reachStatus').hidden=true;
+      document.getElementById('reachSubmitBtn').hidden=false;
+      reachSent=false;
+    }
+    // remember which service page the visitor came from (set by the service CTAs)
+    reachForm.dataset.service=new URLSearchParams(location.search).get('service')||'';
+  }
+  function validateReachForm(){
+    let firstInvalid=null;
+    const bad=(id,msg)=>{ setFieldError(id,msg); firstInvalid=firstInvalid||id; };
+    const name=document.getElementById('reachName').value.trim();
+    const email=document.getElementById('reachEmail').value.trim();
+    const num=document.getElementById('reachPhone').value.trim();
+    const isd=reachIsd.value;
+    const revenue=document.getElementById('reachRevenue').value;
+    const business=document.getElementById('reachBusiness').value.trim();
+
+    if(!name) bad('reachName','Enter your name.'); else setFieldError('reachName','');
+
+    if(!email) bad('reachEmail','Enter your email address.');
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) bad('reachEmail','Enter a valid email address.');
+    else setFieldError('reachEmail','');
+
+    // Country code comes from the dropdown, so the number box holds the national number only.
+    const digits=num.replace(/[\s\-().]/g,'');
+    const total=isd.replace('+','').length+digits.length;
+    if(!num) bad('reachPhone','Enter your mobile number.');
+    else if(num.charAt(0)==='+') bad('reachPhone','Choose the country code from the list, then enter the number without it.');
+    else if(!/^\d+$/.test(digits) || digits.length<4 || total>15) bad('reachPhone','Enter a valid mobile number for the selected country.');
+    else setFieldError('reachPhone','');
+
+    if(!revenue) bad('reachRevenue','Select your annual revenue range.'); else setFieldError('reachRevenue','');
+    if(!business) bad('reachBusiness','Tell us a little about your business.'); else setFieldError('reachBusiness','');
+
+    if(firstInvalid) document.getElementById(firstInvalid).focus();
+    return !firstInvalid;
+  }
+  reachForm?.addEventListener('submit',e=>{
     e.preventDefault();
-    if(!validateExpertForm()) return;
+    if(!validateReachForm()) return;
+    const isd=reachIsd.value;
+    const national=document.getElementById('reachPhone').value.trim().replace(/\s+/g,' ');
     const payload={
-      name:document.getElementById('expertName').value.trim(),
-      email:document.getElementById('expertEmail').value.trim(),
-      phone:document.getElementById('expertPhone').value.trim(),
-      business:document.getElementById('expertBusiness').value.trim(),
-      service:currentService?currentService.slug:'',
-      submittedAt:new Date().toISOString(),
-      source:location.pathname
+      name:document.getElementById('reachName').value.trim(),
+      email:document.getElementById('reachEmail').value.trim(),
+      phone:isd+' '+national,
+      annualRevenue:document.getElementById('reachRevenue').value,
+      business:document.getElementById('reachBusiness').value.trim(),
+      service:reachForm.dataset.service||'',
+      source:location.pathname,
+      submittedAt:new Date().toISOString()
     };
-    const submitBtn=document.getElementById('expertSubmitBtn');
-    const status=document.getElementById('expertStatus');
-    submitBtn.disabled=true; submitBtn.querySelector('span').textContent='Sending…';
+    const btn=document.getElementById('reachSubmitBtn');
+    const label=document.getElementById('reachSubmitLabel');
+    const status=document.getElementById('reachStatus');
+    btn.disabled=true; label.textContent='Sending…';
     status.hidden=true;
-    submitToNetlify('talk-to-expert',payload).then(()=>{
+    submitToNetlify('reachout',payload).then(()=>{
+      reachSent=true;
       status.hidden=false;
       status.className='lead-status success';
-      status.textContent="Thanks — we'll be in touch shortly.";
-      expertForm.querySelectorAll('input,textarea').forEach(i=>i.disabled=true);
-      submitBtn.hidden=true;
+      status.textContent=REACHOUT.success;
+      reachForm.querySelectorAll('input,textarea,select').forEach(i=>{ i.disabled=true; });
+      btn.hidden=true; btn.disabled=false; label.textContent=REACHOUT.submitLabel;
       // GA4 conversion — no personal data is sent, only which form + service page.
-      trackEvent('generate_lead',{form_name:'talk-to-expert',service:payload.service});
+      trackEvent('generate_lead',{form_name:'reachout',service:payload.service});
     }).catch(()=>{
-      submitBtn.disabled=false; submitBtn.querySelector('span').textContent='Send →';
+      btn.disabled=false; label.textContent=REACHOUT.submitLabel;
       status.hidden=false;
       status.className='lead-status error';
       status.textContent="Something went wrong on our end — please try again in a moment.";

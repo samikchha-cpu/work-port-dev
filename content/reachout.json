@@ -1,0 +1,28 @@
+{
+  "eyebrow": "Reach out",
+  "headline": "Let’s talk about your business.",
+  "intro": "Share a few details and you’ll hear back shortly.",
+  "labels": {
+    "name": "Name",
+    "email": "Email address",
+    "phone": "Mobile number",
+    "revenue": "Annual revenue",
+    "business": "Tell us more about your business",
+    "submit": "Send"
+  },
+  "revenueOptions": [
+    "Pre-Revenue",
+    "< $100,000",
+    "$100,000 - 500,000",
+    "$500,000 - 1M",
+    "$1M +"
+  ],
+  "successMessage": "Thanks — your details have been received. You'll hear back shortly.",
+  "asideHeading": "Prefer to reach out directly?",
+  "asideText": "You can also find Piyush here.",
+  "linkedinUrl": "https://www.linkedin.com/in/piyush-roy-a47593231/",
+  "linkedinText": "Connect on LinkedIn",
+  "email": "piyush@funnelprolabs.com",
+  "seoTitle": "Reach out — Piyush Roy",
+  "seoDescription": "Share a few details about your business and get in touch with Piyush Roy."
+}
