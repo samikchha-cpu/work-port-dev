@@ -159,7 +159,6 @@
   .mobile-menu.open a.mobile-link:nth-child(3){transition-delay:.2s}
   .mobile-menu.open a.mobile-link:nth-child(4){transition-delay:.26s}
   .mobile-menu.open a.mobile-link:nth-child(5){transition-delay:.32s}
-  .mobile-menu.open a.mobile-link:nth-child(6){transition-delay:.38s}
   .mobile-link-index{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:12px;color:#8189ac;font-variant-numeric:tabular-nums}
   .mobile-menu-panel a.mobile-link:hover,.mobile-menu-panel a.mobile-link:active{color:#b7bcf2;padding-left:10px}
   .mobile-menu-panel a.nav-cta{
@@ -169,7 +168,7 @@
     box-shadow:0 14px 30px rgba(49,72,199,.35);
     opacity:0;transform:translateX(14px);transition:transform .45s var(--ease),opacity .4s ease,box-shadow .25s ease;
   }
-  .mobile-menu.open a.nav-cta{opacity:1;transform:translateX(0);transition-delay:.44s}
+  .mobile-menu.open a.nav-cta{opacity:1;transform:translateX(0);transition-delay:.32s}
   .mobile-menu-panel a.nav-cta:active{transform:scale(.97)}
   body.menu-open{overflow:hidden}
 
@@ -300,9 +299,9 @@
 
   /* subscribe glass/prism */
   .subscribe-wrap{background:linear-gradient(140deg,#242746,#151515 58%);color:#fff;overflow:hidden}
-  .subscribe-panel{position:relative;padding:80px;border:1px solid rgba(255,255,255,.19);border-radius:34px;background:rgba(255,255,255,.07);backdrop-filter:blur(18px);display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:end;overflow:hidden}
+  .subscribe-panel{position:relative;padding:80px;border:1px solid rgba(255,255,255,.19);border-radius:34px;background:rgba(255,255,255,.07);backdrop-filter:blur(18px);display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;overflow:hidden}
   .subscribe-panel:before{content:"";position:absolute;width:500px;height:500px;right:-120px;top:-250px;border-radius:50%;background:conic-gradient(from 80deg,transparent,rgba(100,113,210,.35),rgba(255,255,255,.18),rgba(163,113,73,.28),transparent 65%);filter:blur(25px);opacity:.65}
-  .subscribe-panel>*{position:relative}.subscribe-panel .eyebrow{color:#cbd0ff}.subscribe-panel h2{margin:0;font-size:clamp(52px,6vw,88px);line-height:.94}.subscribe-panel p{margin:20px 0;color:#c4c2bc;line-height:1.7}
+  .subscribe-panel>*{position:relative}.subscribe-panel .eyebrow{color:#cbd0ff}.subscribe-panel h2{margin:0;font-size:clamp(52px,6vw,88px);line-height:.94}.subscribe-panel p{margin:20px 0;color:#c4c2bc;line-height:1.7}.subscribe-panel .eyebrow{margin:0 0 20px}.subscribe-panel .form-note{margin:16px 0 0}
   .form{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid rgba(255,255,255,.44)}.form input{min-width:0;padding:18px 0;border:0;outline:0;background:transparent;color:#fff}.form input::placeholder{color:#8e8d92}.form button{border:0;background:transparent;color:#fff;font-weight:700;cursor:pointer}
   .form-note{font-size:11px!important}
 
@@ -383,7 +382,7 @@
   #view-reachout .reach-grid{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:0;max-width:1040px;padding-top:44px}
   #view-reachout .reach-form{padding-right:56px}
   #view-reachout .reach-aside{padding-left:44px;border-left:1px solid var(--line)}
-  #view-reachout .reach-aside h2{margin:0 0 10px;font:400 clamp(24px,2.4vw,30px)/1.2 Georgia,serif;letter-spacing:-.02em}
+  #view-reachout .reach-aside h2{margin:0 0 10px;font:400 clamp(26px,2.6vw,34px)/1.1 "Iowan Old Style","Baskerville",Georgia,serif;letter-spacing:-.04em}
   #view-reachout .reach-aside>p{margin:0 0 30px;color:var(--muted);font-size:15.5px;line-height:1.7}
   .reach-contact{display:flex;align-items:center;gap:16px;padding:18px 0;border-top:1px solid var(--line);color:var(--ink);transition:color .25s ease}
   .reach-contact:last-of-type{border-bottom:1px solid var(--line)}
@@ -519,6 +518,32 @@
   .service-card span.arrow{position:absolute;top:34px;right:32px;color:var(--indigo);transition:transform .3s var(--ease)}
   .service-card:hover span.arrow{transform:translate(4px,-4px)}
 
+  /* service page: one shared grid, widened, display-font consistent */
+  :root{--display:"Iowan Old Style","Baskerville",Georgia,serif}
+  #view-service .service-hero .lede,#view-service .service-block .lede{font-family:var(--display);font-weight:400}
+  #view-service .service-hero .lede{max-width:1100px;letter-spacing:-.045em}
+  #view-service .service-hero .support{max-width:760px}
+  .service-hero.no-visual .lede{max-width:1100px}.service-hero.no-visual .support{max-width:760px}
+  #view-service .service-block{padding:96px 0}
+  #view-service .service-block .eyebrow{margin:0 0 22px}
+  #view-service .service-block .lede{max-width:none;margin:0 0 20px;letter-spacing:-.04em}
+  #view-service .service-block .support{max-width:760px;font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:17px;line-height:1.75;letter-spacing:0}
+  #view-service .service-block .pullquote{max-width:none;margin-top:36px}
+  #view-service .pillar-list,#view-service .who-list,#view-service .faq-list{max-width:none;margin-top:36px}
+  #view-service .pillar-item .approach-title,#view-service .faq-item summary{font-family:var(--display);letter-spacing:-.02em}
+  #view-service .faq-item{padding:26px 0}
+  #view-service .faq-item p{max-width:760px}
+  #view-service .who-list li{min-height:0;padding:30px 28px}
+  #view-service .service-block .support+.service-hero-cta,#view-service .service-hero-cta{margin-top:36px}
+  #view-service #serviceSolutionIntro,#view-service #serviceWhoIntro,#view-service #serviceSolutionOutro,#view-service #serviceWhoOutro{max-width:760px!important}
+  @media(min-width:961px){
+    #view-service .service-block:not(.collab-section){display:grid;grid-template-columns:260px minmax(0,1fr);column-gap:64px;align-items:start}
+    #view-service .service-block:not(.collab-section)>*{grid-column:2}
+    #view-service .service-block:not(.collab-section)>.eyebrow{grid-column:1;grid-row:1;margin:6px 0 0}
+    #view-service .service-block .service-hero-cta{margin-top:36px}
+  }
+  :is(#view-service,#view-reachout) h1{font-family:var(--display)}
+
   /* lead capture drawer (reuses .case-panel/.case-backdrop visual language) */
   .lead-field{margin-bottom:26px}
   .lead-field label{display:block;margin-bottom:8px;font-size:11px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -586,7 +611,7 @@
   </div>
 </aside>
 
-<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="/services" class="nav-link">Services</a><a href="#writing" class="nav-link">Blog</a><a href="#subscribe" class="nav-link">Subscribe</a><a class="nav-cta" href="/reachout">Reach out</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
+<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="/services" class="nav-link">Services</a><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="/reachout">Reach out</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
@@ -602,7 +627,6 @@
       <a href="/services" class="mobile-link"><span class="mobile-link-index">03</span>Services</a>
       <a href="#writing" class="mobile-link"><span class="mobile-link-index">04</span>Blog</a>
       <a href="#about" class="mobile-link"><span class="mobile-link-index">05</span>About</a>
-      <a href="#subscribe" class="mobile-link"><span class="mobile-link-index">06</span>Subscribe</a>
     </div>
     <a class="nav-cta" href="/reachout">Reach out</a>
   </nav>
@@ -617,7 +641,7 @@
       <h1 class="display" id="heroName">Piyush Roy</h1>
       <p class="hero-role" id="heroRole">8+ years of converting &ldquo;My product isn't growing&rdquo; into &ldquo;My product grows on auto-pilot&rdquo;.</p>
       <div class="hero-divider"></div>
-      <p class="hero-quote">A body of work shaped by <span class="changing" id="changingWord">proven frameworks</span>.</p>
+      <p class="hero-quote">A body of work shaped by <span class="changing" id="changingWord">frameworks</span>.</p>
       <p class="hero-support" id="heroSupport">Selected work across SaaS, Training Services &amp; FinTech Products and experiences that come out of growing them.</p>
       <div class="hero-meta">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span id="heroLocation">New Delhi, India</span></span>
@@ -647,7 +671,7 @@
     <div class="essay-grid" id="essayGrid"></div><a class="archive" href="/blog">Show all posts →</a>
   </div></section>
 
-  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">One useful idea, sent when it is ready.</h2></div><div><p id="subscribeDescription">One clear idea on fintech product and strategy, sent when it's ready — not on a content calendar.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="trackEvent('newsletter_signup',{form_name:'newsletter-signup',source:'homepage'});fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({'form-name':'newsletter-signup',email:this.email.value,source:'homepage',submittedAt:new Date().toISOString()}).toString()}).catch(function(){});window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
+  <section class="section subscribe-wrap" id="subscribe"><div class="shell"><div class="subscribe-panel reveal"><div><p class="eyebrow" id="subscribeEyebrow">Subscribe</p><h2 class="display" id="subscribeHeadline">Escape the algorithm</h2></div><div><p id="subscribeDescription">An algorithm decides whether you see what I share next. I think you should. Join founders who get my funnel teardowns, blog posts, and first invites to live sessions &amp; meet-ups. Straight to your inbox.</p><form class="form" action="https://buttondown.com/api/emails/embed-subscribe/piyushroy" method="post" target="popupwindow" onsubmit="trackEvent('newsletter_signup',{form_name:'newsletter-signup',source:'homepage'});fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({'form-name':'newsletter-signup',email:this.email.value,source:'homepage',submittedAt:new Date().toISOString()}).toString()}).catch(function(){});window.open('https://buttondown.com/piyushroy', 'popupwindow')"><input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required><button type="submit">Subscribe →</button></form><p class="form-note" id="subscribeNote">No clutter. Unsubscribe whenever you like.</p></div></div></div></section>
 
   <section class="section"><div class="chapter">04</div><div class="shell"><div class="section-head reveal"><div><p class="eyebrow" id="testimonialsEyebrow">Testimonials</p><h2 class="display" id="testimonialsHeadline">What people say after working together.</h2></div><p id="testimonialsDescription">Straight from the people behind the work.</p></div><div class="testimonial-wrap"><div class="testimonial-nav"><button type="button" id="testimonialPrev" aria-label="Previous testimonial">←</button><button type="button" id="testimonialNext" aria-label="Next testimonial">→</button></div><div class="testimonial-grid" id="testimonialList"></div></div></div></section>
 
@@ -805,7 +829,6 @@
     <p class="support reveal" id="serviceHeroCtaLine" style="margin-top:28px;font-size:16px"></p>
     <div class="service-hero-cta reveal">
       <button class="collab-cta" id="serviceHeroCtaBtn" type="button"><span id="serviceHeroCtaLabel">Talk to an Expert</span><span class="collab-cta__icon">→</span></button>
-      <button class="collab-cta secondary" id="serviceHeroSecondaryBtn" type="button"><span id="serviceHeroSecondaryLabel">Subscribe to Newsletter</span></button>
     </div>
   </div>
 
@@ -824,7 +847,6 @@
     <div class="service-hero-cta reveal" id="serviceSolutionCtaWrap">
       <p class="lede" id="serviceSolutionCtaText" style="font-size:clamp(20px,2.2vw,26px);margin-bottom:20px;flex-basis:100%;max-width:none"></p>
       <button class="collab-cta" id="serviceSolutionCtaBtn" type="button"><span id="serviceSolutionCtaLabel">Talk to an Expert</span><span class="collab-cta__icon">→</span></button>
-      <button class="collab-cta secondary" id="serviceSolutionSecondaryBtn" type="button"><span id="serviceSolutionSecondaryLabel">Subscribe to Newsletter</span></button>
     </div>
   </section>
 
@@ -851,7 +873,6 @@
       <p class="collab-side-text" id="serviceCtaSideText"></p>
       <div class="service-hero-cta" style="margin-top:20px">
         <button class="collab-cta" id="serviceFinalCtaBtn" type="button"><span id="serviceFinalCtaLabel">Talk to an Expert</span><span class="collab-cta__icon">→</span></button>
-        <button class="collab-cta secondary" id="serviceFinalSecondaryBtn" type="button"><span id="serviceFinalSecondaryLabel">Subscribe to Newsletter</span></button>
       </div>
     </div>
   </div></section>
@@ -962,7 +983,6 @@
     heroVisualImg.alt=h.headline||'';
     document.getElementById('serviceHeroCtaLine').textContent=h.ctaSupportLine||'';
     document.getElementById('serviceHeroCtaLabel').textContent=h.buttonLabel||'Talk to an Expert';
-    document.getElementById('serviceHeroSecondaryLabel').textContent=h.secondaryButtonLabel||'Subscribe to Newsletter';
 
     // Why Does It Matter?
     const whySection=document.getElementById('serviceWhySection');
@@ -993,7 +1013,6 @@
       document.getElementById('serviceSolutionCtaText').textContent=sol.ctaText||'';
       document.getElementById('serviceSolutionCtaText').hidden=!sol.ctaText;
       document.getElementById('serviceSolutionCtaLabel').textContent=sol.buttonLabel||'Talk to an Expert';
-      document.getElementById('serviceSolutionSecondaryLabel').textContent=sol.secondaryButtonLabel||'Subscribe to Newsletter';
     }
 
     // Who needs to focus on this?
@@ -1029,7 +1048,6 @@
       document.getElementById('serviceCtaSupport').textContent=cta.support||'';
       document.getElementById('serviceCtaSideText').textContent=cta.sideText||'';
       document.getElementById('serviceFinalCtaLabel').textContent=cta.buttonLabel||'Talk to an Expert';
-      document.getElementById('serviceFinalSecondaryLabel').textContent=cta.secondaryButtonLabel||'Subscribe to Newsletter';
     }
 
     document.querySelectorAll('#view-service .reveal').forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound='1'; io.observe(el); } });
@@ -1349,7 +1367,7 @@
   addEventListener('hashchange',closeMenu);
   matchMedia('(min-width:681px)').addEventListener('change',e=>{ if(e.matches) closeMenu(); });
 
-  let words=['proven frameworks','analytics','results'];let i=0;const word=document.getElementById('changingWord');
+  let words=['frameworks','analytics','results'];let i=0;const word=document.getElementById('changingWord');
   setInterval(()=>{
     // Pick up the CMS-provided list if content/page.json has finished loading
     // by now; falls back to the hardcoded default above otherwise.
@@ -1482,11 +1500,8 @@
     navigate('/reachout'+(currentService&&currentService.slug?'?service='+encodeURIComponent(currentService.slug):''));
   }
   document.getElementById('serviceHeroCtaBtn')?.addEventListener('click',goReachout);
-  document.getElementById('serviceHeroSecondaryBtn')?.addEventListener('click',e=>openLeadForm('newsletter',e.currentTarget));
   document.getElementById('serviceSolutionCtaBtn')?.addEventListener('click',goReachout);
-  document.getElementById('serviceSolutionSecondaryBtn')?.addEventListener('click',e=>openLeadForm('newsletter',e.currentTarget));
   document.getElementById('serviceFinalCtaBtn')?.addEventListener('click',goReachout);
-  document.getElementById('serviceFinalSecondaryBtn')?.addEventListener('click',e=>openLeadForm('newsletter',e.currentTarget));
 
   function setFieldError(id,message){
     const input=document.getElementById(id);

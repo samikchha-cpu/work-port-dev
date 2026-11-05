@@ -547,11 +547,6 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Defaults to 'Talk to an Expert' if left blank. Takes the visitor to the Reach out page (roypiyush.com/reachout) — the page's text is edited under Site Content → Reach out Page."
-                  - label: "Secondary button label"
-                    name: "secondaryButtonLabel"
-                    widget: "string"
-                    required: false
-                    hint: "Defaults to 'Subscribe to Newsletter' if left blank. Opens the simpler newsletter form (name + email only)."
               - label: "Lead-form drawer text"
                 name: "leadForm"
                 widget: "object"
@@ -637,11 +632,6 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Defaults to 'Talk to an Expert' if left blank."
-                  - label: "Repeated CTA — secondary button label"
-                    name: "secondaryButtonLabel"
-                    widget: "string"
-                    required: false
-                    hint: "Defaults to 'Subscribe to Newsletter' if left blank."
               - label: "Who Needs To Focus On This?"
                 name: "whoThisIsFor"
                 widget: "object"
@@ -730,11 +720,6 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Defaults to 'Talk to an Expert' if left blank."
-                  - label: "Secondary button label"
-                    name: "secondaryButtonLabel"
-                    widget: "string"
-                    required: false
-                    hint: "Defaults to 'Subscribe to Newsletter' if left blank."
               - label: "Resource sent after signup"
                 name: "resource"
                 widget: "object"
