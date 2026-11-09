@@ -1,96 +1,373 @@
 {
   "services": [
     {
-      "whoThisIsFor": {
-        "sectionTitle": "Who needs to focus on this?",
-        "intro": "This is for founders who've already done the hard part. You've built a product people genuinely find valuable. What's not working yet is the engine that gets it in front of the right people, consistently. If that's you, and any of these sounds familiar, your bottleneck is lead generation:",
-        "bullets": [
-          {
-            "text": "You're an indie hacker with a product people love, but growth has plateaued below $2,000 MRR and you can't get it to climb predictably."
-          },
-          {
-            "text": "You run a B2C SaaS past product-market fit but you're stuck under your first 1,000 paying users and acquisition feels clueless."
-          },
-          {
-            "text": "You're a digital services provider delivering great work but you've to accept every project, good or bad, because the pipeline isn't there."
-          },
-          {
-            "text": "You're a coach, trainer, or consultant with a strong offer, but every cohort launch is a scramble to fill seats instead of a waitlist."
-          }
-        ],
-        "outro": "If that's where you are, more effort isn't the answer. A proven lead-generation framework is."
+      "slug": "funnel-diagnosis",
+      "navTitle": "Funnel Diagnosis",
+      "seoTitle": "Funnel Diagnosis",
+      "seoDescription": "Ads, website, signup, follow-ups, sales calls. Somewhere in that chain, people are leaving. Most teams end up fixing the part that's easiest to change, not the part that's actually broken.",
+      "hero": {
+        "eyebrow": "Funnel Diagnosis",
+        "headline": "You know growth is stuck. You don't know where.",
+        "subheadline": "Ads, website, signup, follow-ups, sales calls. Somewhere in that chain, people are leaving. Most teams end up fixing the part that's easiest to change, not the part that's actually broken.",
+        "ctaSupportLine": "Let's find out where it breaks before you spend more on it.",
+        "buttonLabel": "Talk to an Expert"
       },
-      "slug": "get-more-qualified-leads",
-      "resource": {
-        "name": "Lead Gen Framework (PDF)",
-        "type": "pdf",
-        "url": ""
+      "whyItMatters": {
+        "sectionTitle": "Why does it matter?",
+        "headline": "",
+        "subheadline": "Every founder I speak to has a theory. The ads are weak. The website is old. The sales team doesn't follow up. Sometimes the theory is right. More often, it's the second or third problem, and the real one stays hidden.\n\nFixing the wrong thing feels like progress for a few weeks. Then the numbers come back the same, and the team has less budget and less patience than before.",
+        "quote": "A fix is only as good as the diagnosis behind it. Find the leak first. Then fix it once."
       },
-      "navTitle": "Services",
       "solution": {
         "sectionTitle": "How to solve it, systematically?",
-        "intro": "If a competitor is generating and converting leads with a similar product, the demand is real and the market isn't your problem. When lead gen still struggles, it's almost always one of three things: who you're targeting, how you speak to them, or what you're offering. Here's exactly how I work through each",
+        "intro": "Every funnel loses people somewhere. The work is finding the one place that's costing you the most, and fixing that before touching anything else. Here's how I work through it:",
         "pillars": [
           {
-            "title": "Who you're targeting (ICP & positioning)",
-            "body": "Before a single rupee goes into ads, write down one clear line each: who exactly buys this, what they're really struggling with that your product solves, and why they'd choose you over the alternative. Most teams skip this, which is why their targeting is scattered and their messaging tries to speak to everyone. Nail it and every rupee downstream lands on the right person with the right problem."
+            "title": "Walk the whole journey",
+            "body": "I go through every step your customer takes, from the first ad they see to the moment they pay. I go through it the way they would, and I check your numbers to see where people actually leave."
           },
           {
-            "title": "How you speak to them (copy & experience)",
-            "body": "Now that you're in front of the right people, your ad and landing page have one job: name the exact pain they walked in with, so clearly they feel understood in seconds. Use a proven structure like Problem, Agitate, Solution (PAS). It works well for me and my clients and then test it relentlessly, because the first version is almost never the winner."
+            "title": "Find the biggest leak",
+            "body": "Most funnels have several problems. Only one is costing you the most right now. I rank them and show you why one comes first. You get one clear answer, not a list of 40 things to fix."
           },
           {
-            "title": "What you're offering (the offer)",
-            "body": "The most neglected, and the most invisible. A stranger on your page is skeptical by default. Me too. But nobody resists an offer that would make them feel stupid to walk away from. Most teams pour money into traffic and never touch the offer. Make yours faster, safer, or lower-risk to say yes to and the same traffic suddenly converts better."
+            "title": "Fix it, and track one number",
+            "body": "Then my team and I fix it. That could be a page, an ad, the follow-up messages, or the sales script. Before we start, we agree on one number to watch, so you can see what changed."
           }
         ],
-        "outro": "What separates the products that fix this from the ones that don't is the conviction to execute. Doing all three, in the right order, and holding the line through the testing until it works.",
+        "outro": "This isn't a report that sits in a folder. It ends with the fix built, the number tracked, and a clear plan for what to fix next.",
         "ctaText": "",
-        "buttonLabel": "Talk to an Expert",
-        "secondaryButtonLabel": "Subscribe to Newsletter"
+        "buttonLabel": "Talk to an Expert"
       },
+      "fromMyWork": {
+        "sectionTitle": "From my work",
+        "text": "RuDo Wealth came to me before they had a clear customer in mind. I spent 3 to 4 weeks studying the market and their competitors. That work showed them where the real opening was: NRIs. They built the business around that segment, and still come back to me with positioning questions."
+      },
+      "whoThisIsFor": {
+        "sectionTitle": "Who needs to focus on this?",
+        "intro": "This is for founders who already have something working. People are finding you, some are buying, but the numbers don't match the effort. If any of these sounds familiar, start with a diagnosis:",
+        "bullets": [
+          {
+            "text": "You run a WealthTech app. People download it, but very few finish KYC or make a first investment, and you're not sure if it's the ads, the app or trust."
+          },
+          {
+            "text": "You run a B2B SaaS product. Demos get booked and trials get started, but revenue isn't growing at the pace your effort suggests."
+          },
+          {
+            "text": "You've worked with an agency or two. Each one fixed their part. The overall numbers still didn't move."
+          },
+          {
+            "text": "You're about to raise ad spend or hire a growth person, and want to know what's actually broken first."
+          }
+        ],
+        "outro": "If that's where you are, you don't need more effort. You need to know where to put it."
+      },
+      "faqs": {
+        "sectionTitle": "Frequently Asked Questions (FAQs)",
+        "items": [
+          {
+            "question": "What do I get at the end?",
+            "answer": "A clear picture of where your funnel loses people, ranked by what each problem costs you. The biggest one fixed. One number tracked for 30 days. And a plan for what to fix next, in order."
+          },
+          {
+            "question": "How long does it take?",
+            "answer": "4 to 6 weeks. The first 2 weeks go into finding the leak. The rest goes into fixing it and watching the number."
+          },
+          {
+            "question": "Why fix only one thing? We have many problems.",
+            "answer": "Because if you change 10 things at once, you'll never know which one worked. Fixing the biggest leak first gives you a result you can see and trust. Then the next fix is built on facts, not guesses."
+          },
+          {
+            "question": "What do you need from my team?",
+            "answer": "Access to your analytics, ad accounts and CRM. About an hour a week of your time. And someone on your side who can push changes live."
+          },
+          {
+            "question": "What if the problem is something you can't fix, like pricing or the product?",
+            "answer": "Then I'll tell you plainly and show you what I found. Copy and ads can't fix a price that's wrong for the market or a product that isn't ready. I'd rather say that early than take money for work that won't move your number."
+          },
+          {
+            "question": "Can you guarantee results?",
+            "answer": "No one honest can promise a number when they don't control your budget, product or market. What I commit to: you'll know exactly where you're losing customers, the fix will be built, and we'll measure one number before and after, so you can see what changed."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "get-more-qualified-leads",
+      "navTitle": "Services",
+      "seoTitle": "Get More Qualified Leads",
+      "seoDescription": "It's rarely one thing. The wrong people are being targeted, the message doesn't land, and the page they arrive on doesn't give them a reason to act. Together, these eat your budget and fill your pipeline with people who were never a fit.",
       "hero": {
         "eyebrow": "Get More Qualified Leads",
-        "headline": "You're burning ads budget on leads that were never a fit.",
-        "visual": "/admin/uploads/chatgpt-image-sep-20-2026-01_29_10-pm.png",
-        "subheadline": "It's rarely just one thing. Poor targeting, a weak value proposition, unoptimised ads, and landing pages that don't convert. Together, they drain your spend and fill your pipeline with people who were never going to buy.",
-        "ctaSupportLine": "Let's figure out what's not working right.",
+        "headline": "You're spending on ads. The leads you get were never going to buy.",
+        "subheadline": "It's rarely one thing. The wrong people are being targeted, the message doesn't land, and the page they arrive on doesn't give them a reason to act. Together, these eat your budget and fill your pipeline with people who were never a fit.",
+        "ctaSupportLine": "Let's find out what's not working.",
         "buttonLabel": "Talk to an Expert",
-        "secondaryButtonLabel": "Subscribe to Newsletter"
+        "visual": "/admin/uploads/chatgpt-image-sep-20-2026-01_29_10-pm.png"
       },
-      "seoTitle": "Get More Qualified Leads — Piyush Roy",
+      "whyItMatters": {
+        "sectionTitle": "Why does it matter?",
+        "headline": "",
+        "subheadline": "Most products don't fail because they're bad. They fail because they never build a steady way to reach the right people and turn them into customers.\n\nSo founders do the obvious thing. They raise the ad budget or add another channel. But if the setup underneath is losing people, more spend just sends more money down the same path.",
+        "quote": "More budget grows a campaign that works. It won't fix one that doesn't. Fix the leak first."
+      },
+      "solution": {
+        "sectionTitle": "How to solve it, systematically?",
+        "intro": "If a competitor with a similar product is getting good leads, the demand is real. The market isn't your problem. When leads still don't come, it's almost always one of three things: who you're reaching, what you're telling them, or what you're offering. Here's how I work through each:",
+        "pillars": [
+          {
+            "title": "Who you're reaching",
+            "body": "Before a single rupee goes into ads, we write down three things in plain words. Who exactly buys this. What problem they're trying to solve. And why they'd pick you over the other options. Most teams skip this, so their ads reach everyone and convince no one."
+          },
+          {
+            "title": "What you're telling them",
+            "body": "Once you're in front of the right people, your ad and page have one job: describe the exact problem they came with, so clearly that they feel understood within seconds. Then we test it, because the first version is almost never the best one."
+          },
+          {
+            "title": "What you're offering",
+            "body": "This is the most ignored part. A stranger on your page doubts you by default. Most teams spend on traffic and never touch the offer. Make it faster, safer or easier to say yes to, and the same traffic starts turning into leads. For a WealthTech app, that could be a goal calculator. For a SaaS product, a demo that shows their own data."
+          }
+        ],
+        "outro": "What separates the teams that fix this from the ones that don't is doing all three, in the right order, and sticking with the testing until it works.",
+        "ctaText": "",
+        "buttonLabel": "Talk to an Expert"
+      },
+      "fromMyWork": {
+        "sectionTitle": "From my work",
+        "text": "Perccent, a mutual fund platform, had spent over a year trying to grow. I took over growth on 16 March 2026. In 90 days, registered users went from around 250 to over 13,000."
+      },
+      "whoThisIsFor": {
+        "sectionTitle": "Who needs to focus on this?",
+        "intro": "This is for founders who've already done the hard part. You've built something people find useful. What's not working yet is the system that brings the right people to you, month after month. If any of these sounds familiar, your problem is lead generation:",
+        "bullets": [
+          {
+            "text": "You run a B2B SaaS product and your ads bring in students, job seekers and small teams, not the decision-makers who can actually buy."
+          },
+          {
+            "text": "You run a WealthTech platform and your cost to get one investor keeps going up, while the number of investors doesn't."
+          },
+          {
+            "text": "You're selling to NRIs or a specific group of investors, and your ads keep reaching everyone else."
+          },
+          {
+            "text": "Your sales team spends most of its calls on people who were never going to buy."
+          }
+        ],
+        "outro": "If that's where you are, more effort isn't the answer. A clear, tested way to bring in the right people is."
+      },
       "faqs": {
         "sectionTitle": "Frequently Asked Questions (FAQs)",
         "items": [
           {
             "question": "How do I know I have a lead problem and not a closing problem?",
-            "answer": "Most founders can't tell, and guessing wrong costs a quarter. Quick test: if people are booking demos and going quiet after them, that's a closing problem. No amount of new leads will fix it. If you're spending on ads generating traffic but no enquiries, downloads or sign-up to free tier, that's a lead problem, and it starts upstream of the ad."
+            "answer": "Quick test: if people book demos or sign up and then go quiet, that's a closing problem, and more leads won't fix it. If you're spending on ads and getting traffic but no enquiries, signups or downloads, that's a lead problem."
           },
           {
-            "question": "We've rewritten our landing page twice already and nothing changed. Why would this be different?",
-            "answer": "Because two rewrites that changed nothing is evidence. It tells us the leak probably isn't on the page. A page can only convert the people your targeting sends to it, using the promise your positioning gave it. Rewrite the words on top of the wrong audience and the wrong promise, and you get a prettier page with the same numbers. That's why positioning comes first here, and copy comes second. Most of the time the third rewrite isn't the fix. It's a symptom."
+            "question": "We've rewritten our landing page twice and nothing changed. Why would this be different?",
+            "answer": "Two rewrites that changed nothing tell us the problem probably isn't on the page. A page can only convert the people your ads send to it. If the wrong people arrive, better words just give you a nicer page with the same numbers. That's why I start with who you're reaching, and write the copy after."
           },
           {
-            "question": "Isn't this really an ads problem? We just need more traffic.",
-            "answer": "Sometimes. But more traffic multiplies whatever your funnel already does. If your page converts the wrong people today, doubling spend doubles the wrong people and your sales team pays for it in wasted calls. I'll look at the ad, the page, and the promise between them together, because that's usually where the leak is. If the honest answer turns out to be 'your funnel is fine, you just need more budget,' I'll tell you that and you can stop reading."
+            "question": "Isn't this just an ads problem? We need more traffic.",
+            "answer": "Sometimes. But more traffic multiplies whatever your setup already does. If you're attracting the wrong people today, doubling spend doubles the wrong people. I look at the ad, the page and the offer together. If the honest answer is that you just need more budget, I'll tell you that."
           },
           {
             "question": "Can you guarantee a number of leads?",
-            "answer": "Only if you guarantee execution as I suggest. Typically, I don't control your budget, your market's buying cycle, or your product. What I will commit to: we agree upfront on the one metric this work is meant to move, we measure it before we touch anything, and you'll know within the engagement whether it moved. Lead generation is like 1+1=2. I'll ensure we're doing 1+1 correctly. 2 is inevitable."
+            "answer": "No. I don't control your budget, your market or your product. What I commit to: we agree on one number this work should move, we measure it before we start, and you'll know during the work whether it's moving."
+          },
+          {
+            "question": "Do you run the ads, or just advise?",
+            "answer": "Both. My team and I set up and run your ads on Meta, Google and LinkedIn, and make the creatives and landing pages. You pay the ad platforms directly. My fee covers the work."
           },
           {
             "question": "What if you decide you can't help us?",
-            "answer": "Then I'll say so, ideally before you've paid me for anything large. Some problems look like lead generation and aren't: pricing that's wrong for the segment, a product that isn't ready, or a market that's too small to support the growth target. Copy doesn't fix any of those, and I'd rather lose the engagement than take money for work I know won't move your number. The fastest way to find out is one session, not a proposal."
+            "answer": "Then I'll say so before you pay for anything large. Some problems look like lead problems but aren't: pricing that's wrong for the market, a product that isn't ready, or a market too small for your goal. I'd rather lose the work than take money for something that won't move your number."
           }
         ]
+      }
+    },
+    {
+      "slug": "turn-leads-into-customers",
+      "navTitle": "Turn Leads Into Customers",
+      "seoTitle": "Turn Leads Into Customers",
+      "seoDescription": "They visit, sign up, book a demo, download the app. Then they stop. Somewhere between interest and payment, something makes them hesitate, and most teams never find out what it was.",
+      "hero": {
+        "eyebrow": "Turn Leads Into Customers",
+        "headline": "People are showing interest. Very few are paying.",
+        "subheadline": "They visit, sign up, book a demo, download the app. Then they stop. Somewhere between interest and payment, something makes them hesitate, and most teams never find out what it was.",
+        "ctaSupportLine": "Let's find out why they stop.",
+        "buttonLabel": "Talk to an Expert"
       },
       "whyItMatters": {
-        "sectionTitle": "Why Does It Matters?",
-        "headline": "Most products don't die because they're bad. They die from never building a repeatable way to get and convert qualified demand.",
-        "subheadline": "So founders do the obvious thing. Raise the ad budget, add another channel. But if the funnel underneath is leaking, more spend just pours more money through the same holes.",
-        "quote": "More budget scales a campaign that works. It won't fix the one that doesn't. Fix the leak first."
+        "sectionTitle": "Why does it matter?",
+        "headline": "",
+        "subheadline": "Every lead you already have cost you money. Ads, content, sales time. When they don't turn into customers, that money is gone, and the usual answer is to go and buy more leads.\n\nBut if 100 leads give you 2 customers today, 200 leads will give you 4. The cost per customer stays just as high. Fix what happens after the lead arrives, and the same budget brings in more customers.",
+        "quote": "Getting more leads is expensive. Losing the ones you already have is more expensive."
       },
-      "seoDescription": "A free framework for founders burning ad budget on leads that were never a fit — fix targeting, messaging and the offer, in that order."
+      "solution": {
+        "sectionTitle": "How to solve it, systematically?",
+        "intro": "When people show interest and then leave, it's almost always one of three things: they didn't understand you, it was too hard to go ahead, or no one gave them a reason to decide. Here's how I work through each:",
+        "pillars": [
+          {
+            "title": "Make it clear in seconds",
+            "body": "Your website and landing pages need to answer three questions before the visitor scrolls: what is this, is it for me, and why should I trust it. In WealthTech, trust matters most, so we show who's behind the product, how money is kept safe, and proof from real investors."
+          },
+          {
+            "title": "Remove the reasons to stop",
+            "body": "I go through your signup, onboarding and KYC steps the way a new user would, and find where people give up. Too many fields, an unclear next step, a scary form. For SaaS, it's often a trial that never shows the product's value. For WealthTech, it's the gap between downloading the app and making a first investment."
+          },
+          {
+            "title": "Follow up and help them decide",
+            "body": "Most people don't say yes the first time. We write the emails and WhatsApp messages that bring them back, the sales script and answers to common doubts, and, where needed, rework your plans and pricing so the choice is easy."
+          }
+        ],
+        "outro": "Each step looks small on its own. Together, they decide whether a lead becomes a customer or a number in a spreadsheet.",
+        "ctaText": "",
+        "buttonLabel": "Talk to an Expert"
+      },
+      "fromMyWork": {
+        "sectionTitle": "From my work",
+        "text": "FinArk, a mutual fund data provider, was trying to break into a crowded market. I repositioned the product and rebuilt their sales script. They got their first 10 paying customers, 1 in 3 free users now become paying customers, and over 60% of customers renew."
+      },
+      "whoThisIsFor": {
+        "sectionTitle": "Who needs to focus on this?",
+        "intro": "This is for teams that already get interest. Leads are coming in. What's not working is what happens next. If any of these sounds familiar, your problem is conversion:",
+        "bullets": [
+          {
+            "text": "You run a WealthTech app with plenty of downloads, but most users never finish KYC or start their first SIP."
+          },
+          {
+            "text": "You run a B2B SaaS product where people sign up for a free trial, look around once and never come back."
+          },
+          {
+            "text": "Your sales calls go well, but prospects say \"let me think about it\" and then go quiet."
+          },
+          {
+            "text": "Visitors spend time on your website, but very few fill the form or book a call."
+          }
+        ],
+        "outro": "If that's where you are, more leads won't help yet. Turning the ones you have into customers will."
+      },
+      "faqs": {
+        "sectionTitle": "Frequently Asked Questions (FAQs)",
+        "items": [
+          {
+            "question": "How do I know I have a conversion problem and not a lead problem?",
+            "answer": "If people sign up, book demos or download your app, and then stop, it's a conversion problem. If very few people show interest in the first place, it's a lead problem, and that's a different fix."
+          },
+          {
+            "question": "Is this just rewriting our website?",
+            "answer": "No. Sometimes the website is the problem. Often it's the signup steps, the follow-up messages or the sales call. I find where people drop off first, then fix that part, whatever it is."
+          },
+          {
+            "question": "Do you work on our sales calls too?",
+            "answer": "Yes. I write your sales script, the answers to the doubts prospects raise most, the deck your team uses and the messages that go out after each call."
+          },
+          {
+            "question": "Can you change our pricing?",
+            "answer": "I can suggest changes to your plans, trials and bundles so they're easier to say yes to. The final decision on price stays with you."
+          },
+          {
+            "question": "WealthTech has strict advertising rules. How do you handle that?",
+            "answer": "Every message keeps the disclaimers your business is required to show, and your compliance team approves everything before it goes live."
+          },
+          {
+            "question": "Can you guarantee more customers?",
+            "answer": "No. I don't control your product, your sales team or your market. What I commit to: we agree on one number to move, like signups to paying customers, measure it before we start, and you'll see whether it moved."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "marketing-automation",
+      "navTitle": "Marketing Automation",
+      "seoTitle": "Marketing Automation",
+      "seoDescription": "Someone fills your form at 11 pm. Your team calls back two days later. By then, they've signed up somewhere else. Most teams don't have a people problem. They have a follow-up problem.",
+      "hero": {
+        "eyebrow": "Marketing Automation",
+        "headline": "Your leads lose interest while your team is busy.",
+        "subheadline": "Someone fills your form at 11 pm. Your team calls back two days later. By then, they've signed up somewhere else. Most teams don't have a people problem. They have a follow-up problem.",
+        "ctaSupportLine": "Let's make sure no lead is left waiting.",
+        "buttonLabel": "Talk to an Expert"
+      },
+      "whyItMatters": {
+        "sectionTitle": "Why does it matter?",
+        "headline": "",
+        "subheadline": "The first few hours after someone shows interest are when they're most likely to say yes. After that, they get busy, forget, or find another option.\n\nYour team can't reply to everyone, every time, within minutes. So leads sit in spreadsheets, inboxes and WhatsApp chats, and the good ones go unnoticed alongside the bad ones.",
+        "quote": "You already paid to get these leads. Don't lose them because no one replied in time."
+      },
+      "solution": {
+        "sectionTitle": "How to solve it, systematically?",
+        "intro": "Automation isn't about sending more messages. It's about sending the right message, at the right moment, without someone having to remember. Here's how I set it up:",
+        "pillars": [
+          {
+            "title": "Bring every lead into one place",
+            "body": "Leads from your ads, website forms, WhatsApp and events all go into one system, usually a CRM like HubSpot, Zoho or LeadSquared. No more checking five places to see who's interested."
+          },
+          {
+            "title": "Reply automatically, based on what people do",
+            "body": "Someone started signing up and stopped. Someone didn't finish KYC. Someone's free trial ends in 3 days. Each of these sends a message by email or WhatsApp, at the moment it matters, written to help them take the next step."
+          },
+          {
+            "title": "Send the best leads to your team first",
+            "body": "Not every lead needs a call. We set simple rules so your sales team sees the most interested people first, and the rest are followed up automatically. You also get one simple view of how many leads came in, how many moved forward and where they stopped."
+          }
+        ],
+        "outro": "Once it's set up, your follow-ups happen on time, every time, whether your team is in a meeting, on leave or asleep.",
+        "ctaText": "",
+        "buttonLabel": "Talk to an Expert"
+      },
+      "fromMyWork": {
+        "sectionTitle": "From my work",
+        "text": "At Perccent, growth went from around 250 registered users to over 13,000 in 90 days. Alongside that growth, I built a system for tracking and decisions that the whole team still uses today, so they can see what's working without waiting for someone to pull a report."
+      },
+      "whoThisIsFor": {
+        "sectionTitle": "Who needs to focus on this?",
+        "intro": "This is for teams that get leads but struggle to keep up with them. If any of these sounds familiar, your problem is follow-up:",
+        "bullets": [
+          {
+            "text": "Your leads sit in a spreadsheet or a shared inbox, and no one is sure who has been contacted."
+          },
+          {
+            "text": "You run a WealthTech app where many users start KYC but never finish, and no one reminds them."
+          },
+          {
+            "text": "You run a B2B SaaS product where trials end without a single message to help users decide."
+          },
+          {
+            "text": "Your sales team calls every lead the same way, so the most interested people wait in line behind the least interested."
+          }
+        ],
+        "outro": "If that's where you are, you don't need more people. You need a system that follows up for you."
+      },
+      "faqs": {
+        "sectionTitle": "Frequently Asked Questions (FAQs)",
+        "items": [
+          {
+            "question": "Which tools do you work with?",
+            "answer": "Whatever you already use, if it does the job. Common ones are HubSpot, Zoho, LeadSquared and the WhatsApp Business API. If you don't have a tool yet, I'll suggest one that fits your size and budget."
+          },
+          {
+            "question": "Do we have to pay for the software?",
+            "answer": "Yes. Tool subscriptions are paid directly by you. My fee covers setting it up and writing the messages."
+          },
+          {
+            "question": "Will automated messages feel robotic to our customers?",
+            "answer": "Not if they're written well. Each message is sent because of something the person just did, so it feels timely, not random. We also keep the number of messages low."
+          },
+          {
+            "question": "How is this different from your conversion work?",
+            "answer": "Conversion work decides what your messages and pages say. Automation is the system that sends them at the right time. Many clients need both, but they can be done separately."
+          },
+          {
+            "question": "Who looks after it once it's set up?",
+            "answer": "Your team can run it day to day. I hand it over with simple notes on how it works. If you'd like me to keep improving it every month, that's available too."
+          },
+          {
+            "question": "WealthTech messages have strict rules. How do you handle that?",
+            "answer": "Every message keeps the disclaimers your business is required to show, and your compliance team approves the messages before anything goes live."
+          }
+        ]
+      }
     }
   ]
 }

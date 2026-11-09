@@ -547,22 +547,6 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Defaults to 'Talk to an Expert' if left blank. Takes the visitor to the Reach out page (roypiyush.com/reachout) — the page's text is edited under Site Content → Reach out Page."
-              - label: "Lead-form drawer text"
-                name: "leadForm"
-                widget: "object"
-                required: false
-                hint: "Text shown inside the 'Get the checklist' drawer that opens when any button on this page is clicked."
-                fields:
-                  - label: "Eyebrow"
-                    name: "eyebrow"
-                    widget: "string"
-                    required: false
-                    hint: "Defaults to 'Get the framework' if left blank."
-                  - label: "Sub-headline"
-                    name: "subheadline"
-                    widget: "text"
-                    required: false
-                    hint: "Defaults to 'Enter your details below and the checklist lands in your inbox.' if left blank."
               - label: "Why Does It Matter?"
                 name: "whyItMatters"
                 widget: "object"
@@ -573,19 +557,21 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Defaults to 'Why Does It Matter?' if left blank. Shown as the small blue section label."
-                  - label: "Headline"
+                  - label: "Headline (optional)"
                     name: "headline"
                     widget: "text"
                     required: false
-                  - label: "Sub-headline"
+                    hint: "Optional large heading above the body text. Leave blank to show only the body text."
+                  - label: "Body text"
                     name: "subheadline"
                     widget: "text"
                     required: false
+                    hint: "The main text of this section. Leave a blank line between paragraphs to start a new paragraph."
                   - label: "Quote"
                     name: "quote"
                     widget: "text"
                     required: false
-                    hint: "Shown highlighted, like a pull-quote. Leave blank to hide."
+                    hint: "The pull line, shown highlighted. Leave blank to hide."
               - label: "How To Solve It"
                 name: "solution"
                 widget: "object"
@@ -632,6 +618,22 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Defaults to 'Talk to an Expert' if left blank."
+              - label: "From my work"
+                name: "fromMyWork"
+                widget: "object"
+                required: false
+                hint: "A short client example shown after 'How to solve it'. Leave the text blank to hide this section."
+                fields:
+                  - label: "Section title"
+                    name: "sectionTitle"
+                    widget: "string"
+                    required: false
+                    hint: "Defaults to 'From my work' if left blank."
+                  - label: "Text"
+                    name: "text"
+                    widget: "text"
+                    required: false
+                    hint: "The client example, in a few sentences."
               - label: "Who Needs To Focus On This?"
                 name: "whoThisIsFor"
                 widget: "object"
