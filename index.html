@@ -543,6 +543,51 @@
     #view-service .service-block .service-hero-cta{margin-top:36px}
   }
   :is(#view-service,#view-reachout) h1{font-family:var(--display)}
+  #view-service .service-block .support,#view-service .faq-item p{white-space:pre-line}
+  #view-service .service-block .service-work span{text-transform:none;letter-spacing:0;font:400 clamp(18px,1.9vw,22px)/1.6 var(--display);max-width:calc(100% - 40px)}
+
+  .page-head>p.eyebrow{margin-top:26px;font-size:12px;line-height:1.4;color:var(--indigo)}
+
+  /* services index cards — notched card with hover glow */
+  .service-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:48px}
+  .service-card{--nw:176px;--nh:66px;--r:22px;position:relative;display:block;padding:0;border:0;border-radius:0;background:none;box-shadow:none;transform:none;
+    filter:drop-shadow(0 0 .6px rgba(18,23,34,.34)) drop-shadow(0 14px 24px rgba(18,23,34,.07));transition:filter .45s var(--ease),transform .45s var(--ease)}
+  .service-card:hover{transform:translateY(-6px);box-shadow:none;filter:drop-shadow(0 0 .6px rgba(49,72,199,.5)) drop-shadow(0 22px 38px rgba(49,72,199,.38))}
+  .service-card .sc-body{position:relative;display:flex;flex-direction:column;min-height:400px;padding:30px 28px calc(var(--nh) + 34px);border-radius:26px;background:var(--paper-2);overflow:hidden;isolation:isolate;
+    -webkit-mask:
+      linear-gradient(#000,#000) var(--r) 0/calc(100% - var(--r)) calc(100% - var(--nh)) no-repeat,
+      linear-gradient(#000,#000) 0 0/var(--r) calc(100% - var(--nh) - var(--r)) no-repeat,
+      radial-gradient(circle at 100% 0,#000 calc(var(--r) - .5px),transparent var(--r)) 0 calc(100% - var(--nh))/var(--r) var(--r) no-repeat,
+      linear-gradient(#000,#000) calc(var(--nw) + var(--r)) 0/calc(100% - var(--nw) - var(--r)) 100% no-repeat,
+      linear-gradient(#000,#000) var(--nw) 0/var(--r) calc(100% - var(--r)) no-repeat,
+      radial-gradient(circle at 100% 0,#000 calc(var(--r) - .5px),transparent var(--r)) var(--nw) 100%/var(--r) var(--r) no-repeat,
+      radial-gradient(circle at 0 100%,transparent calc(var(--r) - .5px),#000 var(--r)) calc(var(--nw) - var(--r)) calc(100% - var(--nh) + var(--r))/var(--r) var(--r) no-repeat;
+    mask:
+      linear-gradient(#000,#000) var(--r) 0/calc(100% - var(--r)) calc(100% - var(--nh)) no-repeat,
+      linear-gradient(#000,#000) 0 0/var(--r) calc(100% - var(--nh) - var(--r)) no-repeat,
+      radial-gradient(circle at 100% 0,#000 calc(var(--r) - .5px),transparent var(--r)) 0 calc(100% - var(--nh))/var(--r) var(--r) no-repeat,
+      linear-gradient(#000,#000) calc(var(--nw) + var(--r)) 0/calc(100% - var(--nw) - var(--r)) 100% no-repeat,
+      linear-gradient(#000,#000) var(--nw) 0/var(--r) calc(100% - var(--r)) no-repeat,
+      radial-gradient(circle at 100% 0,#000 calc(var(--r) - .5px),transparent var(--r)) var(--nw) 100%/var(--r) var(--r) no-repeat,
+      radial-gradient(circle at 0 100%,transparent calc(var(--r) - .5px),#000 var(--r)) calc(var(--nw) - var(--r)) calc(100% - var(--nh) + var(--r))/var(--r) var(--r) no-repeat}
+  .service-card .sc-body:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(120% 90% at 100% 100%,#6b7cf0 0%,transparent 55%),linear-gradient(155deg,#3148c7,#1c2670);opacity:0;transition:opacity .5s var(--ease)}
+  .service-card .sc-body:after{content:"";position:absolute;right:-64px;bottom:-64px;width:230px;height:230px;border-radius:50%;background:rgba(49,72,199,.07);z-index:-1;transition:transform .6s var(--ease),background .5s ease}
+  .service-card:hover .sc-body:before{opacity:1}
+  .service-card:hover .sc-body:after{transform:scale(1.35);background:rgba(255,255,255,.1)}
+  .service-card .sc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:46px}
+  .service-card .sc-icon{display:grid;place-items:center;width:54px;height:54px;border-radius:16px;background:rgba(49,72,199,.09);color:var(--indigo);transition:background .4s ease,color .4s ease}
+  .service-card .sc-num{font-size:11px;font-weight:750;letter-spacing:.16em;color:var(--muted);transition:color .4s ease}
+  .service-card h3{margin:0 0 14px;font:400 clamp(26px,2.2vw,32px)/1.08 var(--display);letter-spacing:-.04em;color:var(--ink);transition:color .4s ease}
+  .service-card p{margin:0;font-size:15px;line-height:1.65;color:var(--muted);transition:color .4s ease}
+  .service-card:hover .sc-icon{background:rgba(255,255,255,.16);color:#fff}
+  .service-card:hover .sc-num{color:rgba(255,255,255,.7)}
+  .service-card:hover h3{color:#fff}
+  .service-card:hover p{color:rgba(255,255,255,.82)}
+  .service-card .sc-btn{position:absolute;left:0;bottom:10px;display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:650;transition:gap .35s var(--ease),background .35s ease,box-shadow .35s ease}
+  .service-card:hover .sc-btn{gap:13px;background:var(--indigo);box-shadow:0 10px 24px -8px rgba(49,72,199,.7)}
+  @media(max-width:1180px){.service-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.service-card .sc-body{min-height:360px}}
+  @media(max-width:640px){.service-cards{grid-template-columns:1fr;margin-top:32px;gap:20px}.service-card .sc-body{min-height:0}.service-card .sc-top{margin-bottom:28px}}
+  @media(hover:none){.service-card:hover{transform:none}}
 
   /* lead capture drawer (reuses .case-panel/.case-backdrop visual language) */
   .lead-field{margin-bottom:26px}
@@ -850,6 +895,11 @@
     </div>
   </section>
 
+  <section class="shell service-block reveal" id="serviceWorkSection" hidden>
+    <p class="eyebrow" id="serviceWorkEyebrow">From my work</p>
+    <div class="pullquote service-work"><span id="serviceWorkText"></span></div>
+  </section>
+
   <section class="shell service-block reveal" id="serviceWhoSection">
     <p class="eyebrow" id="serviceWhoEyebrow">Who needs to focus on this?</p>
     <p class="support" id="serviceWhoIntro" style="max-width:960px"></p>
@@ -955,14 +1005,22 @@
     document.getElementById('postNextPrev').innerHTML=nav;
   }
 
-  function serviceCardHTML(s){
+  const SERVICE_ICONS=[
+    '<path d="M3 5h18l-7 8v6l-4 2v-8z"/>',
+    '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+    '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6.5"/>',
+    '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>'
+  ];
+  function serviceCardHTML(s,i){
     const h=s.hero||{};
-    return `<a class="service-card reveal" href="/service/${s.slug}"><span class="arrow" aria-hidden="true">↗</span><h3>${h.headline||s.navTitle||'Service'}</h3><p>${h.subheadline||''}</p></a>`;
+    const title=h.eyebrow||s.navTitle||'Service';
+    const icon=SERVICE_ICONS[i%SERVICE_ICONS.length];
+    return `<a class="service-card reveal" href="/service/${s.slug}"><span class="sc-body"><span class="sc-top"><span class="sc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${icon}</svg></span><span class="sc-num" aria-hidden="true">${String(i+1).padStart(2,'0')}</span></span><h3>${title}</h3><p>${h.headline||h.subheadline||''}</p></span><span class="sc-btn">Explore more <span class="sc-arrow" aria-hidden="true">→</span></span></a>`;
   }
 
   function renderServicesIndex(){
     const grid=document.getElementById('serviceCards');
-    if(grid) grid.innerHTML=SERVICES.map(serviceCardHTML).join('');
+    if(grid) grid.innerHTML=SERVICES.map((x,i)=>serviceCardHTML(x,i)).join('');
   }
 
   function renderService(s){
@@ -991,6 +1049,7 @@
     if(whyHasContent){
       document.getElementById('serviceWhyEyebrow').textContent=why.sectionTitle||'Why Does It Matter?';
       document.getElementById('serviceWhyHeadline').textContent=why.headline||'';
+      document.getElementById('serviceWhyHeadline').hidden=!why.headline;
       document.getElementById('serviceWhySubheadline').textContent=why.subheadline||'';
       const quoteWrap=document.getElementById('serviceWhyQuoteWrap');
       quoteWrap.hidden=!why.quote;
@@ -1013,6 +1072,15 @@
       document.getElementById('serviceSolutionCtaText').textContent=sol.ctaText||'';
       document.getElementById('serviceSolutionCtaText').hidden=!sol.ctaText;
       document.getElementById('serviceSolutionCtaLabel').textContent=sol.buttonLabel||'Talk to an Expert';
+    }
+
+    // From my work
+    const work=s.fromMyWork||{};
+    const workSection=document.getElementById('serviceWorkSection');
+    workSection.hidden=!work.text;
+    if(work.text){
+      document.getElementById('serviceWorkEyebrow').textContent=work.sectionTitle||'From my work';
+      document.getElementById('serviceWorkText').textContent=work.text;
     }
 
     // Who needs to focus on this?
