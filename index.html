@@ -656,7 +656,7 @@
   </div>
 </aside>
 
-<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="/services" class="nav-link">Services</a><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="/reachout">Reach out</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
+<div class="nav-wrap"><nav class="nav shell" aria-label="Primary navigation"><a class="wordmark" href="#top" id="navWordmark">Piyush Roy</a><div class="nav-links"><a href="#writing" class="nav-link">Blog</a><a class="nav-cta" href="/reachout">Reach out</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div></nav></div>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
@@ -669,9 +669,8 @@
     <div class="mobile-menu-links">
       <a href="#top" class="mobile-link"><span class="mobile-link-index">01</span>Home</a>
       <a href="#work" class="mobile-link"><span class="mobile-link-index">02</span>Work</a>
-      <a href="/services" class="mobile-link"><span class="mobile-link-index">03</span>Services</a>
-      <a href="#writing" class="mobile-link"><span class="mobile-link-index">04</span>Blog</a>
-      <a href="#about" class="mobile-link"><span class="mobile-link-index">05</span>About</a>
+      <a href="#writing" class="mobile-link"><span class="mobile-link-index">03</span>Blog</a>
+      <a href="#about" class="mobile-link"><span class="mobile-link-index">04</span>About</a>
     </div>
     <a class="nav-cta" href="/reachout">Reach out</a>
   </nav>
@@ -866,7 +865,7 @@
 
 <section id="view-service" class="view section" hidden>
   <div class="shell page-head service-hero" id="serviceHeroWrap">
-    <a class="back-link reveal" href="/services">← All services</a>
+    <a class="back-link reveal" id="serviceBackLink" href="#top">← All services</a>
     <p class="eyebrow reveal" id="serviceEyebrow" style="margin-top:26px"></p>
     <h1 class="lede reveal" id="serviceHeadline"></h1>
     <p class="support reveal" id="serviceSupport"></p>
@@ -928,7 +927,7 @@
   </div></section>
 </section>
 
-<footer><div class="shell footer-grid"><p class="footer-title" id="footerName">Piyush Roy</p><div class="footer-links"><a href="/services">Services</a><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
+<footer><div class="shell footer-grid"><p class="footer-title" id="footerName">Piyush Roy</p><div class="footer-links"><a href="#subscribe">Subscribe</a><a href="https://www.linkedin.com/in/piyush-roy-a47593231/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><div class="copyright">© <span id="copyrightYear">2026</span> Piyush Roy</div></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
 <script>
@@ -948,6 +947,9 @@
   }
 
   let POSTS=[];
+  // Services pages are hidden for now. Set to true (and restore the nav/footer links)
+  // to bring them back; all the service code and content below is kept intact.
+  const SERVICES_ENABLED=false;
   let SERVICES=[];
   let currentService=null;
   // Local, always-available fallback used whenever a CMS image field is
@@ -1030,6 +1032,7 @@
 
   function renderService(s){
     currentService=s;
+    const sb=document.getElementById('serviceBackLink'); if(sb) sb.setAttribute('href','/services');
     const h=s.hero||{}, why=s.whyItMatters||{}, sol=s.solution||{}, who=s.whoThisIsFor||{}, faq=s.faqs||{}, cta=s.closingCta||{};
 
     // Hero
@@ -1158,6 +1161,11 @@
     document.querySelectorAll('.view').forEach(v=>{ v.hidden=true; });
     const path=location.pathname.replace(/\/+$/,'')||'/';
     let showHome=true;
+    if(!SERVICES_ENABLED && (path==='/services' || path.indexOf('/service/')===0)){
+      history.replaceState(null,'','/');
+      route();
+      return;
+    }
     if(path.indexOf('/post/')===0){
       const slug=path.slice(6);
       const p=POSTS.find(x=>x.slug===slug);
@@ -1401,7 +1409,7 @@
 
   Promise.all([
     fetch('/content/posts.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/posts.json:',err); return {posts:[]}; }),
-    fetch('/content/services.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/services.json:',err); return {services:[]}; })
+    SERVICES_ENABLED?fetch('/content/services.json').then(r=>r.json()).catch(err=>{ console.error('Failed to load content/services.json:',err); return {services:[]}; }):Promise.resolve({services:[]})
   ]).then(([postsData,servicesData])=>{
     // Always sort newest-first by actual date, regardless of the order
     // posts happen to be stored in (Decap CMS appends new entries to the

@@ -8,4 +8,10 @@
 # /images/*, /content/*, robots.txt, sitemap.xml, etc.), serve index.html
 # with a 200 status, and let the page's own JavaScript render the right
 # view based on the URL.
+# Services are hidden for now: send the old service URLs to the home page.
+# (302 = temporary, so search engines keep the option of the pages returning.
+# Remove these two lines when Services come back.)
+/services      /   302
+/service/*     /   302
+
 /*    /index.html   200

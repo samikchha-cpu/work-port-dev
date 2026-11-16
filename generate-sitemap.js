@@ -12,6 +12,9 @@ const path = require('path');
 
 const SITE_URL = 'https://roypiyush.com';
 
+// Services pages are hidden for now. Set to true when they come back.
+const SERVICES_ENABLED = false;
+
 function readJSON(relPath) {
   const full = path.join(__dirname, relPath);
   if (!fs.existsSync(full)) {
@@ -26,7 +29,8 @@ const urls = [];
 // Static pages — always present.
 urls.push({ loc: '/', changefreq: 'weekly', priority: '1.0' });
 urls.push({ loc: '/blog', changefreq: 'weekly', priority: '0.8' });
-urls.push({ loc: '/services', changefreq: 'monthly', priority: '0.8' });
+urls.push({ loc: '/reachout', changefreq: 'monthly', priority: '0.8' });
+if (SERVICES_ENABLED) urls.push({ loc: '/services', changefreq: 'monthly', priority: '0.8' });
 urls.push({ loc: '/privacy', changefreq: 'yearly', priority: '0.2' });
 
 // Blog posts.
@@ -45,7 +49,7 @@ if (postsData && Array.isArray(postsData.posts)) {
 }
 
 // Services.
-const servicesData = readJSON('content/services.json');
+const servicesData = SERVICES_ENABLED ? readJSON('content/services.json') : null;
 if (servicesData && Array.isArray(servicesData.services)) {
   servicesData.services.forEach(s => {
     if (s.slug) {

@@ -482,7 +482,8 @@ collections:
             required: false
 
   - name: "services"
-    label: "Services"
+    label: "Services (hidden for now)"
+    hide: true
     description: "Each entry here is a full standalone landing page, shown at roypiyush.com/service/[slug]. Add more services here later without touching any design — each one automatically gets the same layout, and sections with no content simply don't show on the page."
     files:
       - name: "services"
