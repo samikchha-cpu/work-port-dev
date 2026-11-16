@@ -21,7 +21,8 @@
         "tag": "",
         "cta2Link": "https://roypiyush.com/services",
         "cta1Show": false,
-        "problem": "Grow revenue by onboarding new customers and getting them to scale their monthly transaction volume.\n\n"
+        "problem": "Grow revenue by onboarding new customers and getting them to scale their monthly transaction volume.\n\n",
+        "cta2Show": false
       }
     },
     {
@@ -44,7 +45,8 @@
         "tag": "",
         "cta2Link": "https://roypiyush.com/services",
         "cta1Show": false,
-        "problem": "Strong technical work, but deals kept slipping to competitors and lead inflow was inconsistent. The capability was there, the edge wasn't landing with buyers.\n\n"
+        "problem": "Strong technical work, but deals kept slipping to competitors and lead inflow was inconsistent. The capability was there, the edge wasn't landing with buyers.\n\n",
+        "cta2Show": false
       }
     },
     {
@@ -67,7 +69,8 @@
         "tag": "",
         "cta2Link": "https://roypiyush.com/services",
         "cta1Show": false,
-        "problem": "A poor activation-to-investment ratio on the platform. People signed up. Far fewer invested.\n"
+        "problem": "A poor activation-to-investment ratio on the platform. People signed up. Far fewer invested.\n",
+        "cta2Show": false
       }
     },
     {
@@ -90,7 +93,8 @@
         "tag": "",
         "cta2Link": "https://roypiyush.com/services",
         "cta1Show": false,
-        "problem": "Almost no conversion from the free tier to paid.\n\n"
+        "problem": "Almost no conversion from the free tier to paid.\n\n",
+        "cta2Show": false
       }
     },
     {
@@ -113,7 +117,8 @@
         "tag": "",
         "cta2Link": "https://roypiyush.com/services",
         "cta1Show": false,
-        "problem": "The founders knew they wanted to build, but not where to start.\n"
+        "problem": "The founders knew they wanted to build, but not where to start.\n",
+        "cta2Show": false
       }
     },
     {
@@ -136,7 +141,8 @@
         "tag": "",
         "cta2Link": "https://roypiyush.com/services",
         "cta1Show": false,
-        "problem": "Low lead volume, and most of what came in was the wrong fit for the training services.\n"
+        "problem": "Low lead volume, and most of what came in was the wrong fit for the training services.\n",
+        "cta2Show": false
       }
     }
   ]
