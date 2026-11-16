@@ -950,6 +950,26 @@
   // Services pages are hidden for now. Set to true (and restore the nav/footer links)
   // to bring them back; all the service code and content below is kept intact.
   const SERVICES_ENABLED=false;
+  // While Services are hidden, no link to them may appear anywhere — including links
+  // that come from CMS content (case-study buttons, blog text, page copy). Button-style
+  // links are removed; links inside running text keep their words but lose the link.
+  const SERVICE_HREF=/^(?:https?:\/\/(?:www\.)?roypiyush\.com)?\/services?(?:[\/?#]|$)/i;
+  function scrubServiceLinks(root){
+    if(SERVICES_ENABLED) return;
+    (root||document).querySelectorAll('a[href]').forEach(a=>{
+      if(!SERVICE_HREF.test(a.getAttribute('href')||'')) return;
+      const wrap=a.parentElement;
+      if(/cta|btn|button|card/i.test(a.className)){ a.remove(); }
+      else { a.replaceWith(document.createTextNode(a.textContent)); }
+      if(wrap && wrap.classList && wrap.classList.contains('case-ctas') && !wrap.children.length) wrap.remove();
+    });
+  }
+  if(!SERVICES_ENABLED){
+    let scrubQueued=false;
+    new MutationObserver(()=>{ if(scrubQueued) return; scrubQueued=true; requestAnimationFrame(()=>{ scrubQueued=false; scrubServiceLinks(document); }); })
+      .observe(document.body,{childList:true,subtree:true});
+    scrubServiceLinks(document);
+  }
   let SERVICES=[];
   let currentService=null;
   // Local, always-available fallback used whenever a CMS image field is
