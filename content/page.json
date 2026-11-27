@@ -25,7 +25,7 @@
   },
   "writing": {
     "eyebrow": "Blog",
-    "headline": "Writing on product, growth and the decisions between them.",
+    "headline": "Notes on sales, funnels and the decisions that move them.",
     "description": "From what I've observed. Not what I've read or been told."
   },
   "subscribe": {
@@ -46,6 +46,7 @@
     "headlinePost": "",
     "support": "",
     "sideText": "Interested in working together? Let’s start by understanding each other.\n",
-    "email": ""
+    "email": "",
+    "ctaLabel": "Let’s Connect"
   }
 }
