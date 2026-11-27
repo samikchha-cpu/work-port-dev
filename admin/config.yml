@@ -400,11 +400,11 @@ collections:
                 widget: "text"
                 required: false
                 hint: "The line next to the arrow, e.g. 'Interested in working together? Let's build something meaningful.' (shown as plain text, without italics)."
-              - label: "'Write to Piyush' button — email address"
-                name: "email"
+              - label: "Button label"
+                name: "ctaLabel"
                 widget: "string"
                 required: false
-                hint: "Just the email address, e.g. name@example.com — no 'mailto:' needed. Leave blank to keep the site's current default (piyush@funnelprolabs.com)."
+                hint: "Text on the button in this section. Defaults to 'Let’s Connect'. The button always opens the Contact (Reach out) page."
 
       - name: "reachout"
         label: "Reach out Page"
