@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "ICP, Offering & Funnels",
-    "role": "I help founders who’ve tried everything find out why they’re not selling more, and fix it with their team.",
+    "role": "Helping SaaS and WealthTech companies find and fix what’s stopping consistent sales, within 60 days, without guesswork or hiring another agency.",
     "changingWords": [
       "frameworks",
       "analytics",
@@ -34,6 +34,11 @@
     "description": "An algorithm decides whether you see what I share next. I think you should. Join founders who get my funnel teardowns, blog posts, and first invites to live sessions & meet-ups. Straight to your inbox.",
     "note": "No clutter. Unsubscribe whenever you like."
   },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "headline": "What people say after working together.",
+    "description": "Straight from the people behind the work."
+  },
   "collab": {
     "eyebrow": "Collaboration",
     "headlinePre": "I believe in long-term work associations because let’s be practical,",
@@ -42,10 +47,5 @@
     "support": "",
     "sideText": "Interested in working together? Let’s start by understanding each other.\n",
     "email": ""
-  },
-  "testimonials": {
-    "eyebrow": "Testimonials",
-    "headline": "What people say after working together.",
-    "description": "Straight from the people behind the work."
   }
 }
