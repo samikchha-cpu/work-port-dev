@@ -753,8 +753,8 @@
   <div class="shell page-head">
     <a class="back-link reveal" href="#top">← Back to site</a>
     <p class="eyebrow reveal" style="margin-top:26px">Blog</p>
-    <h1 class="display reveal">All writing, newest first.</h1>
-    <p class="reveal">Every post, arranged chronologically rather than by theme. Pick a piece below for the full essay.</p>
+    <h1 class="display reveal" id="blogPageHeadline">Notes on sales, funnels and the decisions that move them.</h1>
+    <p class="reveal" id="blogPageDescription">Every post, arranged chronologically rather than by theme. Pick a piece below for the full essay.</p>
   </div>
   <div class="shell" style="padding-top:0">
     <div class="post-list" id="postListContainer"></div>
@@ -1352,6 +1352,8 @@
     const writing=page.writing||{};
     set('writingEyebrow',writing.eyebrow);
     set('writingHeadline',writing.headline);
+    set('blogPageHeadline',writing.headline);
+    set('blogPageDescription',writing.pageDescription);
     set('writingDescription',writing.description);
     const subscribe=page.subscribe||{};
     set('subscribeEyebrow',subscribe.eyebrow);

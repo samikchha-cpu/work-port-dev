@@ -328,6 +328,11 @@ collections:
                 name: "description"
                 widget: "text"
                 required: false
+              - label: "Blog page — line under the heading"
+                name: "pageDescription"
+                widget: "text"
+                required: false
+                hint: "The short line under the heading on the /blog page. The heading itself uses the Headline above."
 
           - label: "Subscribe panel"
             name: "subscribe"
